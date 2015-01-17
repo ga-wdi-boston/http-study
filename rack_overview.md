@@ -8,10 +8,10 @@ RubyOnRails has the concept of Middleware which is just a small Rack app that pr
 ## Create the simplest Rack app possible.  
 Will show the current time.
 
-This lambda that will return an array with three entries, the entries will be:  
+Well use a lambda that will return an array with three entries, the entries will be:  
 1. A HTTP Status Code, 200 is the code for OK.  
 2. A Ruby hash that contains the HTTP Response Header fields.  
-3. Any Object that responds to the 'each' method.  __This will be the body of the page you will see in the browser__
+3. The body of HTTP Request.  
 4. It will run the WEBrick server on port 1234 listening for Requests. 
 
 ##### Create a Rack app. 
@@ -49,6 +49,13 @@ Open the Chrome Inspector and go to the Network tab. Refresh and look at the HTT
 
 
 ## Show the HTTP Request Headers
+
+Rack puts all the Request Headers, and other info, inside env argument that is passed to the lambda.
+This env argument is a Ruby Hash. 
+
+Now we can do all kinds of logic that can depend on the HTTP Request's path, the URL parameters, etc.
+
+In this case we're just going to build a string from some of this info and sent it back to the client.
 
 ```
 touch rack/show_http_headers.rb
@@ -98,29 +105,65 @@ Example:
 http://localhost:1234/?who=The Police&name=a Main Street resident&crime=possesion of a handgun&source=in the Lowell Sun&object=frozen cheess pizza
 
 
-##### Question what are the %20 in the response?### Demo
+##### Question what are the %20 in the response?
 
 ### Lab 
 Write a Rack app, like the above, but also create a method named 'get'. 
 
-This method named 'get' will take two arguments. The first argument will be the resource path and the second argument will be a string to send back in the body of the HTTP Response.
+This method named 'get' will take two arguments. The first argument will be the resource path and the second argument will be a return string to send back in the body of the HTTP Response.
+
+The lambda will call this get method and get will:
+* create a Ruby hash named params
+* extract the key value pairs in the URL parameters and add each pair into the params hash.
+* use this params hash to substitute into the return string given as the second argument to the gets method.
 
 For example:
 
-```get '/stooges/curly_howard.html', "<html>...<body><h3>Curly Howard</h3></body></html>"```
-
-```get '/stooges/show?location="Boston"&date="1-10-1944"', "<html>...<body><h3>Place: Boston</h3><h5>Date: 1-10-1944</body></html>"```
+```get '/stooges/show?location="Boston"&date="1-10-1944"', "<html>...<body><h3>Place: #{params[:location]}</h3><h5>Date: #{date}</body></html>"```
 
 ### Lab
 Change the get method to have a second argument of the form class#method.
 
-
 ```get '/stooges/3', 'stooge#show' ```
 
-This will:
-1. Create a stooge object, an instance of a Stooge class. 
-2. Call the show method on this object passing the 3, let call 3 the index, from the path as an argument.
-3. Use this index, integer 3, to lookup a stooge in an Array of Stooges!
+This will:  
+1. Create a stooge object, an instance of a Stooge class.   
+2. Call the show method on this object passing the 3, lets call 3 the index, from the path as an argument.  
+3. Use this index, integer 3, to lookup a stooge in an Array of Stooges!  
+
+```
+class Stooge
+  STOOGES = %w{ Larry Moe Curly Joe}
+  
+  def show(params)
+  "Hello #{STOOGES[params[:id]]}, yuk, yuk"
+  end
+end
+
+def path_to_params(path)
+  ...
+end
+
+def get(path, class_method_str)
+ # Get id from resource path.
+ params = path_to_params(path)
+ # params[:id] = 3
+  ...
+  
+  # May want to determine which kind of object 
+  # to create and which method to call 
+  # from the class_method_str argument!
+  
+  stooge = Stooge.new
+  stooge.show(params)
+end
+
+app = lambda do |env|
+  body = get(#{env['REQUEST_PATH'], 'stooge#show')
+  [200, { }, [body] ]
+end
+```
+
 
                                                                       
 
