@@ -14,14 +14,14 @@ By the end of this, students should be able to:
 
 ### Background
 
-The HTTP protocol is used to communicate over the "Web". It defines the content
+The HTTP protocol is used to communicate over the "Web". It defines the format
 of messages passed between **HTTP clients** and **HTTP servers**.
 
 ![Web Architecture](./images/webserver_to_rails_setup.jpeg "Web Architecture")
 
-Some typical **HTTP clients** are Browsers(Chrome, Firefox, etc.), command line programs(curl, wget) and other web applications. They create **HTTP Requests**.
+Some typical **HTTP clients** are Browsers(Chrome, Firefox, etc.), command line programs(curl, wget) and other web applications. **HTTP client** create **HTTP Requests**.
 
-The most popular **HTTP servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/). But there are lots of [Web Servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software). Some web servers are [written using Ruby](https://www.ruby-toolbox.com/categories/web_servers). They recieve **HTTP Requests** and ofter pass them on to web applications.
+The most popular **HTTP servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/). But there are lots of [Web Servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software). Some web servers are [written using Ruby](https://www.ruby-toolbox.com/categories/web_servers). They recieve **HTTP Requests** and often pass them on to web applications.
 
 **Web applications** are built by a developer with a framework like Rails or Node.js. They are passed HTTP Requests from the HTTP server and create HTTP Responses.
 
@@ -154,15 +154,21 @@ Reply to a HTTP client from a web server.
 	
 * Access another, image, representation of this resource with Chrome Inspector and curl.  http://localhost:5000/stooges/moe_howard.jpg
 
+* Use [hurl](https://www.hurl.it/) to access the above resource.
+
+**Now you can debug HTTP with Three different tools!**
 	
+	
+## HTTP Methods
+
+Watch this video about when to use a [HTTP GET or POST](https://www.youtube.com/watch?v=kGOpY2J31pI)
+
 ## Bonus (Optional Section)
 
 [Build your own simple web app!](rack_overview.md)
 
 
 ## Additional Resources
-
-List additional related resources such as videos, blog posts and official documentation.
 
 - [9 uses for curl](http://localhost:5000/)
 - [HTTP RFC](http://tools.ietf.org/html/rfc2616)
