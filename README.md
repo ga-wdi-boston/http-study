@@ -163,10 +163,6 @@ Reply to a HTTP client from a web server.
 
 Watch this video about when to use a [HTTP GET or POST](https://www.youtube.com/watch?v=kGOpY2J31pI)
 
-## Bonus (Optional Section)
-
-[Build your own simple web app!](rack_overview.md)
-
 
 ## Additional Resources
 
