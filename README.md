@@ -80,7 +80,11 @@ We'll start by looking at HTTP Requests and Responses using the Chrome Inspector
 
 The HTTP Request has a set of fields that provide info. 
 
-![HTTP Request](./images/http_request.jpeg "HTTP Request")	
+![HTTP Request](./images/http_request.jpeg "HTTP Request")  
+
+* GET HTTP Request Format  
+	[http request method] [URL] [http version]  
+	[headers]
 
 * HTTP Request Methods *(GET and POST most used.)*  
 	* GET. Retrieve a resource.  
@@ -88,10 +92,6 @@ The HTTP Request has a set of fields that provide info.
 	* PUT. Update a resource.  
 	* DELETE, Delete a resource.  
 	* HEAD, Retreive the headers for a resource.  
-
-* GET HTTP Request Format  
-	[http request method] [URL] [http version]  
-	[headers]
 
 * Example GET Request:  
 		GET http://vermonster.com HTTP/1.1  
