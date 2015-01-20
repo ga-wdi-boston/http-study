@@ -7,7 +7,7 @@
 By the end of this, students should be able to:
 
 - Have a basic understanding of the Hypertext Transfer Protocol (HTTP).
-- Understand REST and it's terminology, resources vs representation, etc.
+- Understand REST and its terminology, resources vs representation, etc.
 - Understand Universal Resource Location (URL).
 - Know the flow of a web request from a client to server and back.
 - Trace, inspect and debug web requests using common developer tools.
@@ -46,7 +46,7 @@ A **Resource** is something, an entity or object, that lives on the server. For 
 
 A **Resource** can have multiple **Representations**. The representation coud be some html, an image, a pdf or some other form. 
 
-For example, a Car resource could be represented by a PDF that showed it's specifications or maybe an HTML page that shows marketing info or an image.
+For example, a Car resource could be represented by a PDF that showed its specifications or maybe an HTML page that shows marketing info or an image.
 
 ## Instructions
 
