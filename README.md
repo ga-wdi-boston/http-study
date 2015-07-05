@@ -12,160 +12,152 @@ By the end of this, students should be able to:
 - Know the flow of a web request from a client to server and back.
 - Trace, inspect and debug web requests using common developer tools.
 
-### Background
+## HTTP
 
-The HTTP protocol is used to communicate over the "Web". It defines the format
-of messages passed between **HTTP clients** and **HTTP servers**.
+HTTP is a protocol - a system of rules - that determines how web pages (see:'hypertext') get sent (see:'transferred') from one place to another. Among other things, it defines the format of the messages passed between **HTTP clients** and **HTTP servers**.
 
 ![Web Architecture](./images/webserver_to_rails_setup.jpeg "Web Architecture")
 
-Some typical **HTTP clients** are Browsers(Chrome, Firefox, etc.), command line programs(curl, wget) and other web applications. **HTTP client** create **HTTP Requests**.
+Since the web is a service, it works through a combination of **clients** (which _make_ requests) and **servers** (which _receive_ requests). Browsers (Chrome, Firefox, etc.) are common **HTTP clients**, but there are also command line programs (e.g. [curl](http://curl.haxx.se/docs/), [wget](http://www.gnu.org/software/wget/manual/wget.html)) that can make requests.
 
-The most popular **HTTP servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/). But there are lots of [Web Servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software). Some web servers are [written using Ruby](https://www.ruby-toolbox.com/categories/web_servers). They recieve **HTTP Requests** and often pass them on to web applications.
+Two of the most popular **HTTP servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/), But there are lots different [web servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software) out there. Some web servers are [written in Ruby](https://www.ruby-toolbox.com/categories/web_servers), while others are written using other languages. All of them recieve **HTTP Requests** and often pass them on to web applications.
 
-**Web applications** are built by a developer with a framework like Rails or Node.js. They are passed HTTP Requests from the HTTP server and create HTTP Responses.
+**Web applications** are programs built by a developer within a framework like Rails or Express. These programs plug into a server, process the HTTP requests that receive, and generate HTTP Responses.
 
 ![HTTP Request and Response](images/http_req_resp.gif)
 
+Lost? Here's the play-by-play.
 
-1. **HTTP Clients** send a **HTTP Request** to a **HTTP server**.
-	* The host name in the URL will identify the server.
-2. The **HTTP Server** will then process the **HTTP Request**.
-	* The web application will be passed this **HTTP Request** and creates a **HTTP Response**.
-3. The **HTTP Response** will be returned to the client.
-4. The **HTTP client** will process the response.
+1. A client sends a request to a server.
+	* The **hostname**, given in the URL, indicates which server will receive the request.
+2. The server processes the request. This may entail passing the request to some web application, which creates a response.
+3. The response gets sent back to the client.
+4. The client processes the response.
 
-
-### Uniform Resource Location (URL)
-
-A URL will uniquely identify a **Resource** on the web. 
+How does the server know what the request is asking for? This is specified by the URL, a special kind of path that specifies where a **resource** can be found on the web.
 
 ![URL](images/http1-url-structure.png)
 
-A **Resource** is something, an entity or object, that lives on the server. For example, it can be Person, Auto, User, Order Cart, Search Form, etc. 
+> Technically, the term 'resource' refers to an abstraction that your application uses; depending on what the application does, a resource might be a 'Car', a 'Person', a 'User', or an 'Order Cart'. A single resource can be represented in multiple different ways by the server, including through HTML, PDF files, and images. What we really mean when we say 'resource' above is a _representation_ of some resource.
 
-A **Resource** can have multiple **Representations**. The representation coud be some html, an image, a pdf or some other form. 
+### HTTP :: Demo
 
-For example, a Car resource could be represented by a PDF that showed its specifications or maybe an HTML page that shows marketing info or an image.
+Lets explore HTTP and resources. We'll start by looking at HTTP requests and responses using the Chrome Inspector.
 
-## Instructions
+![HTTP Request and Response](./images/http_request_response.jpeg "HTTP Request and Response")
 
-Lets explore HTTP and resources.
-
-#### Using Chrome's Inspector.
-
-We'll start by looking at HTTP Requests and Responses using the Chrome Inspector.  
-
-* In Chrome, Command + Option to open up Chrome Inspector. *Or you can Control + Click and select inspect element*  
-* Select the Network tab.
+* In Chrome, open up Chrome Inspector (*command + option + 'i', or ctrl + click and select 'inspect element'*).
+* Select the Network tab. It should look something like this:
 
 ![Chrome Inspector](images/chome_inspector.png)
 
-* Go to the **URL** https://generalassemb.ly/
+* Next, go to the **URL** https://generalassemb.ly/
 
-	This will show us quite of few HTTP Requests and Responses.
-	
-	For each request we'll see the **Path**, **Method**, **Status**, **Type**, **Size** and info about how long it took to get each of these resources.   
+	You should be able to see a few HTTP Requests and Responses in the Network tab; for each request you'll see a **Path**, **Method**, **Status**, **Type**, and **Size**, along with info about how long it took to get each of these resources.
 	*Most of this information comes from the HTTP Request and Response.*
-	
-* Some HTTP request are for css, javascript and images that are referenced by the HTML.
-* Select generalassemb.ly in the Path column on the far left. Then select the Headers tab. 
 
-	This will show the HTTP Request and Response Headers.
-	
-	
-![HTTP Request and Response](./images/http_request_response.jpeg "HTTP Request and Response")	
-	
-### HTTP Request
+* Some HTTP requests are for CSS, JavaScript and images that are referenced by the HTML.
+* Select `generalassemb.ly` in the Path column on the far left.
+* Select the Headers tab. **Headers** are meta-data properties of an HTTP request or response, separate from the body of the message.
 
-The HTTP Request has a set of fields that provide info. 
+#### HTTP Request
 
-![HTTP Request](./images/http_request.jpeg "HTTP Request")  
+![HTTP Request](./images/http_request.jpeg "HTTP Request")
 
-* GET HTTP Request Format  
-	[http request method] [URL] [http version]  
-	[headers]
+The first word in the request line, **GET**, is the **'method'** of the HTTP request. There are many different 'methods', and each 'method' indicates a different type of request. Here are a few of them:
+* **GET** => Retrieve a resource.  
+* **POST** => Create a resource.  
+* **PATCH** (_or **PUT**, but **PATCH** is recommended_) => Update an existing resource.  
+* **DELETE** => Delete a resource.  
+* **HEAD** => Retreive the headers for a resource.
 
-* HTTP Request Methods *(GET and POST most used.)*  
-	* GET. Retrieve a resource.  
-	* POST. Create a resource.  
-	* PUT. Update a resource.  
-	* DELETE, Delete a resource.  
-	* HEAD, Retreive the headers for a resource.  
+Of these, **GET** and **POST** are the most widely used. Generally, HTTP requests take the following format:
 
-* Example GET Request:  
+```
+[http request method] [URL] [http version]  
+	[list of headers]
+
+	[message body]
+```
+
+Example:
+
 		GET http://vermonster.com HTTP/1.1  
 		Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8  
-		Accept-Encoding:gzip,deflate,sdch   
+		Accept-Encoding:gzip,deflate,sdch
 		Accept-Language:en-US,en;q=0.8  
 		Connection:keep-alive  
 		Host:vermonster.com  
 		User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5)  
 		AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1659.2 Safari/537.36  
-		
-### HTTP Response
+
+#### HTTP Response
+
 ![HTTP Response](./images/http_response.jpeg "HTTP Response")
 
-Reply to a HTTP client from a web server.
-  
-* HTTP Response Format    
-	[version] [status] [reason]  
-	[headers]
-  
-	[body]	# typically HTML, json, ...  
+When a client sends a request, the server sends back a response; the standard format for this response is:
+
+```
+[http version] [status] [reason]  
+[list of headers]
+
+[body]	# typically HTML, json, ...  
+```
+
 * HTTP version should be 1.1
-* Status Codes, [Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-		* 200  OK 
-   		* 301 Moved Permanently 
-		* 302 Moved Temporarily 
-   		* 400 Bad Request   
-		* 403 Forbidden 
-		* 404 Not Found 
-		* 500 Internal Server Error
+* [Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes) have standard meanings; here are a few.
 
-		
-## Your turn
-* Run a very simple HTTP Server, WEBRick, on port 5000.
-	```ruby -run -e httpd . -p5000 ```  
-	
-	This will start the default Ruby webserver on *localhost* at port 5000. It will listen for HTTP Requests from a HTTP client and send a HTTP Response back to this client.
-* Open Chrome Inspector
-* Go to URL http://localhost:5000/stooges/moe_howard.html.
-* Find another student/s to help you draw flow of HTTP Request/Response from the client to the server and back.  
-	* Use a whiteboard and show it to an instructor!  
-* What is the resource?
-* What is the representation?
-	* What field in the HTTP Response indicates the representation?
-* How does the browser know which server to get the resource from?
-	* Where is this info kept in the HTTP Request?  
-* What is the resource path?
-	* Where is this info kept in the HTTP Request?  
-* What HTTP Method is used in the Request?  
-	* Where is this info kept in the HTTP Request? 
-* What kind of HTTP client is being used?  
-	* Where is this info kept in the HTTP Request? 
-* What is the status of this request?
- 	* Where is this info kept in the HTTP Response?  
-* What kind of HTTP Server is being used?  
- 	* Where is this info kept in the HTTP Response? 
+|Code|Reason|
+|:---|:-----|
+|200| OK
+|301| Moved Permanently
+|302| Moved Temporarily
+|400| Bad Request
+|403| Forbidden
+|404| Not Found
+|500| Internal Server Error
 
-* Use another HTTP client, **curl** to view moe's resource and the HTTP info.
-	```curl -v http://localhost:5000/stooges/moe_howard.html```  
-	
-* Access another, image, representation of this resource with Chrome Inspector and curl.  http://localhost:5000/stooges/moe_howard.jpg
 
-* Use [hurl](https://www.hurl.it/) to access the above resource.
+## HTTP :: Lab
 
-**Now you can debug HTTP with Three different tools!**
-	
-	
-## HTTP Methods
+Break up into pairs! We're going to run a very simple HTTP Server, WEBRick, and look at the requests and responses we see.
 
-Watch this video about when to use a [HTTP GET or POST](https://www.youtube.com/watch?v=kGOpY2J31pI)
+1. If you haven't yet, fork and clone this repo.
+
+2. Navigate into the root of the repo and run the following command:
+
+	`ruby -run -e httpd . -p5000`  
+
+	This will start the default Ruby webserver (in this case, WEBrick), and tell it (1) to serve up files found within the repo's root directory, and (2) to start listening for requests on port 5000 on your machine (aka  *'localhost'*).
+
+3. Open Chrome Inspector and go to the Network tab.
+
+4. Go to http://localhost:5000/stooges/moe_howard.html; this will cause the browser to make a GET request to that URL.
+
+5. In pairs, draw the request/response flow (from the client to the server and back) on a whiteboard, and show it to an instructor! You should be able to answer the following questions, and also explain where the answer can be found within the HTTP request/response.
+
+	* What are the resource (abstraction) and the corresponding representation (physical file)?
+	* How does the browser know which server to get the resource from?
+	* What is the resource path?
+	* What HTTP Method is used in the Request?  
+	* What kind of HTTP client is being used?  
+	* What is the status of this request?
+	* What kind of HTTP Server is being used?  
+	<br>
+
+6. Now, use another HTTP client, **curl** to view the resource and look at the HTTP info. The command to enter is:
+
+	`curl -v http://localhost:5000/stooges/moe_howard.html`  
+
+	Access another representation of this resource (an image) by `curl`ing the following URL: http://localhost:5000/stooges/moe_howard.jpg
+
+7. Finally, use [hurl](https://www.hurl.it/) to access the above resource.
+
+**Now you can debug HTTP with three different tools!**
 
 
 ## Additional Resources
-
+- Watch this video about when to use a [HTTP GET or POST](https://www.youtube.com/watch?v=kGOpY2J31pI)
 - [9 uses for curl](http://localhost:5000/)
 - [HTTP RFC](http://tools.ietf.org/html/rfc2616)
 - [URL RFC](https://tools.ietf.org/html/rfc3986)
