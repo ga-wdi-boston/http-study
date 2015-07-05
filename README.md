@@ -20,9 +20,9 @@ HTTP is a protocol - a system of rules - that determines how web pages (see:'hyp
 
 Since the web is a service, it works through a combination of **clients** (which _make_ requests) and **servers** (which _receive_ requests). Browsers (Chrome, Firefox, etc.) are common **HTTP clients**, but there are also command line programs (e.g. [curl](http://curl.haxx.se/docs/), [wget](http://www.gnu.org/software/wget/manual/wget.html)) that can make requests.
 
-Two of the most popular **HTTP servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/), But there are lots different [web servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software) out there. Some web servers are [written in Ruby](https://www.ruby-toolbox.com/categories/web_servers), while others are written using other languages. All of them recieve **HTTP Requests** and often pass them on to web applications.
+Two of the most popular **HTTP servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/), But there are lots different [web servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software) out there. Some web servers are [written in Ruby](https://www.ruby-toolbox.com/categories/web_servers), while others are written in other languages. All of them recieve **HTTP Requests** and often pass them on to web applications.
 
-**Web applications** are programs built by a developer within a framework like Rails or Express. These programs plug into a server, process the HTTP requests that receive, and generate HTTP Responses.
+**Web applications** are programs built by a developer within a framework like Rails or Express. These programs plug into a server, process the HTTP requests that the server receives, and generate **HTTP Responses**.
 
 ![HTTP Request and Response](images/http_req_resp.gif)
 
@@ -38,7 +38,7 @@ How does the server know what the request is asking for? This is specified by th
 
 ![URL](images/http1-url-structure.png)
 
-> Technically, the term 'resource' refers to an abstraction that your application uses; depending on what the application does, a resource might be a 'Car', a 'Person', a 'User', or an 'Order Cart'. A single resource can be represented in multiple different ways by the server, including through HTML, PDF files, and images. What we really mean when we say 'resource' above is a _representation_ of some resource.
+> Technically, the term 'resource' refers to an abstraction that your application uses; depending on what the application does, a resource might be a 'Car', a 'Person', a 'User', or an 'Order Cart'. A single resource can be represented in multiple different ways by the server, including through HTML pages, PDF files, and images. What we really mean when we say 'resource' above is a _representation_ of a resource.
 
 ### HTTP :: Demo
 
@@ -77,7 +77,7 @@ Of these, **GET** and **POST** are the most widely used. Generally, HTTP request
 [http request method] [URL] [http version]  
 	[list of headers]
 
-	[message body]
+	[request body]
 ```
 
 Example:
@@ -101,7 +101,7 @@ When a client sends a request, the server sends back a response; the standard fo
 [http version] [status] [reason]  
 [list of headers]
 
-[body]	# typically HTML, json, ...  
+[response body]	# typically HTML, JSON, ...  
 ```
 
 * HTTP version should be 1.1
