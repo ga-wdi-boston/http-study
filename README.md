@@ -6,11 +6,10 @@
 
 By the end of this, students should be able to:
 
-- Have a basic understanding of the Hypertext Transfer Protocol (HTTP).
-- Understand REST and its terminology, resources vs representation, etc.
-- Understand Universal Resource Location (URL).
-- Know the flow of a web request from a client to server and back.
-- Trace, inspect and debug web requests using common developer tools.
+- Walk through the flow of a web request from a client to server and back.
+- Identify the different pieces of a Universal Resource Location (URL).
+- Explain the difference between a resource and its representation.
+- Use the browser, `curl`, and hurl.it to issue GET and POST requests.
 
 ## HTTP
 
