@@ -156,7 +156,15 @@ Break up into pairs! We're going to run a very simple HTTP Server, WEBRick, and 
 
 
 ## Additional Resources
-- Watch this video about when to use a [HTTP GET or POST](https://www.youtube.com/watch?v=kGOpY2J31pI)
+
+- Three part video series about HTTP:  
+	1. [Basic concepts of web applications, how they work and the HTTP protocol](https://www.youtube.com/watch?v=RsQ1tFLwldY)  
+	2. [Know about HTTP URL](https://www.youtube.com/watch?v=ADQ_rhefgEk)  
+	3. [Understanding HTTP Request Response Messages](https://www.youtube.com/watch?v=sxiRFwQ1RJ4)  
+
+- [curl Command Line Utility](http://conqueringthecommandline.com/book/curl)
+
+- [HTTP GET or POST](https://www.youtube.com/watch?v=kGOpY2J31pI)
 - [9 uses for curl](http://localhost:5000/)
 - [HTTP RFC](http://tools.ietf.org/html/rfc2616)
 - [URL RFC](https://tools.ietf.org/html/rfc3986)
