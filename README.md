@@ -17,27 +17,46 @@ HTTP is a protocol - a system of rules - that determines how web pages (see:'hyp
 
 ![Web Architecture](./images/webserver_to_rails_setup.jpeg "Web Architecture")
 
-Since the web is a service, it works through a combination of **clients** (which _make_ requests) and **servers** (which _receive_ requests). Browsers (Chrome, Firefox, etc.) are common **HTTP clients**, but there are also command line programs (e.g. [curl](http://curl.haxx.se/docs/), [wget](http://www.gnu.org/software/wget/manual/wget.html)) that can make requests.
+Since the web is a service, it works through a combination of **clients which _make_ requests** and **servers (which _receive_ requests)**.
 
-Two of the most popular **HTTP servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/), But there are lots different [web servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software) out there. Some web servers are [written in Ruby](https://www.ruby-toolbox.com/categories/web_servers), while others are written in other languages. All of them recieve **HTTP Requests** and often pass them on to web applications.
+### HTTP Client
 
-**Web applications** are programs built by a developer within a framework like Rails or Express. These programs plug into a server, process the HTTP requests that the server receives, and generate **HTTP Responses**.
+**HTTP Clients make or generate HTTP Requests.** Some types of clients are:
+
+* Browsers - Chrome, Firefox and Safari.
+* Command Line programs - [curl](http://curl.haxx.se/docs/) and [wget](http://www.gnu.org/software/wget/manual/wget.html).
+
+**HTTP Clients respond to HTTP Responses from a Web Server.** They process the data being returned form a **Web Server, aka HTTP Server.**
+
+### HTTP/Web Server
+
+Two of the most popular **HTTP or Web servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/), But there are lots different [web servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software) out there. Some web servers are [written in Ruby](https://www.ruby-toolbox.com/categories/web_servers), while others are written in other languages. 
+
+All **Web Servers** recieve **HTTP Requests** and generate **HTTP Responses**. *We'll look deeper into these later.*
+
+Often Web Servers are just the middleman, passing HTTP Request and Responses between the client and web application.
+
+### Web applications
+
+Are programs built by a developer, sometimes using a framework like Rails or Express. These programs plug into a web server, process the **HTTP requests** that the server receives, and generate **HTTP Responses**.
 
 ![HTTP Request and Response](images/http_req_resp.gif)
 
 Lost? Here's the play-by-play.
 
-1. A client sends a request to a server.
-	* The **hostname**, given in the URL, indicates which server will receive the request.
-2. The server processes the request. This may entail passing the request to some web application, which creates a response.
+1. A client sends a **HTTP Request** to a **HTTP Server** running on a remote machine.  
+	* The **hostname**, given in the URL, indicates which server will receive the request.  
+2. The **HTTP server** processes the **HTTP Request**. This may entail passing the request to some **Web Application**, which creates a **HTTP Response**.
 3. The response gets sent back to the client.
 4. The client processes the response.
 
-How does the server know what the request is asking for? This is specified by the URL, a special kind of path that specifies where a **resource** can be found on the web.
+**How does the server know what the request is asking for? This is specified by the URL**, a special kind of path that specifies where a **resource** can be found on the web.
 
 ![URL](images/http1-url-structure.png)
 
-> Technically, the term 'resource' refers to an abstraction that your application uses; depending on what the application does, a resource might be a 'Car', a 'Person', a 'User', or an 'Order Cart'. A single resource can be represented in multiple different ways by the server, including through HTML pages, PDF files, and images. What we really mean when we say 'resource' above is a _representation_ of a resource.
+> Technically, the term 'resource' refers to an abstraction that your application uses; depending on what the application does, a resource might be a 'Car', a 'Person', a 'User', or an 'Order Cart'. 
+> 
+> A single resource can be represented in multiple different ways by the server, including a HTML, JSON, PDF files, and images. What we really mean when we say 'resource' above is a specific **Representation** of a resource.
 
 ### HTTP :: Demo
 
@@ -63,23 +82,31 @@ Lets explore HTTP and resources. We'll start by looking at HTTP requests and res
 
 ![HTTP Request](./images/http_request.jpeg "HTTP Request")
 
-The first word in the request line, **GET**, is the **'method'** of the HTTP request. There are many different 'methods', and each 'method' indicates a different type of request. Here are a few of them:
+The first word in the request line, **GET**, is the **HTTP Request's Method**.
+
+**HTTP Request Methods:**   
+
 * **GET** => Retrieve a resource.  
 * **POST** => Create a resource.  
 * **PATCH** (_or **PUT**, but **PATCH** is recommended_) => Update an existing resource.  
 * **DELETE** => Delete a resource.  
 * **HEAD** => Retreive the headers for a resource.
 
-Of these, **GET** and **POST** are the most widely used. Generally, HTTP requests take the following format:
+Of these, **GET** and **POST** are the most widely used. 
+
+**HTTP Request Structure**
 
 ```
 [http request method] [URL] [http version]  
-	[list of headers]
+[list of headers]
 
-	[request body]
+[request body]
 ```
 
-Example:
+*Notice, that the Request Header is separated from the Request Body by a new line.*
+
+
+HTTP Request Method Example: (No Body) 
 
 		GET http://vermonster.com HTTP/1.1  
 		Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8  
@@ -150,7 +177,7 @@ Break up into pairs! We're going to run a very simple HTTP Server, WEBRick, and 
 
 	Access another representation of this resource (an image) by `curl`ing the following URL: http://localhost:5000/stooges/moe_howard.jpg
 
-7. Finally, use [hurl](https://www.hurl.it/) to access the above resource.
+7. Finally, use [Postman Chrome Extension](https://goo.gl/CoIuZx) to access the above resource.
 
 **Now you can debug HTTP with three different tools!**
 
