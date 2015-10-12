@@ -1,0 +1,14 @@
+{
+  "name": "moe",
+  "desc": "Moe Harry Horwitz, professional known as Moe Howard, was an American actor and comedian best known as the de facto leader of The Three Stooges",
+  "DOB": {
+    "day": 19,
+    "month": "June",
+    "year": "1897"
+  },
+  "DOD": {
+    "day": 4,
+    "month": "May",
+    "year": "1975"
+  }
+}

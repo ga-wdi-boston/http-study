@@ -144,6 +144,29 @@ When a client sends a request, the server sends back a response; the standard fo
 |500| Internal Server Error
 
 
+### We Do 
+
+Let's use a command line utility **curl** that is a **HTTP Client**. We'll use this to look at a **Resource** that is provided by our server that we ran above.
+
+
+```bash
+$ curl -H "Accept: application/json" http://localhost:5000/stooges/moe_howard.json
+```
+
+This will form a **HTTP Request** for the **JSON** representation of a **Resource**. The resource is **Uniquely Identified** by it's **URL**. The domain name, *localhost*, identifies the server using the **domain name** that is running the **Web Server** and the **port**, 5000. The port 5000 is the endpoint that the **Web Application** is listening on for **HTTP Requests**. *Actually, the **Web Server** will direct all HTTP Request on port 5000 to the **Web Application.**
+
+The **path** that the **Web Application** will use to identify it's **Resouce** is ``/stooges/moe_howard.json``
+
+**The Instructor will draw a diagram of all the parts of this system and will enumerate the order of all the operations.**
+
+## JSON
+
+JSON is yet another way to represent data. It consist of a string with a very specific format. [JSON Examples](http://json.org/example.html).  JSON is formally defined [here](http://www.json.org/).
+
+Remember JSON is not a Hash, it's not a Object or Object Literal. **JSON is ONLY a string with a specific format.**
+
+**JSON** is a very, very common format used to transfer data over the internet. It has libraries for almost every langauage that will **convert the JSON string to a language's data structure or data type.**
+
 ## HTTP :: Lab
 
 Break up into pairs! We're going to run a very simple HTTP Server, WEBRick, and look at the requests and responses we see.
