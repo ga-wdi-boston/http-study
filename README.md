@@ -30,7 +30,7 @@ Since the web is a service, it works through a combination of **clients which _m
 
 ### HTTP/Web Server
 
-Two of the most popular **HTTP or Web servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/), But there are lots different [web servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software) out there. Some web servers are [written in Ruby](https://www.ruby-toolbox.com/categories/web_servers), while others are written in other languages. 
+Two of the most popular **HTTP or Web servers** are [Apache](http://httpd.apache.org/) and [Nginx](http://nginx.com/), But there are lots different [web servers](http://en.wikipedia.org/wiki/Comparison_of_web_server_software) out there. Some web servers are [written in Ruby](https://www.ruby-toolbox.com/categories/web_servers), while others are written in other languages.
 
 All **Web Servers** recieve **HTTP Requests** and generate **HTTP Responses**. *We'll look deeper into these later.*
 
@@ -44,8 +44,8 @@ Are programs built by a developer, sometimes using a framework like Rails or Exp
 
 Lost? Here's the play-by-play.
 
-1. A client sends a **HTTP Request** to a **HTTP Server** running on a remote machine.  
-	* The **hostname**, given in the URL, indicates which server will receive the request.  
+1. A client sends a **HTTP Request** to a **HTTP Server** running on a remote machine.
+	* The **hostname**, given in the URL, indicates which server will receive the request.
 2. The **HTTP server** processes the **HTTP Request**. This may entail passing the request to some **Web Application**, which creates a **HTTP Response**.
 3. The response gets sent back to the client.
 4. The client processes the response.
@@ -54,8 +54,8 @@ Lost? Here's the play-by-play.
 
 ![URL](images/http1-url-structure.png)
 
-> Technically, the term 'resource' refers to an abstraction that your application uses; depending on what the application does, a resource might be a 'Car', a 'Person', a 'User', or an 'Order Cart'. 
-> 
+> Technically, the term 'resource' refers to an abstraction that your application uses; depending on what the application does, a resource might be a 'Car', a 'Person', a 'User', or an 'Order Cart'.
+>
 > A single resource can be represented in multiple different ways by the server, including a HTML, JSON, PDF files, and images. What we really mean when we say 'resource' above is a specific **Representation** of a resource.
 
 ### HTTP :: Demo
@@ -84,20 +84,20 @@ Lets explore HTTP and resources. We'll start by looking at HTTP requests and res
 
 The first word in the request line, **GET**, is the **HTTP Request's Method**.
 
-**HTTP Request Methods:**   
+**HTTP Request Methods:**
 
-* **GET** => Retrieve a resource.  
-* **POST** => Create a resource.  
-* **PATCH** (_or **PUT**, but **PATCH** is recommended_) => Update an existing resource.  
-* **DELETE** => Delete a resource.  
+* **GET** => Retrieve a resource.
+* **POST** => Create a resource.
+* **PATCH** (_or **PUT**, but **PATCH** is recommended_) => Update an existing resource.
+* **DELETE** => Delete a resource.
 * **HEAD** => Retreive the headers for a resource.
 
-Of these, **GET** and **POST** are the most widely used. 
+Of these, **GET** and **POST** are the most widely used.
 
 **HTTP Request Structure**
 
 ```
-[http request method] [URL] [http version]  
+[http request method] [URL] [http version]
 [list of headers]
 
 [request body]
@@ -106,16 +106,16 @@ Of these, **GET** and **POST** are the most widely used.
 *Notice, that the Request Header is separated from the Request Body by a new line.*
 
 
-HTTP Request Method Example: (No Body) 
+HTTP Request Method Example: (No Body)
 
-		GET http://vermonster.com HTTP/1.1  
-		Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8  
+		GET http://vermonster.com HTTP/1.1
+		Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 		Accept-Encoding:gzip,deflate,sdch
-		Accept-Language:en-US,en;q=0.8  
-		Connection:keep-alive  
-		Host:vermonster.com  
-		User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5)  
-		AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1659.2 Safari/537.36  
+		Accept-Language:en-US,en;q=0.8
+		Connection:keep-alive
+		Host:vermonster.com
+		User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5)
+		AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1659.2 Safari/537.36
 
 #### HTTP Response
 
@@ -124,10 +124,10 @@ HTTP Request Method Example: (No Body)
 When a client sends a request, the server sends back a response; the standard format for this response is:
 
 ```
-[http version] [status] [reason]  
+[http version] [status] [reason]
 [list of headers]
 
-[response body]	# typically HTML, JSON, ...  
+[response body]	# typically HTML, JSON, ...
 ```
 
 * HTTP version should be 1.1
@@ -144,7 +144,7 @@ When a client sends a request, the server sends back a response; the standard fo
 |500| Internal Server Error
 
 
-### We Do 
+### We Do
 
 Let's use a command line utility **curl** that is a **HTTP Client**. We'll use this to look at a **Resource** that is provided by our server that we ran above.
 
@@ -175,7 +175,7 @@ Break up into pairs! We're going to run a very simple HTTP Server, WEBRick, and 
 
 2. Navigate into the root of the repo and run the following command:
 
-	`ruby -run -e httpd . -p5000`  
+	`ruby -run -e httpd . -p5000`
 
 	This will start the default Ruby webserver (in this case, WEBrick), and tell it (1) to serve up files found within the repo's root directory, and (2) to start listening for requests on port 5000 on your machine (aka  *'localhost'*).
 
@@ -188,15 +188,15 @@ Break up into pairs! We're going to run a very simple HTTP Server, WEBRick, and 
 	* What are the resource (abstraction) and the corresponding representation (physical file)?
 	* How does the browser know which server to get the resource from?
 	* What is the resource path?
-	* What HTTP Method is used in the Request?  
-	* What kind of HTTP client is being used?  
+	* What HTTP Method is used in the Request?
+	* What kind of HTTP client is being used?
 	* What is the status of this request?
-	* What kind of HTTP Server is being used?  
+	* What kind of HTTP Server is being used?
 	<br>
 
 6. Now, use another HTTP client, **curl** to view the resource and look at the HTTP info. The command to enter is:
 
-	`curl -v http://localhost:5000/stooges/moe_howard.html`  
+	`curl -v http://localhost:5000/stooges/moe_howard.html`
 
 	Access another representation of this resource (an image) by `curl`ing the following URL: http://localhost:5000/stooges/moe_howard.jpg
 
@@ -207,10 +207,10 @@ Break up into pairs! We're going to run a very simple HTTP Server, WEBRick, and 
 
 ## Additional Resources
 
-- Three part video series about HTTP:  
-	1. [Basic concepts of web applications, how they work and the HTTP protocol](https://www.youtube.com/watch?v=RsQ1tFLwldY)  
-	2. [Know about HTTP URL](https://www.youtube.com/watch?v=ADQ_rhefgEk)  
-	3. [Understanding HTTP Request Response Messages](https://www.youtube.com/watch?v=sxiRFwQ1RJ4)  
+- Three part video series about HTTP:
+	1. [Basic concepts of web applications, how they work and the HTTP protocol](https://www.youtube.com/watch?v=RsQ1tFLwldY)
+	2. [Know about HTTP URL](https://www.youtube.com/watch?v=ADQ_rhefgEk)
+	3. [Understanding HTTP Request Response Messages](https://www.youtube.com/watch?v=sxiRFwQ1RJ4)
 
 - [curl Command Line Utility](http://conqueringthecommandline.com/book/curl)
 
@@ -220,3 +220,8 @@ Break up into pairs! We're going to run a very simple HTTP Server, WEBRick, and 
 - [URL RFC](https://tools.ietf.org/html/rfc3986)
 - [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 - [Media Types](http://en.wikipedia.org/wiki/Internet_media_type)
+
+## [License](LICENSE)
+
+Source code distributed under the MIT license. Text and other assets copyright
+General Assembly, Inc., all rights reserved.
