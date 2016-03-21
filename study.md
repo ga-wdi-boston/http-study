@@ -131,7 +131,7 @@ In your own words, give a breif description of what HTTP is.
 
 ## Describe what a client is and what a server is
 
-Describe what a client is and what a server is. How do they interact with each other?
+ What is a client is and what is a server? How do they interact with each other?
 
 ```md
 <!-- your answer here -->
@@ -148,6 +148,14 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 ## Describe what a Response is
 
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
+
+```md
+<!-- your answer here -->
+```
+
+## Make a curl request
+
+Using curl, how would you get the content from Reddit.com?
 
 ```md
 <!-- your answer here -->

@@ -14,11 +14,11 @@ By the end of this, students should be able to:
 
 ## Instructions
 
-1.Fork and clone this repository.
-2.Change into the new directory.
-3.Create and checkout a branch named `response`.
-4.Follow the directions given in `study.md`.
-5.When finished, push to your fork and submit a pull request.
+1.  Fork and clone this repository.
+1.  Change into the new directory.
+1.  Create and checkout a branch named `response`.
+1.  Follow the directions given in `study.md`.
+1.  When finished, push to your fork and submit a pull request.
 
 ## [License](LICENSE)
 
