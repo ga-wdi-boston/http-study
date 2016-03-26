@@ -154,6 +154,8 @@ Get Method - Which is used to retrieve a resource
 Put - used to update a resource
 Delete  - deletes the resource
 Post - used to create a resource (i.e submitting a form).
+
+source: (http://symfony.com/doc/current/book/http_fundamentals.html)
 ```
 
 ## Describe what a Response is
@@ -163,6 +165,16 @@ What is a response? what does it contain? What are some common status codes in a
 ```md
 <!-- your answer here -->
 A response comes from the server after receiving a specific request from the client. The first line includes the HTTP response code (i.e. 404), which communicates the outcome of the request. Then it is followed by the response headers telling the user more information and then followed by a body.
+
+The common status codes in a response:
+
+404 HTTPS Not Found: The resource could not be found.
+
+200 OK: It means that the request was successful.
+
+503 Service Unavailable: The server is currently unavailable.
+
+Source from http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 ```
 
 ## Make a curl request
@@ -172,5 +184,9 @@ Using curl, how would you get the content from Reddit.com?
 
 
 ```md
-curl -v https://www.reddit.com
+curl -- request Get https://www.reddit.com
+
+source: (http://conqueringthecommandline.com/book/curl)
+
+///could you also use curl -v?
 ```
