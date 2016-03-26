@@ -126,7 +126,10 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol that allows web clients (like browsers) and user clients (like cURL) to communicate requests to web servers and recieve responses in a shared language that both sides can understand.
+(sources:
+this document
+https://www.youtube.com/watch?v=RsQ1tFLwldY)
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +137,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a browser or program on the user end (like chrome or curl).  A server can refer to a program that provides service for the client like providing data or the physical machine that the program runs on.
+
+When they interact, the client sends a request for a resource (like a web page). The server recieves that request and creates a response composed of the requested material either statically (the response material is already prepared) or dynamically (the server has to add to the response material on the spot).  The server then sends that response back to the client.  This process is faciliated by protocols such as HTTP which allows the client and server to transfer requests/responses in a shared language.
+(sources:
+https://www.youtube.com/watch?v=RsQ1tFLwldY)
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +149,23 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+The four most common HTTP verbs used when creating a RESTFful API are GET, POST, DELETE, and PUT.
+
+GET  would be used to instruct the server to get a resource.
+
+POST would be used to create a new resource to send to the server that the server would then process.
+
+DELETE would be used to delete a resource. (I don't quite understand why you would want to use this verb)
+
+PUT would be used to update or add to an existing resource for a server to process.
+
+(sources:
+http://www.restapitutorial.com/lessons/httpmethods.html
+http://stackoverflow.com/questions/256349/what-are-the-best-common-restful-url-verbs-and-actions
+https://www.youtube.com/watch?v=sxiRFwQ1RJ4
+http://restcookbook.com/HTTP%20Methods/put-vs-post/
+(to understand idempotency, still somewhat confused on this too)
+http://www.restapitutorial.com/lessons/idempotency.html)
 ```
 
 ## Describe what a Response is
@@ -150,7 +173,17 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is a resource created by the server at the request of the client that is composed of what the client requested.  That composition is usually dependant on what the application that the client was interacting with does.
+
+One of the most common/recognizable codes is 404 indicating that the client was able to reach the server but was attempting to access a non-functional link.  This would be an example of client side error.
+
+Another common code is 503 which means a server is inaccessible because it is recieving too many requests or is down for maintenance.  This would be an example of an error on the server's part.
+
+Other error categories include 1xx which means the request status is ongoing, 2xx which means the request went through and was return successfully, and 3xx which means the client has to do something else to allow the request to go through.
+  
+(source:
+this document
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 ```
 
 ## Make a curl request
@@ -158,5 +191,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com/
 ```
