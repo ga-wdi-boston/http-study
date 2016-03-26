@@ -79,7 +79,7 @@ Try this in your terminal:
 curl --request GET https://www.google.com
 ```
 
-What did you see?
+What did you see? //A lot of numbers and letters
 
 ## Responses & Resources
 
@@ -126,23 +126,34 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is essentially the rules that are set for a web client and a web server so that both
+systems will communicate to each other under the same system and cicumstance. Streamlines the communication.
 ```
 
 ## Describe what a client is and what a server is
 
  What is a client is and what is a server? How do they interact with each other?
 
+
 ```md
 <!-- your answer here -->
+The client is the User-Agent like a browser(Chrome) and a server holds the web applications that stores
+all of the features that a website includes. I think of the client as the customer and the server as the waiter
+in a restaurant. Both need the menu (https) to streamline the communication on what the customer would like to
+eat.
 ```
 
 ## Describe the 4 most common HTTP verbs
 
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
+
 ```md
 <!-- your answer here -->
+Get Method - Which is used to retrieve a resource
+Put - used to update a resource
+Delete  - deletes the resource
+Post - used to create a resource (i.e submitting a form).
 ```
 
 ## Describe what a Response is
@@ -151,12 +162,15 @@ What is a response? what does it contain? What are some common status codes in a
 
 ```md
 <!-- your answer here -->
+A response comes from the server after receiving a specific request from the client. The first line includes the HTTP response code (i.e. 404), which communicates the outcome of the request. Then it is followed by the response headers telling the user more information and then followed by a body.
 ```
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
+
+
 ```md
-<!-- your answer here -->
+curl -v https://www.reddit.com
 ```
