@@ -142,7 +142,10 @@ Essentially, a client is the one requesting information, while a server is the c
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-GET, PUT, PUSH, DELETE
+GET --simplest request. Used to retrieve info from server (i.e. open a website)
+PUT --request to update/create the designated resource
+POST --similar to PUT. Used when server processing is to be repeated.
+DELETE --remove resource from server
 ```
 
 ## Describe what a Response is
