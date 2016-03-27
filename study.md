@@ -126,9 +126,10 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-HTTP is a protocol, a set of standardized rules that a client and server adhere to in order to succesfully communicate.
+HTTP is a request-response protocol, a set of standardized rules that a client and server adhere to in order to succesfully communicate.
 
 [Youtube](https://www.youtube.com/watch?v=RsQ1tFLwldY)
+[Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
 ```
 
 ## Describe what a client is and what a server is
