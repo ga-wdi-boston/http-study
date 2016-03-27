@@ -123,10 +123,10 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 
 ## Define HTTP
 
-In your own words, give a breif description of what HTTP is.
+In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol (shared language) for requesting, transfering, and modifying documents on the web.
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +134,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is something that makes requests for information on the web, such as an internet browser, or cURL. The server responds to these requests.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +142,10 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET: To request information be sent (but not changed)
+POST: To create a new resource
+PUT: To update or modify an existing resource
+DELETE: To delete a resource
 ```
 
 ## Describe what a Response is
@@ -150,7 +153,7 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is a reply by a server to a client request. It contains a Head and a Body. The head will include a 3-digit status code giving a brief overview of what occurred with the response. For example, 200 (OK), 400 (bad request), 404 (not found). The body might contain a document, such as an HTML file that will allow the browser to display a website.
 ```
 
 ## Make a curl request
@@ -158,5 +161,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+in the terminal: curl -v https://www.reddit.com
 ```
