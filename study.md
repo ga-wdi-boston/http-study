@@ -126,7 +126,10 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- hyper text transfer protocl
+rules for transferring information between servers and clients through the internet.
+it made sense to me to look at it like as being both the language and grammar rules of communication, like if i want to talk to another human being i need to use the protocols of using the same language AND rules of the language. Even in the same language someone that breaks grammar rules and speaks in a slang you aren't familiar in might make no sense, even if it's still in the same languge.
+ -->
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +137,15 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!--
+a client is something like a web browser like chrome etc, something that GETs information from a server through protocols
+and  allows the user to read it, like seeing a webpage instead of a ton of files of different code
+
+a server is the machine storing the information we send our requests to. they receives requests from the client
+and send responses back to the client.
+
+the internet is where these exchanges are transferring between and taking place and https is a common type of protocols that these interactions are operating under.
+your answer here -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +153,13 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+<!-- CRUD:
+POST ---- Create
+GET ----- Read  --get resources and read those files, like opening an html page
+PUT ----- Update -i understood it to be like post, but updating exisiting information
+DELETE -- Destory
+
+ -->
 ```
 
 ## Describe what a Response is
@@ -150,7 +167,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!--
+a response is a literally a response from the server, sent to the client, in response to the clients request.
+
+so curl https://reddit.com/ would get me the contents of the server with that url with that identification.
+responses are coded into, i think 5 classes that classify the types of responses into things like 1xx informational (information on what you're doing along a process like changing information on a server with a post request) 2xx success (showing success in creating or managing resources etc) 3xx redirection (redirecting you to other servers through different URLs) and 4xx and 5xx being client and server errors respectfully. it seems like the most common of those would be somewhat obvious, like you may get the well-known 404 not found error if you mistype a url or a 5xx error in trying to access a sever you don't have permission to.a
+your answer here -->
 ```
 
 ## Make a curl request
@@ -158,5 +180,7 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!-- curl https://reddit.com/
+
+is that it? I thought it would be something like curl GET /https://www.reddit.com/ or something like that but it seems like just curl and the url does will get you the content of the url and -->
 ```
