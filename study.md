@@ -126,7 +126,9 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a langauge that allows computers to talk to each other over the internet,
+understanding what one computer is requesting, and the other computer providing
+the requested resource(s).
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +136,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a computer, often an individual user, that is sending a request for
+a particular resource from a server, which is hosting that resource.  A client
+requests content, and a server responds with that content.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +146,10 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET - requests a resource
+PUT - updates or replaces a resource
+POST - creates a resource
+DELETE - deletes a resource
 ```
 
 ## Describe what a Response is
@@ -150,7 +157,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is infromation sent from a server to which a request for that information was made from a client.  Common status codes include:
+200 - OK (you made a valid request and here is that resource)
+403 - Forbidden (you made a valid request, but the server will not respond to it)
+404 - Not found (You made an invalid request)
+503 - Service unavailable (server is down for maintenence or overwhelmed by client requests)
 ```
 
 ## Make a curl request
@@ -158,5 +169,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
