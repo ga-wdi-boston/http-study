@@ -126,7 +126,7 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a list of rules and protocols that dictate how files are transferred between servers and clients.
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +134,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Essentially, a client is the one requesting information, while a server is the computer/program that responds.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +142,10 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET --simplest request. Used to retrieve info from server (i.e. open a website)
+PUT --request to update/create the designated resource
+POST --similar to PUT. Used when server processing is to be repeated.
+DELETE --remove resource from server
 ```
 
 ## Describe what a Response is
@@ -150,7 +153,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is a standardized result sent to the client regarding their request.
+404 --resource not found
+403 --forbidden
+200 --success
 ```
 
 ## Make a curl request
@@ -158,5 +164,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
