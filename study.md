@@ -126,7 +126,9 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol used for computers to communicate. It allows computers to access information stored on servers around the world using unique identifiers for information location names. It is protocols like this that make the internet possible.
+
+from http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340/
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +136,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is usually a computer sending a request for information and a server is where the information is stored. In some cases information is taken from the client and then stored on the server. They interact with eachother through some sort of protocol that allows them to understand eachother. Typically this is HTTP.
+
+from http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340/
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +146,12 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET - is used to request information from one computer to another. It uses a URI to access it.
+DELETE - removes information from a server
+PUT - used when you want to create or update some information on the server
+POST - Is used to change some information on the server, but not actually directly change the directory or file it is stored in. Instead it will make changes in a unique place on the server. I guess similar to a branch on github.
+
+from http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340/
 ```
 
 ## Describe what a Response is
@@ -150,7 +159,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what happens when the server fulfills or fails the request sent by the client.
+
+200 ok - request fulfilled
+201 created - some PUT or POST method was successful
+404 - information requested couldnt be found
+
+from http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340/
 ```
 
 ## Make a curl request
@@ -158,5 +173,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -v reddit.com
 ```
