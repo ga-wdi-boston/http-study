@@ -126,7 +126,12 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hypertext Transfer Protocol is a set of rules basically, or a language, through which
+the information is being passed. Essentially, if we each only spoke in one language,
+I could send you an email in Spanish and you could reply in French and neither of us
+would have any idea what the other was saying.  So HTTP is basically setting up guidelines
+for how the communication will happen (similar to saying "You and I are both going to be
+writing our emails in French.")
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +139,13 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client is the user interacting with a website/app.  If you were reading Boston.com,
+you would be the client.  If Dennis Quaid was reading your website, Dennis would be
+the client.
+A server is the program that "serves" up a web page/information.  It's kind of like a
+Starbucks barista.  You go to the counter and tell them what your order is.  A bunch of various
+stuff happens and then the barista brings you back your order.  If you're lucky, your name
+will be comedically mispelled on the cup.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +153,18 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET is for reading a web page.  If I wanted to read the latest tweet of Kanye West,
+I would send a GET request to his Twitter page and hopefully it would return that page.
+POST is for sending some info to a website.  For example, if I submitted my contact
+info to a site, I would be sending a POST request.
+PATCH is for updating/changing information that is being sent to a website.  If I had
+sent in all my contact info earlier and needed to update just my email address, I would
+be using a PATCH request as it only sends the difference between the previous version
+and the new rather than the entire resource.  This is similar to a git commit vs. saving
+the whole code all over again.
+DELETE is for simply deleting something off of a website.  For instance, if I didn't
+want Comcast to have my phone number anymore, I would be sending a DELETE request to
+their server.
 ```
 
 ## Describe what a Response is
@@ -150,7 +172,14 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what happens after a request is evaluated by the server/controller.  The
+response is what is getting served back to you (like your venti mochachino lowfat
+latte at Starbucks).  The response contains information such as a web page and a
+response code that succinctly tells you what is happening or has happened. A response
+code that is in the 200s indicates that your request was succesful, such as the code
+"201 Created" in which a request was successful and now a new resource has been created.
+A code in the 400s suggests an error by the client such as "404 Not Found" where maybe the
+user clicked on a link that had a typo.
 ```
 
 ## Make a curl request
@@ -158,5 +187,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+After installing I would type in the CLI "curl www.Reddit.com".
 ```
