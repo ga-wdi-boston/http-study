@@ -126,37 +126,52 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is basically a rule book that interprets messages and finds proper responses for them so that they can be sent both ways on the web. It is made up of 2 parts called the server and a client. HTTP is the language that makes it possible for multuple machines to interact with one another.
 ```
+http://symfony.com/doc/current/book/http_fundamentals.html
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 
 ## Describe what a client is and what a server is
 
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is what initiates a request to a server (ie: phone app, browser). The server is a computer system that receives requests and interprets them as well as responds back.
 ```
+http://www.webopedia.com/TERM/S/server.html
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+http://symfony.com/doc/current/book/http_fundamentals.html
 
 ## Describe the 4 most common HTTP verbs
 
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET: transmits data to the client.
+PUT: creates or updates a resource.
+DELETE: deletes a resourse.
+POST: repeats whatever processing you have on the server.
 ```
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 
 ## Describe what a Response is
 
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the requested info from a client along with other information such as status codes and HTTP headers.
+200 OK: successful request.
+400 Bad Request: malformed request.
+401 Unauthorized: you need authentication prior to gaining access.
 ```
+http://symfony.com/doc/current/book/http_fundamentals.html
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+
+$ curl -i http://www.Reddit.com
 ```
+http://conqueringthecommandline.com/book/curl
