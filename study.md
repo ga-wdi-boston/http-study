@@ -11,7 +11,7 @@ of the messages passed between *clients* and *servers*.
 
 "Clients" send *requests* and receive *responses*. Examples include browsers
 (like Chrome, Safari, or Firefox) and other programs like
-[`curl`](http://curl.haxx.se/docs/) and
+  [`curl`](http://curl.haxx.se/docs/) and
 [`wget`](http://www.gnu.org/software/wget/manual/wget.html).
 
 "Servers" receive requests and send responses. Examples are more complex, since
@@ -126,7 +126,7 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a text based protocol for communication between systems (such as webservers and clients). It is stateless, which means transactions are not stored or remembered. The communication happens in request/response pairs.
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +134,8 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Websites/apps are hosted through a "web server" (the application server used to receive/respond to requests, such as NGINX). The web server communicates with the web client (a browser, such as Chrome), and the website/app though HTTP.
+When I type “Google.com” into my browser URL, my browser (the client) is submitting a request to the web server. The request includes 2 things: the method (what I’m asking it to do - “get” google), and the URI (the location of what it’s looking for - the url, or a shorthand). A request is processed by the web server, and a response is then delivered to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +143,11 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET : retrieve a resource. Accessing a website.
+POST : create a resource. Adding an article to a website. A URI is created in the process.
+PUT : update a resource. Change an article.
+DELETE : delete a resource from the server.
+
 ```
 
 ## Describe what a Response is
@@ -150,7 +155,9 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Depending on what is requested, after the correct PHP function is exectued, a response is what is sent back to the client from the web server. If "GET" a website is requested, the reponse is URL requested for the website.
+The reponse contains a 3 digit HTTP code - for a successful delivery, the code begins with 2##, 1## for informational messages, for a redirection, 3###, and for a client error 4##.
+
 ```
 
 ## Make a curl request
@@ -158,5 +165,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+You could use file_get_content after or you could download the content using curl -o.
 ```
