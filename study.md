@@ -125,38 +125,56 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 
 In your own words, give a breif description of what HTTP is.
 
-```md
-<!-- your answer here -->
-```
+HTTP is a protocal (like a language) that sets the rules for communcating between a client and a server.  https://www.youtube.com/watch?v=sxiRFwQ1RJ4
 
 ## Describe what a client is and what a server is
 
  What is a client is and what is a server? How do they interact with each other?
 
-```md
-<!-- your answer here -->
-```
+The youtube videos were helpful for this
+
+A client is the customer using a web browser seeking information from the server.  The server is a host that responsds to client request with the information the client is seeking.
 
 ## Describe the 4 most common HTTP verbs
 
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
-```md
-<!-- your answer here -->
-```
+tutsplus site was useful for this question
+
+
+GET   instructs the server to transmit the information identified in the URL request
+GRT / HTTP/1.1
+
+PUT is a requeset used to create or update the resource identified by the URL
+
+PUT clients/robin
+
+DELETE used when you want to delete the resource identified by the URL.
+curl - v -X DELETE /clients/robin
+
+POST used when the processing you wish to happen on the server should be repeated.  Similar to PUT
+POST /clients/
 
 ## Describe what a Response is
 
+restapitutorial.com lessons
+
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
-```md
-<!-- your answer here -->
-```
+HTTP Response is codes that standardize a way of informing the client about  the result of its request.
+100's continue waiting
+200's success accepted
+300's redirected
+400's bad requests etc client errors
+500's  Server error codes
+
 
 ## Make a curl request
 
+Searched google for this one and looked at the examples on curl.haxx.
+
 Using curl, how would you get the content from Reddit.com?
 
-```md
-<!-- your answer here -->
-```
+In the terminal type
+
+curl --request GET https://www.reddit.com
