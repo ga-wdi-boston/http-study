@@ -126,7 +126,9 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a text language that is a protocol or a set of rules that dictates
+how information is shared across the web. It stands for Hypertext Transfer Protocol.
+source: http://symfony.com/doc/current/book/http_fundamentals.html
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +136,12 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the front-end user interface that is used to send requests to a
+server. Examples of clients are browsers such as Internet Explorer and Google
+Chrome. While clients sent requests and receive responses, servers receive
+these requests and send responses. A server can refer to either the software that
+performs these requests and responses, or the hardware itself that hosts this software.
+Sources: this document, https://en.wikipedia.org/wiki/Web_server, https://www.youtube.com/watch?v=sxiRFwQ1RJ4
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,15 +149,42 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
-```
+The 4 most common HTTP verbs are:
+* GET: the simplest type of HTTP method, which instructs the server to transmit
+the data identified by the URL. For example: GET /www.google.com
+* PUT: used to create new resources or update the resource identified by the URL.
+For example: PUT /clients/robin might create a new client Robin on the server.
+* DELETE: performs the opposite task as PUT. Should only be used when you want to
+delete the resource identified by the URL.
+* POST: like PUT, also used to create new resources. Particularly used to create
+subordinate resources. Usually interchangeable with PUT--some systems only use
+one.
+Sources: http://www.restapitutorial.com/lessons/httpmethods.html,
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 
 ## Describe what a Response is
 
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is generated on the server side as a result of a client request. Common
+HTTP response status codes are:
+* 1xx: Informational. Indicates a provisional response
+  * For example--100 Continue. The server has received the request header and the
+    the client should proceed to send the request body.
+* 2xx: Success. Indicates the client's request was received, understood, and processed
+    successfully.
+  * For example--200 OK. Standard response for successful HTTP requests.
+* 3xx: Redirection. Indicates that the client must take action before continuing.
+  * For example--300 Multiple Choices. Multiple options from which the client may choose.
+* 4xx: Client Error. 
+  * For example--400 Bad Request. Server can't process the request due to an apparent
+    client-side error.
+* 5xx: Server Error.
+  * For example--500 Internal Server Error. An unexpected server-side condition
+    was met, so this generic error message was generated.
+
+Sources: https://www.youtube.com/watch?v=sxiRFwQ1RJ4, https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 ```
 
 ## Make a curl request
@@ -158,5 +192,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+cURL --request GET https://www.reddit.com
 ```
