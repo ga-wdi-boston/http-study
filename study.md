@@ -125,6 +125,8 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 
 In your own words, give a breif description of what HTTP is.
 
+hyper text transfer protocol - a simple way to for server to send and request information to be displayed on a browswer.
+
 ```md
 <!-- your answer here -->
 ```
@@ -134,6 +136,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
+client is you - the mobile phone or desktop.  server is cnn.com or wikpidia.com that is serving you the information.
 <!-- your answer here -->
 ```
 
@@ -142,6 +145,10 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
+GET - request data from another server
+PUT - request that another server accept data
+POST - request that the client server add data to the website
+DELETE - delete data
 <!-- your answer here -->
 ```
 
@@ -150,7 +157,9 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+10.2 Successful - client code was successfully received
+10.2.6 205 - content reset
+10.3.5 304 - not modified
 ```
 
 ## Make a curl request
@@ -158,5 +167,12 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
+reddit@reddit-VirtualBox:~$ curl -X POST -d 'grant_type=password&username=reddit_bot&password=snoo' --user 'p-jcoLKBynTLew:gko_LXELoV07ZBNUXrvWZfzE3aI' https://www.reddit.com/api/v1/access_token
+{
+    "access_token": "J1qK1c18UUGJFAzz9xnH56584l4",
+    "expires_in": 3600,
+    "scope": "*",
+    "token_type": "bearer"
+}
 <!-- your answer here -->
 ```
