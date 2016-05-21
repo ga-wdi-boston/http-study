@@ -81,6 +81,8 @@ curl --request GET https://www.google.com
 
 What did you see?
 
+A large block of a lot of text that was difficult to interpret and mostly looked like nonsense, but was definitely a web page of some sort that was structured with html, because the first line was the standard <!doctype html>.
+
 ## Responses & Resources
 
 Servers send responses, and those responses contain resource representations.
