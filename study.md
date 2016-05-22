@@ -126,7 +126,9 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocal for client to make request and receive response from server.
+Reference: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol;
+           https://www.youtube.com/watch?v=RsQ1tFLwldY;
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +136,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client: a computer program/device that use web application and send request to web server;
+Server: a computer program/device that serves web page or files or other resource to other computer programs (client);
+Client-server model: Client send any request to server, and server response accordingly.
+Reference: https://en.wikipedia.org/wiki/Client%E2%80%93server_model
+           https://www.youtube.com/watch?v=RsQ1tFLwldY;
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +148,9 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+Most common HTTP verbs: POST, GET, PUT, DELETE;
+Each request client send to server need to specify HTTP verb(method) before url address for identify this request;
+Reference: http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a Response is
@@ -150,7 +158,9 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Responses sent by server to fulfill client's requests, and those responses contain resource representations.
+Common status codes: 200 OK; 400 Bad Request; 404 Not Found; 409 Conflict;
+Reference: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes;
 ```
 
 ## Make a curl request
@@ -158,5 +168,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com/
 ```
