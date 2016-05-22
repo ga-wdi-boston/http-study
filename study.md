@@ -126,7 +126,8 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the agreed upon "language" servers and clients use to communicate back and forth to send and receive requests and responses.
+(source: http://symfony.com/doc/current/book/http_fundamentals.html, this study page)
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +135,8 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is anything that requests data (some sort of resource) from a server and receives the servers response. A server takes requests and fulfills them, responding with the appropriate requested data. A client will make requests and parse responses, while a server will take requests and send responses.
+(source: this study page)
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +144,11 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET - a client will use this verb to request data from a server.
+PUT - adds or updates data on the server
+DELETE - removes data on the server
+POST - similar to PUT, but can be used to make new data without specifying a URL directly.
+(source: http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340)
 ```
 
 ## Describe what a Response is
@@ -150,7 +156,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what the server sends back to the client, it contains data, usually in the form of html or json.
+Common status codes:
+200: success
+503: down for maintenence
+404: resource not found
+(source: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes, this study page)
 ```
 
 ## Make a curl request
@@ -158,5 +169,8 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+to display the content in the terminal:  curl https://www.reddit.com
+to save the content to a file: curl -O https://www.reddit.com
+
+(source: http://conqueringthecommandline.com/book/curl, http://www.thegeekstuff.com/2012/04/curl-examples/)
 ```
