@@ -126,7 +126,11 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a way to transfer data between a client and server.  Typically, the client (computer applications, website, etc) will submit a request, and that request will be sent to the web/data server via HTTP protocol.
+
+Additional Sources:
+https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +138,10 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a web-based entity, like an app or website, and a server is a repository (computer) that stores the data that is being requested.  They interact when a client makes a request, for example by submitting a form, and the server responds to that request, for example by posting that form data into their data storage.
+
+Sources:
+Reading materials above and my previous work experience
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +149,10 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+POST- this method pushes data to the server, typically creates new resources
+GET- this method pulls data from the server
+DELETE- this method deletes data from the server
+PUT- this method updates resources that are already on the server
 ```
 
 ## Describe what a Response is
@@ -150,7 +160,9 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is a status that the server will send when a conversation starts with the client.  A response typically includes information regarding the transfer of information, for example that there was a successful transfer of data, that there is an error in the client submission, or that the server is having a problem.
+
+One common status code 404, which means that what the client requested could not be found on the server.  Another common status code is 200, which indicates that everything went well with the request.  I've also seen a 403 status code, which means that the request that was made was not authorized by the server.
 ```
 
 ## Make a curl request
@@ -158,5 +170,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -i https://www.reddit.com  (the -i would display request/response information)
 ```
