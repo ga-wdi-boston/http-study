@@ -81,6 +81,8 @@ curl --request GET https://www.google.com
 
 What did you see?
 
+A large block of a lot of text that was difficult to interpret and mostly looked like nonsense, but was definitely a web page of some sort that was structured with html, because the first line was the standard <!doctype html>.
+
 ## Responses & Resources
 
 Servers send responses, and those responses contain resource representations.
@@ -126,7 +128,9 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the set of rules (it's kinda like a language, but technically called a "protocol") which are used to pass information across the internet, by users and servers.
+
+sources: google search (what is http); http://symfony.com/doc/current/book/http_fundamentals.html
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +138,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is any thing that can send a request to a server. It's an entity that gets information (by sending requests) and uses it. A server stores information, and can receive the client requests, and send their information back to the client. Common clients include web browsers.
+https://www.youtube.com/watch?v=RsQ1tFLwldY;
+http://symfony.com/doc/current/book/http_fundamentals.html
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +148,14 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+Post, Get, Put and Delete
+Get just fetches data from a server, without asking the server to make any changes to the data on its side
+Post sends new data to a server
+Put sends a request to update or change existing data on a server
+Delete sends a request to delete data from a server
+
+sources: http://www.restapitutorial.com/lessons/httpmethods.html,
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a Response is
@@ -150,7 +163,18 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Responses are what servers send back to the clients to use. They usually contain a status line at the top, possibly a header line, and a body section that contains the actual data requested by the client (often code or other resources necessary).
+
+Some common status codes are:
+200--Ok, which is the standard response for a successful request (all codes in the 200s represent success)
+301--Moved permenantly (all codes in the 300s mean that the client needs to be redirected)
+401--Unauthorized
+404--Not found (all codes in the 400s mean that the request from the client was a bad one)
+502--Bad gateway
+504--Gateway timeout (all codes in the 500s mean that the server is incapable of processing the request due to problems on its end)
+sources:
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes,
+ and found via google search http://www.herongyang.com/PHP/Response-Header-What-Is-HTTP-Response.html
 ```
 
 ## Make a curl request
@@ -158,5 +182,6 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET http://www.reddit.com
+no sources other than this document and above curl request to google.
 ```
