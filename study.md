@@ -126,7 +126,7 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a text language that allows two computers (a client and server) to communicate with each other.
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +134,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client sends requests to servers and servers send responses back to client computers to fulfill the requests.  For instance, when we type in a URL, our client web browser/computer sends a request to the URL server which then responds with code for our browser to run and display a website.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +142,10 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET -- this retrieves a the resource from the server its URL is directed towards
+POST -- this creates a resource on the server
+PUT -- this updates the resource on the server
+DELETE -- this deletes the resouce on the server
 ```
 
 ## Describe what a Response is
@@ -150,7 +153,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what the server returns to the client.  It contains code for the server to run in order to generate the response on the client side computer.  Common codes include:
+200 - a successful response
+404 - Not found - when URL points to a resource that can't be found
+401 - indicates that the client request needs to perform authentication before receiving repsonse
 ```
 
 ## Make a curl request
@@ -158,5 +164,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl https://www.reddit.com
 ```
