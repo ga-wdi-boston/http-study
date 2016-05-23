@@ -126,7 +126,7 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- http is the protocol used for the internet to gain access to certain websites -->
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +134,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!-- A client is someomone like us who requests to gain access for the server while a server will display the contnt to the client once requested.  example: when we type in google.com that is sending a request to the server to send us the google website -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +142,7 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+<!-- GET, PUT, POST, DELETE -->
 ```
 
 ## Describe what a Response is
