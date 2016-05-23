@@ -126,7 +126,11 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Like all things, the internet would fall into utter chaos if it didn't have a system of rules to adhere to. HTTP is the standard set of instructions given to facilitate communication between the client and the server when accessing documents on the internet.
+
+Sources: http://symfony.com/doc/current/book/http_fundamentals.html
+https://www.youtube.com/watch?v=RsQ1tFLwldY
+http://techterms.com/definition/http
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +138,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client is the tool by which a user attempts to access information on the internet and it is constructed to communicate with servers, which is the general term given to both the physical location where information being sought out is stored and also can mean more vaguely the theoretical location specified. Basically, the client asks for something and the server responds, gives it {or not}, and passes information back to the client to display to the user.
+
+Sources: http://programmers.stackexchange.com/questions/206254/difference-between-a-server-and-a-client
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +148,13 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET: This verb is used to fetch data from the specified location.
+PUT: This tells the server to make some sort of addition/ change to the specified URL.
+DELETE: Does what it says on the tin {deletes specified data from the specified location}.
+POST: This verb is similar to PUT but is used more to repeat an action {for example, if multiple resources in a similar location require the same type of change}.
+
+Sources: http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -150,13 +162,18 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Simply put, a response is the output from a server. It is the abstracted form of the document you are trying to access, it is the intended end result. Some common status codes are, for example, 404 Not Found, which means the resourcd you're trying to get isn't available, 200 OK is the classic response given when the request goes through and the response is accessed accordingly, and 503 Service Unavailabe, which means that the specified site is down because the server is overloaded or temporarily unavailable for some other reason.
 ```
+Sources: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+https://twitter.com/stevelosh/status/372740571749572610
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --
 ```
+
+Sources: http://conqueringthecommandline.com/book/curl
+https://curl.haxx.se/docs/manpage.html
