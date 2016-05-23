@@ -80,6 +80,7 @@ curl --request GET https://www.google.com
 ```
 
 What did you see?
+Google's source code
 
 ## Responses & Resources
 
@@ -123,10 +124,14 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 
 ## Define HTTP
 
-In your own words, give a breif description of what HTTP is.
+In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP enables interaction and communication across the web between servers and clients.
+It sets the rules for the kind of information that can be requested and sent.
+HTTP is also a text-based language. In other words, the messages or files that are transferred
+across the web are marked up a header and body, each containing the relevant
+information to properly display the web page.
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +139,12 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Clients are responsible for starting the conversation by creating a text message,
+which contains everything the server needs to fetch the appropriate document.  
+Clients can be defined as web browsers or smartphone apps. Servers play the roles
+of receiver and sender. Once they get the client's text message, they know
+two things: what the client needs and what it will do with it. It will then return
+the request with its own message containing details about the exchange.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +152,12 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+All besides GET are unsafe because of possible changes to the documentation
+GET - as the name implies, this method gets, or rather, retrieves the documentation from the server
+to the client
+POST - create documentation on the server   
+PUT - update or replace the documentation on the server
+DELETE - delete the documentation from the server  
 ```
 
 ## Describe what a Response is
@@ -150,7 +165,22 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+The HTTP response is a text message containing important information regarding
+the exchange from the server to the client. Here you'll find the status code, which  
+details the outcome of the request that was sent to the client, and other information
+in the header and body such as content-type.
+1xx: hold on (request received, continuing process)
+2xx: here you go (received, understood, accepted, and processed successfully)
+  200 - successful request
+  201 - successful request and a resource was created
+3xx: go away (client must take additional action to complete the request)
+4xx: you fucked up (client error)
+  400 - bad request
+  404 - required resource was not found, URL could not be found
+  405 - method not allowed
+  409 - conflict
+5xx: I fucked up (server error)
+  500 - internal server error
 ```
 
 ## Make a curl request
@@ -158,5 +188,6 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -v http://reddit.com
+(omitting a method name will result in a GET request).
 ```
