@@ -126,7 +126,21 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol (Hypertext Transfer Protocol) that people use to transfer
+resources around on the internet. HTTP has two roles - client and server, and
+the way it works is that the client sends an HTTP request and then the server
+sends back a response, after some processing. The HTTP request has a header
+and a body, and the server knows what to do with the content of the request
+based on what verb is used in the header. The body contains content but can
+also be empty. I think the key thing about HTTP is that it is just a standard
+so it is agnostic toward what the client and server actually are. I think that
+anything that can send a server a properly formatted HTTP request, and
+receive a response, can be a client, and server can be anything that understands
+the requests etc. That is why applications can work on different browsers
+and devices.
+
+I used my former knowledge and the links and videos provided above.
+
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +148,15 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client, or "user agent" e.g. a web browser or cURL is the side of the
+HTTP exchange that sends the request to the web server. The web server is
+the application, or back end, that has the resources that the clientside
+request is referring to. Technically a web server can have multiple web
+applications on it, but in the description of HTTP, people often call each
+application a "web server", since the important thing is that it is
+"server side" rather than "client side".
+
+I used my former knowledge and the links and videos provided above.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +164,21 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+
+GET - get a resource from a web server, is idempotent (can be repeated)
+
+POST - send data to a web server, hides it in the request body rather than
+showing it in the URL (which is what GET does) - is not idempotent, it can
+cause changes on the server that do not directly relate to the content being
+sent i.e. it can change the state of the server so that another request would
+not be interacting with the same server state.
+
+PUT - create or replace a resource on a web server, is idempotent (can be repeated)
+
+DELETE - delete a resource from a web server, is idempotent (can be repeated)
+
+I used my former knowledge and the links and videos provided above. Also:
+http://www.diffen.com/difference/GET_(HTTP)_vs_POST_(HTTP)
 ```
 
 ## Describe what a Response is
@@ -150,7 +186,21 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+An HTTP response is what the server sends back to the client.
+
+The response header contains a response code, which is specified in the
+webserver definition, but has certain conventions. Generally,
+100-199 is just waiting,
+200-299 means everything is okay,
+300-399 means that other action is required e.g. redirection,
+400-499 means that the request had something wrong
+500-599 means that server has an internal error.
+The most common example is probably 404 which means that the resource was not found.
+
+Aside from the response header, the response body will contain any requested content.
+
+I used my former knowledge and the links and videos provided above. And:
+http://www.tutorialspoint.com/http/http_responses.htm
 ```
 
 ## Make a curl request
@@ -158,5 +208,8 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com/ > /Users/mishaherscu/Desktop/reddit.html
+
+This should send the content of that page to a file on my desktop.
+Unfortuntely they think I am a bot qq.
 ```
