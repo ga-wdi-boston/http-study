@@ -80,6 +80,7 @@ curl --request GET https://www.google.com
 ```
 
 What did you see?
+It looks like a bunch of html with inline CSS near the top and some JS at the bottom.
 
 ## Responses & Resources
 
@@ -126,7 +127,10 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+HTTP: hypertext transfer protocol.
+HTTP is a set of rules that dictate how commands (requests and responses) are organized and writted to transfer data between a client and server. It regulates the traffic by creating a request response system.
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +138,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+http://infomotions.com/musings/waves/clientservercomputing.html
+
+Client is what a person sees, interacts with, and uses to send requests to the server to get information. The client displays the user interface in a way that makes sense to a human, translates whatever actions the human wants to take into http protocol sends to teh server, the the client updates with the response from the server
+
+Server is is what 'serves' information to all the different clients that make rewuests from it. It processes the request from the client, retrieves necessary information, then sends the information back to the client who requested it.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +150,12 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+http://www.restapitutorial.com/lessons/httpmethods.html
+
+POST: create. new subordinate data under a parent file
+GET: read. returns representation of a resource. object holding data?
+PUT: update/replace. create a resource under an id chosen by the client. update capabilities on existing server.
+DELETE: delete a resource
 ```
 
 ## Describe what a Response is
@@ -150,7 +163,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+https://nodejs.org/api/http.html#http_class_http_serverresponse
+
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+An object or message created by the http server.
+
+Codes: default message sent by browser? in response to an unknown or improper request. Most well known ; 404 page not found.
 ```
 
 ## Make a curl request
@@ -158,5 +177,47 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
+
+My response:
+
+<!doctype html>
+<html>
+  <head>
+    <title>Too Many Requests</title>
+    <style>
+      body {
+          font: small verdana, arial, helvetica, sans-serif;
+          width: 600px;
+          margin: 0 auto;
+      }
+
+      h1 {
+          height: 40px;
+          background: transparent url(//www.redditstatic.com/reddit.com.header.png) no-repeat scroll top right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>whoa there, pardner!</h1>
+
+
+
+<p>we're sorry, but you appear to be a bot and we've seen too many requests
+from you lately. we enforce a hard speed limit on requests that appear to come
+from bots to prevent abuse.</p>
+
+<p>if you are not a bot but are spoofing one via your browser's user agent
+string: please change your user agent string to avoid seeing this message
+again.</p>
+
+<p>please wait 8 second(s) and try again.</p>
+
+    <p>as a reminder to developers, we recommend that clients make no
+    more than <a href="http://github.com/reddit/reddit/wiki/API">one
+    request every two seconds</a> to avoid seeing this message.</p>
+  </body>
+</html>
+
+
 ```
