@@ -126,37 +126,35 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
-```
+Rules for communication between client and server. ```
 
 ## Describe what a client is and what a server is
 
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
-```
+Client is what accesses a database. It is often a browser. A server is a database
+that sends documents requested by the client, ID'ed by a URL```
 
 ## Describe the 4 most common HTTP verbs
 
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
-```
+GET, PUT, DELETE, POST.```
 
 ## Describe what a Response is
 
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
-```
+after a docment is transmitted, the server responds with a response. it contains
+a status that is interperated in codes. 1xx code means hang on. 2xx code means
+all good. a 500 error is the server giving that weak shit.```
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
-```
+curl -v Reddit.com ```
