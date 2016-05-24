@@ -126,7 +126,7 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+http is a protocol that governs how information is shared and interpreted. We experience this most of the time accessing content over the internet but http can also be processed locally.
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +134,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client sends requests and receives information from the server, which
+serves the converse function, receiving requests and providing responses.
+A web browser serves as the client side interaction for most users.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +144,11 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET: gets the relevant html, css, javascript, etc. from the url in order
+to represent the DOM, PUT: replaces the information contained at the url
+with that provided, or if none is present adds it, POST: adds new
+information as a member of a collection (rare), DELETE: removes the
+information located at the url.
 ```
 
 ## Describe what a Response is
@@ -150,7 +156,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response what a server provides to a client request. They contain
+resource representations, some kind of abstraction that depends on what
+the client is trying to accomplish. 404 is everyone's favorite code;
+typically it means that the client's request was not formatted correctly
+and the server rejected it. Codes starting in 3xx seems pretty common;
+they indicate redirection to a new url from the original request.
 ```
 
 ## Make a curl request
@@ -158,5 +169,6 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com typed from the command line in
+terminal.
 ```
