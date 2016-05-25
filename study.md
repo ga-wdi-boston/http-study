@@ -126,7 +126,9 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP ( Hypertext Transfer Protocol) is the most used protocol from servers and clients. It can be seen as a set of rules so that the servers and clients can communicate with each other effectively.
+
+Source: readings
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +136,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the web browser. It can be any web browser Firefox, Opera, Chrome etc. In addition to that a client can be also Telnet or cURL. Basically anything that is able to communicate with a web server.
+
+A server is a network application that is listed on some port, that helps the client to get what they are looking for.
+
+Sources: readings
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +148,18 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+The 4 verbs are all methods one can use to interact with the server.
+
+- PUT:  update resources, provide a body that should be replaced
+- GET: give information to client, provide resources
+- POST: send data to the server for processing and therefore creating new resources
+- DELETE: delete resources/data
+
+GET is considered a safe method, since retrieving data changes nothing on the server. PUT, DELETE and GET are Idempotent methods.
+
+The PUT and DELETE method are not supported by html so that one will need to use AJAX or Javascript instead.
+
+Sources: readings + http://searchcloudstorage.techtarget.com/definition/RESTful-API
 ```
 
 ## Describe what a Response is
@@ -150,7 +167,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what one gets back from a web server after sending a request to it. For example after trying to GET something, let’s say opening an article.
+
+The response with usually start with a start line also known as a response line. Followed by headers and a blank line. After that the body starts, in which your requested article content can be found.
+
+Sources: readings
 ```
 
 ## Make a curl request
@@ -158,5 +179,10 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+go in terminal and type
+
+curl https://www.reddit.com/
+curl --request GET 'https://www.reddit.com/'
+
+Sources: readings + https://www.youtube.com/watch?v=ca3rxpMEWk0
 ```
