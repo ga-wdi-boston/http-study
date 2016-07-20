@@ -126,7 +126,8 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HyperText Transfer Protocol is a language of text only which communicates between two machines.
+http://symfony.com/doc/current/book/http_fundamentals.html
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +135,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client sends requests to a server to obtain documents held on the server.
+A web server receives these requests and sends responses.  They need to use the same protocol, such as HTTP, FTP, or WebSocket.  HTTP is the most common.
+A web client can be a web browser or a direct URL.
+http://symfony.com/doc/current/book/http_fundamentals.html
+https://www.youtube.com/watch?v=RsQ1tFLwldY
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +147,12 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET, which is a request the client sends the server to get the data identified by the URL from the server and transmit back to the client.
+POST, requests to repeat the server repeats the requested process.
+PUT, a request to update or create the URL.  This is created by the server.
+  curl -v -X PUT -d "some text" would be used in the command line to request additional data to the reuqest.
+DELETE is used to request to the server to delete the client data held on the server.
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a Response is
@@ -150,7 +160,18 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+
+A response is an HTTP message to inform the client of the request result.  The resulting message uses response codes for standardization.
+200 OK - request successful.
+201 Created - used to confirm PUT or POST request successful.
+400 Bad Request - data does not pass validation.
+404 Not Found - resource could not be found.
+401 Unauthorized - not allowed without authentication
+405 Method Not Allowed - HTTP method is not supported
+409 Conflict - requesting a resource more than once can cause this
+500 Internal Server Error - issues on the server side, error.
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html
 ```
 
 ## Make a curl request
@@ -158,5 +179,6 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -v http://reddit.com
+
 ```
