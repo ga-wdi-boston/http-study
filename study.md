@@ -126,7 +126,10 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the Hypertext Transfer Protocol. It is the protocol which allows servers
+and clients, usually browsers, to send information to eachother. This allows
+web sites and web applications to be served to the browser, and for the client to
+send information to the server.
 ```
 
 ## Describe what a client is and what a server is
@@ -134,7 +137,12 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is usually a web browser but can also be another program such as CURL.
+Clients are where the end user sees and interacts with the informatiom sent over
+HTTP. A server is the program or device which stores and provides this information
+to the user. Again, over HTTP. For both this question and the previous I checked
+Wikipedia to confirm what I knew about HTTP, clients and servers which I learned
+from classes in college and prior reading.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +150,10 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+POST - to create
+GET - to read
+PUT - to update or replace
+DELETE - to delete
 ```
 
 ## Describe what a Response is
@@ -150,7 +161,9 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+HTTP responses are information sent back from the server about the information requested.
+They contain a status code, and resource representations, such as HTML, JSON, etc. 404 means not found.
+301 means moved permanently. 200 means the request was successful.
 ```
 
 ## Make a curl request
@@ -158,5 +171,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
