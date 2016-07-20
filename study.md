@@ -112,7 +112,6 @@ What are HTTP status codes?
 ## Additional Resources (Optional)
 
 -   [Conquering the Command Line: `curl`](http://conqueringthecommandline.com/book/curl)
--   [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 -   [Media Types](http://en.wikipedia.org/wiki/Internet_media_type)
 
 ## Questions
@@ -126,15 +125,15 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a set of rules dictating how resources are transferred over the internet to and from servers and clients
 ```
 
 ## Describe what a client is and what a server is
 
- What is a client is and what is a server? How do they interact with each other?
+ What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+a client is typically an application operated by a person, that is looking to send or retrieve information over the internet. a server holds information (resources) at specified locations and that information can be relayed or manipulated. clients send requests to servers detailing the resource they are looking for and what they are hoping to do with it. servers receieve the requests and depending on the details of the request they will send a response back to the client and can make the changes detailed in the request.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +141,15 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+GET gets the resource from the server
+GET is used every time you type out a website name and hit enter
+
+POST makes a new resource that you specify on the server
+Using Forms in HTML typically issues a POST request
+
+PUT updates the specified resource on the server, or creates it if that ID doesn't exist, generally should not be used to create a resource. You would use it to alter a resource normally.
+
+DELETE will delete the specified resource from the server. You could use it to remove a person from a database of a company if they no longer work there.
 ```
 
 ## Describe what a Response is
@@ -150,7 +157,15 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Used tutorialspoint.com/http/http_responses.htm as well as links provided
+
+A server will send you a response after it gets your request and it will tell you if the request was successful or not. it will also tell you what protocol was used and the content type of the resource.
+
+Some common status codes:
+  200 - success
+  401 - unauthorized
+  404 - resource not found
+  500 - internal server error
 ```
 
 ## Make a curl request
@@ -158,5 +173,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
