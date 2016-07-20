@@ -126,6 +126,7 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
+The system of communicating which allows the sending of documents, or as we know them web pages back and forth from the server side to the client side.
 <!-- your answer here -->
 ```
 
@@ -142,6 +143,10 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
+GET: This is used when you want to send data, it is used when sending forms such as profile information or credit card informatiom, search engines or even typing in a URL into the nav bar.
+PUT: Is used to CREATE or UPDATE. These requests hold information which affectsm updates and creates the resources in the body.
+POST: Is used when you want the action which is taking place on the server to repeat.
+DELETE: Is the opposite of PUT. It is used when you want to clear all the data related to that resource.
 <!-- your answer here -->
 ```
 
@@ -150,6 +155,9 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
+Is another way of saying a URL. The URL is what finds the resource. Resources contain the information which is sent which which can be in several different formats or languages including JSON and html.
+404- not found
+504
 <!-- your answer here -->
 ```
 
@@ -158,5 +166,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
