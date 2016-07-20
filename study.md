@@ -126,15 +126,22 @@ In your responses, be sure to cite any relevant sources you consulted in your se
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP (Hypertext Transfer Protocol) is resquest-response protocol, and it stands for system of rules that decides how documents are passed from one place to another. It also sets the format of messages passed between cliens and servers.
+
+Resources: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 ```
 
 ## Describe what a client is and what a server is
 
  What is a client is and what is a server? How do they interact with each other?
 
+
 ```md
-<!-- your answer here -->
+Client sends request and receives response from server. The request is a text message created by a client (Chrome, phone, tablet). The client sends that request to a server, and then waits for the response.
+
+Servers receive requests through URI. URI is a string of characters that identifies a resource. Servers knows what client wants to do with that resource, and after running the requested program, it prepares the response and sends it back to the client in HTTP format.
+
+Resources: http://symfony.com/doc/current/book/http_fundamentals.html
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -142,7 +149,14 @@ In your own words, give a breif description of what HTTP is.
 What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
 
 ```md
-<!-- your answer here -->
+POST is used when the processing you wish to happen on the server should be repeated (forms).
+GET creates a resource on the server (the one that browsers use each time you click a link or type a URL into the address bar).
+DELTETE is used when you want to delete the resource identified by the URL of the request.
+PUT request is used when you wish to create or update the resource identified by the URL.
+
+Resources:
+http://symfony.com/doc/current/book/http_fundamentals.html
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a Response is
@@ -150,7 +164,16 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-<!-- your answer here -->
+HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
+Responses are grouped in five classes:
+
+1. informational responses 1XX,
+2. successful responses 2XX,
+3. redirects 3XX,
+4. client errors 4XX,
+5. servers errors 5XX.
+
+Resources: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 ```
 
 ## Make a curl request
@@ -158,5 +181,5 @@ What is a response? what does it contain? What are some common status codes in a
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
