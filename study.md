@@ -161,7 +161,9 @@ DELETE - to delete
 What is a response? what does it contain? What are some common status codes in a response and what do they mean?
 
 ```md
-HTTP responses are information sent back from the server about the information requested. They contain a status code, and resource representations, such as HTML, JSON, etc. 404 means not found. 301 means moved permanently. 200 means the request was successful.
+HTTP responses are information sent back from the server about the information requested.
+They contain a status code, and resource representations, such as HTML, JSON, etc. 404 means not found.
+301 means moved permanently. 200 means the request was successful.
 ```
 
 ## Make a curl request
