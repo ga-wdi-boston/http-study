@@ -4,7 +4,7 @@
 
 ## Objectives
 
-By the end of this, students should be able to:
+By the end of this, developers should be able to:
 
 -   Diagram the request-response flow between a client and server
 -   Identify the different parts of a Universal Resource Location (URL)
