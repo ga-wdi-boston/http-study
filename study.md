@@ -135,7 +135,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is HyperText Transfer Protocol. It is the way that servers and clients(the people using computers) send and recieve information to load a webpage.
+Found these to be the most helpful:
+http://symfony.com/doc/current/book/http_fundamentals.html
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+https://www.youtube.com/watch?v=ADQ_rhefgEk
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +147,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the "computer" that someone is using to ask for the webpage through http. The server is the thing that takes the request and sends back information, or the webpage.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +156,7 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+They are GET DELETE POST & PUT. You use GET by
 ```
 
 ## Describe what a Response is
