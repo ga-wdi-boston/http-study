@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-HTTP is a protocol that determines how information is passed back and forth between clients and servers. Specifically, it determines the format of client requests and server responses.
+HTTP is a text-based protocol that determines how information is passed back and forth between clients and servers. Specifically, it determines the format of client requests and server responses.
 
 Citations: [study.md](https://github.com/ga-wdi-boston/http-study/blob/master/study.md), [HTTP on Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), [Symfony HTTP explanation](http://symfony.com/doc/current/introduction/http_fundamentals.html).
 ```
