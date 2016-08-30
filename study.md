@@ -135,7 +135,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol for how information is passed between clients and servers.
+One part of this protocol is the formatting between these entities so each side
+can both send and interpret the information necessary to process the request.
+
+Symfony HTTP Fundamentals
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +147,14 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a device or machine that may need information from a server to
+properly complete a task for a user. A server is often a machine that is used
+to store information to be used by clients. The server also must be able to
+understand client requests and return the appropriate information. The two
+interact through requests and responses. The client requests information, the
+server interprets that request and responds with the appropriate information.
+
+Symfony HTTP Fundamentals
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +163,17 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - Get information. This could be used to retrieve a webpage.
+
+POST - Create and store information. This may be used for a product review or a
+new user profile.
+
+PUT - Update information. This could be used to fix a bug in existing software
+or update a roster of players on a team.
+
+DELETE - Delete information. This could be used to delete a profile or review.
+
+Symfony HTTP Fundamentals
 ```
 
 ## Describe what a Response is
@@ -161,7 +182,13 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what the server will return to the client after the client makes a
+request. A response contains the requested information, if possible, as well as
+data about the response itself, including status codes and a timestamp. Some
+common status codes are 200 (OK), 404 (not found), and 500 (internal server
+error).
+
+Symfony HTTP Fundamentals
 ```
 
 ## Make a curl request
@@ -169,7 +196,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
+
+Modified from Google example above.
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +208,16 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+URL Scheme - The scheme or protocol being used to transfer the information
+Host - The address of the computer that is hosting the information. This can be
+a domain name or an IP address.
+Port Number - The location of the information on the machine on which it is
+hosted. This is often omitted from URLs because port numbers are often
+standardized to 80 for http and 443 for https.
+URL Path - The local path to the information requested. This is the path of the
+file system just like the ones we've been using on our machines.
+Query - Additional information that can be used by the server to access the
+correct information like a discount code or a username.
+
+Know about HTTP URL video.
 ```
