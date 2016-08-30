@@ -216,6 +216,9 @@ Using curl, how would you get the content from Reddit.com?
 
 ```md
 curl --request GET https://www.reddit.com
+
+Citation: study.md 
+
 ```
 
 ## Describe the parts of a URL
@@ -239,5 +242,7 @@ resource path: where to find the requested resource on the server.
 parameters: additional data (key/value pairs) to send to the server.
 
 anchor: points to a specific point within the requested document.
+
+Citation: MDN
 
 ```
