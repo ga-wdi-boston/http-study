@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Http is a protocol that allows messages to be sent from servers to clients.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,8 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the computer making the request and the server is the one recieving
+the request. They interact by sending messages back and forth(like web pages)
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +153,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+Get: Tells the server to send data to client.
+Put: Used to update info in a URL
+Delete: Gets rid of something in a URL (opposite of put)
+Post: Used to make an action on a server repeat
 ```
 
 ## Describe what a Response is
@@ -161,7 +165,9 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what a server sends back to a client. It would countain data.
+200 OK: this means the response went through.
+204 No Content: this happens when there is no content to be sent back to the client.
 ```
 
 ## Make a curl request
@@ -169,7 +175,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +185,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol: this tells the browser what it should do
+host: this tells the browser who the host is (where to get the data from)
+port: This is the gate used to access the data
+resource path: This tells the browser where to go in the data
+anchor: this is like the bookmark of where the browser needs to go
 ```
