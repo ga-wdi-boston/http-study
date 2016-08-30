@@ -134,18 +134,31 @@ material. Instead, digest what you've read and repeat it in your own voice.
 
 In your own words, give a breif description of what HTTP is.
 
-```md
-HTTP is a text-based protocol that determines how information is passed back and forth between clients and servers. Specifically, it determines the format of client requests and server responses.
+```md 
+HTTP is a text-based protocol that determines how information is passed
+back and forth between clients and servers. Specifically, it determines the
+format of client requests and server responses.
 
-Citations: [study.md](https://github.com/ga-wdi-boston/http-study/blob/master/study.md), [HTTP on Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), [Symfony HTTP explanation](http://symfony.com/doc/current/introduction/http_fundamentals.html).
+Citations: [study.md](https://github.com/ga-wdi-boston/http-
+study/blob/master/study.md), [HTTP on
+Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol),
+[Symfony HTTP explanation](http://symfony.com/doc/current/introduction/http_fu
+ndamentals.html). 
 ```
 
 ## Describe what a client is and what a server is
 
  What is a client is and what is a server? How do they interact with each other?
 
-```md
-<!-- your answer here -->
+```md 
+A client (often a web browser, but sometimes a utility like curl or
+wget) sends requests for resources and receives responses. A server (a web
+server like Apache or Nginx, or an application server like Node or Ruby)
+receives requests for resources and sends back responses containing those
+resources.
+
+Citations: [study.md](https://github.com/ga-wdi-boston/http-
+study/blob/master/study.md) 
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -153,8 +166,23 @@ Citations: [study.md](https://github.com/ga-wdi-boston/http-study/blob/master/st
 What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
-```md
-<!-- your answer here -->
+```md 
+- GET is used to obtain resources from a server. It's not used to create
+or update resources (in this sense, it's "read-only"). 
+- PUT is used to create
+or update resources on the server (for example, make a change to your Twitter
+profile or publish a new Tweet). 
+- POST is used to send data to the server and
+ask the server to do something with it. Sending another identical POST request
+triggers a repeat of the same action—adding another new user or instigating
+another search. POST is often used in form submission. 
+- DELETE is used to
+delete a resource from a server.
+
+Citations: [envato tuts+ tutorial](http://code.tutsplus.com/tutorials/a
+-beginners-guide-to-http-and-rest--net-16340), [POST on
+Wikipedia](https://en.wikipedia.org/wiki/POST_(HTTP)), [Idempotence on
+Wikipedia](https://en.wikipedia.org/wiki/Idempotence#Computer_science_meaning)
 ```
 
 ## Describe what a Response is
