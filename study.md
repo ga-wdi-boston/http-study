@@ -37,7 +37,11 @@ Which server is the request sent to? How does the server know what to respond
 with? Both of these questions are answered by *uniform resource locator (URL)*.
 
 > ![URL](https://cloud.githubusercontent.com/assets/388761/12622184/2c0143dc-c4f2-11e5-84af-55f723dd6639.png)
+>
 > unkown source
+
+Study each part of a URL using the [Mozilla Developer Network
+Documentation](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL).
 
 ## HTTP Verbs
 
@@ -163,6 +167,16 @@ response and what do they mean?
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
+
+```md
+<!-- your answer here -->
+```
+
+## Describe the parts of a URL
+
+List the parts of a URL and explain what each part is, in your own words. You'll
+refer to this list often in the next few weeks, so it's important to keep it in
+an easy-to-reference place.
 
 ```md
 <!-- your answer here -->
