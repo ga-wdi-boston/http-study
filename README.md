@@ -4,7 +4,7 @@
 
 ## Objectives
 
-By the end of this, students should be able to:
+By the end of this, developers should be able to:
 
 -   Diagram the request-response flow between a client and server
 -   Identify the different parts of a Universal Resource Location (URL)
@@ -27,5 +27,6 @@ requests](https://github.com/ga-wdi-boston/meta/wiki/PullRequest).
 
 ## [License](LICENSE)
 
-Source code distributed under the MIT license. Text and other assets copyright
-General Assembly, Inc., all rights reserved.
+1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.

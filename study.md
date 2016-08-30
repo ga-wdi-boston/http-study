@@ -23,6 +23,7 @@ the machine that these programs run on. In this document, the latter is what we
 mean when we say "server", as in this diagram:
 
 > ![http-xkcd](https://cloud.githubusercontent.com/assets/388761/12621764/0ffb527e-c4f0-11e5-87ae-d597e3835fcd.png)
+>
 > [Symfony and HTTP Fundamentals (The Symfony Book)](http://symfony.com/doc/current/book/http_fundamentals.html)
 
 1.  A client sends a request to a server.
@@ -36,7 +37,11 @@ Which server is the request sent to? How does the server know what to respond
 with? Both of these questions are answered by *uniform resource locator (URL)*.
 
 > ![URL](https://cloud.githubusercontent.com/assets/388761/12622184/2c0143dc-c4f2-11e5-84af-55f723dd6639.png)
+>
 > unkown source
+
+Study each part of a URL using the [Mozilla Developer Network
+Documentation](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL).
 
 ## HTTP Verbs
 
@@ -117,9 +122,13 @@ What are HTTP status codes?
 
 ## Questions
 
-Use your favorite search engine and the provided readings to research and respond to the following questions.
+Use your favorite search engine and the provided readings to research and
+respond to the following questions.
 
-In your responses, be sure to cite any relevant sources you consulted in your search. We ask you to write responses in your own words in order to see how you process what you've read. Please do not respond with direct quotes from source material. Instead, digest what you've read and repeat it in your own voice.
+In your responses, be sure to cite any relevant sources you consulted in your
+search. We ask you to write responses in your own words in order to see how you
+process what you've read. Please do not respond with direct quotes from source
+material. Instead, digest what you've read and repeat it in your own voice.
 
 ## Define HTTP
 
@@ -139,7 +148,8 @@ In your own words, give a breif description of what HTTP is.
 
 ## Describe the 4 most common HTTP verbs
 
-What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
+What are the 4 most common HTTP verbs used when creating a RESTful API. How
+would you use each?
 
 ```md
 <!-- your answer here -->
@@ -147,7 +157,8 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 
 ## Describe what a Response is
 
-What is a response? what does it contain? What are some common status codes in a response and what do they mean?
+What is a response? what does it contain? What are some common status codes in a
+response and what do they mean?
 
 ```md
 <!-- your answer here -->
@@ -156,6 +167,16 @@ What is a response? what does it contain? What are some common status codes in a
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
+
+```md
+<!-- your answer here -->
+```
+
+## Describe the parts of a URL
+
+List the parts of a URL and explain what each part is, in your own words. You'll
+refer to this list often in the next few weeks, so it's important to keep it in
+an easy-to-reference place.
 
 ```md
 <!-- your answer here -->
