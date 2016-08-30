@@ -135,7 +135,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a system of rules, or a protocol, that allows us to send documents and information back and forth across the web. It, along with its secure cousin HTTPS, are the standard of the majority of pages on the web.
+
+(resources: the document, the "Beginner's Guide to HTTP and REST" and [this ELI5 answer](https://www.reddit.com/r/explainlikeimfive/comments/2s2clf/eli5what_is_the_difference_between_http_and_ip/?st=ishxbi8k&sh=a64bb683) )
+
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +146,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is used to send requests and receive responses from the server. Web browsers are common exampls of clients.
+
+In HTTP, the server is the one that receives the requests from the clients, and sends responses back to them. The client is usually the one to initiate the conversation.
+
+(resources: this document and "Beginners Guide to HTTP and REST")
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +159,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - the simplest HTTP request method. It is used to read / retrieve a representation of a resource.
+
+PUT - used to create/update the resource identified by the URL
+
+DELETE - deletes the resource identified by the URL
+
+POST - used to trigger operations on the server. Can sometimes be used to create operations (instead of PUT). Most often used with forms.
 ```
 
 ## Describe what a Response is
@@ -161,7 +174,16 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Responses come from the server, and they contain  information (in a certain format) about the state of the resource, or how that state should be in the future. This information is often called a "resource representation."
+
+Common status codes include:
+  404 (Resource not found),
+  403 (resource exists, but client does not have permission to access it),
+  200 (Standard response for successful requests),
+  500 (Internal Server Error - something has gone wrong)
+  503 (Server is unavailable / down)
+
+
 ```
 
 ## Make a curl request
@@ -169,7 +191,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com/
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +201,17 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Parts of a URL:
+
+Protocol - indicates which protocol the browser must use (usually HTTP/HTTPS)
+
+Domain Name - Indicates which webserver is being requested
+
+Port - Indicates the technical 'gate' used to access the resources on the server (can be omitted if its one of the standard ports (80 for HTTP, 443 for HTTPS), otherwise must be stated explicitly)
+
+Resource Path - Path to the resource on the web server
+
+Parameters/Query - A list of key/value pairs separated by & sign. The web server uses these parameters to do extra 'stuff' before returning the resource.
+
+Anchor - A 'bookmark' of sorts to a location inside the resource, or an anchor to another part of the resource itself. Starts with '#'
 ```
