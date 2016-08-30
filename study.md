@@ -149,7 +149,13 @@ Resources: http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the browser (such as Firefox, Chrome, IE, etc.) being used to access
+a website. The server is the machine that websites are run on, although it has
+other meanings and applications when referring to node and ruby, and they can
+also be on the web. Clients send requests and receive responses to/from the
+server, whereas servers receive requests and send responses from/to the client.
+
+Source: description at top of study
 ```
 
 ## Describe the 4 most common HTTP verbs
