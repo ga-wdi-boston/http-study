@@ -117,9 +117,13 @@ What are HTTP status codes?
 
 ## Questions
 
-Use your favorite search engine and the provided readings to research and respond to the following questions.
+Use your favorite search engine and the provided readings to research and
+respond to the following questions.
 
-In your responses, be sure to cite any relevant sources you consulted in your search. We ask you to write responses in your own words in order to see how you process what you've read. Please do not respond with direct quotes from source material. Instead, digest what you've read and repeat it in your own voice.
+In your responses, be sure to cite any relevant sources you consulted in your
+search. We ask you to write responses in your own words in order to see how you
+process what you've read. Please do not respond with direct quotes from source
+material. Instead, digest what you've read and repeat it in your own voice.
 
 ## Define HTTP
 
@@ -139,7 +143,8 @@ In your own words, give a breif description of what HTTP is.
 
 ## Describe the 4 most common HTTP verbs
 
-What are the 4 most common HTTP verbs used when creating a RESTful API. How would you use each?
+What are the 4 most common HTTP verbs used when creating a RESTful API. How
+would you use each?
 
 ```md
 <!-- your answer here -->
@@ -147,7 +152,8 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How woul
 
 ## Describe what a Response is
 
-What is a response? what does it contain? What are some common status codes in a response and what do they mean?
+What is a response? what does it contain? What are some common status codes in a
+response and what do they mean?
 
 ```md
 <!-- your answer here -->
