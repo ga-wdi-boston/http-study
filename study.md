@@ -135,7 +135,15 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+
+HTTP is a text-based protocol that determines how information is passed back
+and forth between clients and servers. Specifically, it determines the format
+of client requests and server responses.
+
+Citations: 
+- [study.md](https://github.com/ga-wdi-boston/http-study/blob/master/study.md)
+- [HTTP on Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+- [Symfony HTTP explanation](http://symfony.com/doc/current/introduction/http_fundamentals.html)
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +151,13 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+
+A client (often a web browser, but sometimes a utility like curl or wget)
+sends requests for resources and receives responses. A server (a web server
+like Apache or Nginx, or an application server like Node or Ruby) receives
+requests for resources and sends back responses containing those resources.
+
+Citations: [study.md](https://github.com/ga-wdi-boston/http-study/blob/master/study.md)
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +166,24 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+
+- GET is used to obtain resources from a server. It's not used to create or
+update resources (in this sense, it's "read-only").
+
+- PUT is used to create or update resources on the server (for example, make a
+change to your Twitter profile or publish a new Tweet).
+
+- POST is used to send data to the server and ask the server to do something
+with it. Sending another identical POST request triggers a repeat of the
+same action—adding another new user or instigating another search. POST is
+often used in form submission.
+
+- DELETE is used to delete a resource from a server.
+
+Citations: 
+- [envato tuts+ tutorial](http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340)
+- [POST on Wikipedia](https://en.wikipedia.org/wiki/POST_(HTTP))
+- [Idempotence on Wikipedia](https://en.wikipedia.org/wiki/Idempotence#Computer_science_meaning)
 ```
 
 ## Describe what a Response is
@@ -161,7 +192,22 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+
+A response is a message sent from a server to a client after the server
+receives a request from that client. Responses contain headers (which contain
+metadata about the response) and content (which can be HTML, images, PDFs,
+JSON, etc.).
+
+Common status codes include:
+- 200 OK (all good!)
+- 500 Internal Server Error (something went wrong on the server side)
+- 404 Not found (the requested resource doesn't exist on the server)
+- 400 Bad Request (your request wasn't properly formed)
+
+Citations:
+- envato tuts+ tutorial
+- study.md 
+
 ```
 
 ## Make a curl request
@@ -169,7 +215,10 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
+
+Citation: study.md 
+
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +228,21 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+
+protocol: indicates to the client and the server how to handle the
+request/response. This is often HTTP, but could also be mailto or tel.
+
+host: points to the correct server. can be an IP address or a domain name.
+
+port: indicates which port to use (omitted if defaults (like 80 for HTTP) are
+being used).
+
+resource path: where to find the requested resource on the server.
+
+parameters: additional data (key/value pairs) to send to the server.
+
+anchor: points to a specific point within the requested document.
+
+Citation: MDN
+
 ```
