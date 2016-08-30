@@ -23,6 +23,7 @@ the machine that these programs run on. In this document, the latter is what we
 mean when we say "server", as in this diagram:
 
 > ![http-xkcd](https://cloud.githubusercontent.com/assets/388761/12621764/0ffb527e-c4f0-11e5-87ae-d597e3835fcd.png)
+>
 > [Symfony and HTTP Fundamentals (The Symfony Book)](http://symfony.com/doc/current/book/http_fundamentals.html)
 
 1.  A client sends a request to a server.
