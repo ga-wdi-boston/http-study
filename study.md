@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hypertext Transfer Protocol: protocol that determines how (e.g. formatting) documents are transferred between a client and server.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,8 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client: send requests/receive responses. (i.e. browsers)
+Server: receive requests/send responses. (i.e. application servers, web servers etc.)
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +153,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - retrieve resource from server (visiting a page)
+POST - create resource on server (submitting form)
+PUT/PATCH - update resource on server (edit a post)
+DELETE - delete resource from server (deleting a post)
 ```
 
 ## Describe what a Response is
@@ -161,7 +165,14 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Response = what a server sends back to a browser after it has processed a request. Responses contain resource representations, which are abstractions of what the application uses but usually HTML or JSON.
+
+Status codes:
+     1xx Request received, continuing process
+     2xx Request successfully processed
+     3xx Additional action needed to complete request
+     4xx Client error
+     5xx Server error
 ```
 
 ## Make a curl request
@@ -169,7 +180,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +190,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol - designates which protocol browser should use (http)
+Host - the webserver that is being requested
+Port - the "gate" to access resources
+Resource Path - the path to the file
+Query - extra parameters represented by key/value pairs
+Anchor - like a bookmark on a page
 ```
