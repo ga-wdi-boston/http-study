@@ -86,6 +86,8 @@ curl --request GET https://www.google.com
 
 What did you see?
 
+Lots of HTML!
+
 ## Responses & Resources
 
 Servers send responses, and those responses contain resource representations.
@@ -135,7 +137,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a set of rules used to exchange messages between the client (the browser)
+and the server. The messages are sent in text form, although within the body of
+the message, other media can be included.
+
+Resources: http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a client is and what a server is
