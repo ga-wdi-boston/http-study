@@ -72,7 +72,7 @@ requests you could make to it's server, that documentation might say instead:
 GET /
 ```
 
-In other words, API docs often only describe the URI instead of the full URL.
+In othe`r words, API docs often only describe the URI instead of the full URL.
 
 The response your browser receives from Google is an HTML document the browser
 parses and renders. What would happen if you made the same get request outside
@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the common and minimal language that computers/servers use to communicate with each other.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is an entity that makes a request.  The server is the entity that handles the request by returning a response.  The client can ask the server to do various things, like retrieve, edit, update, or delete a resource.  The server can respond by accepting the client's request or denying it, either because it cannot find the resource, because the client does not have proper access, or because maybe the server is overheating and its data has been corrupted.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +152,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - retrieve a resource and deliver it to the client
+PUT - update a resource if it exists, or create one if it does not (flexible)
+POST - create a resource, specified by the client (flexible)
+DELETE - delete a resource if it exists.
 ```
 
 ## Describe what a Response is
@@ -161,7 +164,7 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what the server returns to the client after a request.  It contains a status code which describes the type of response given (i.e., 200 success - request accepted, server will act upon request; 404, resource not found; 5xx - we (server) done goofed)
 ```
 
 ## Make a curl request
@@ -169,7 +172,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +182,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol: http or https for secured connections.  This specifies the 'language' agreed upon between the communicating systems.
+
+host: the server that is holding the resources being accessed.  The host listens to the requests from the client and decides how to handle them.
+
+port: the specific channel through which data is going to be transeferred between systems.  If you only had one application on one system connecting to one application on one other system, you may only need one port.  However, having multiple ports allows multiplexing of data transfer so multiple systems/applications can transfer data simultaneously without having each system wait in a queue to get their chance to transfer some data.  In other words, ports allow data transfer to be parallelized.  Default ports are usually assigned to specific types of service to make this process easier.  
 ```
