@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP, or HyperText Transfer Protocol, is a set of universal rules that govern
+the way web clients, web servers, and web resources communicate with each other.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,10 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A web client is a user agent, who (usually through a web browswer, but there
+are other methods like cURL and Telnet) sends a request to retrieve information
+(about a web resource) to the web server, which in turn sends a response back
+to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +156,15 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+A handy acronym that describes the four most common HTTP verbs and the gist of
+what each one does is (the four verbs are in BOLDFACE):
+
+C - Create - POST
+R - Read - GET
+U - Update - PUT
+D - Delete - DELETE
+
+(found on https://www.exceptionnotfound.net/using-http-methods-correctly-in-asp-net-web-api/)
 ```
 
 ## Describe what a Response is
@@ -161,7 +173,22 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what the server returns after a client makes a request for a resource.
+Some common HTTP status codes are:
+1 1xx Informational.
+2 2xx Success.
+3 3xx Redirection.
+4 4xx Client Error.
+5 5xx Server Error.
+
+or if you prefer...
+
+1 1xx Hold on.
+2 2xx Here you go.
+3 3xx Go away.
+4 4xx You fucked up.
+5 5xx I fucked up.
+
 ```
 
 ## Make a curl request
@@ -169,7 +196,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+*NOTE* I was not able to get curl to work in my terminal--I have some questions
+about this for an instructor.
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +207,17 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+The primary parts of a URL are:
+EXAMPLE                         DESCRIPTION
+http                            URL scheme (indicates how to access the resource)
+www.wikipedia.org               host (can be name or IP address)
+80                              port number (usually ommitted due to standardization)
+/wiki/List_of_HTTP_status_codes URL path (the web server uses this info to
+                                identify the resource)
+
+ALSO (but not in above example) query string (looks like `name=value&`, etc.)
+                                fragment (like a bookmark - not passed to server)
+
+
+(I used the 'Natural Programmer videos' for most of my answers.)
 ```
