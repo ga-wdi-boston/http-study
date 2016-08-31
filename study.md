@@ -211,5 +211,23 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+
+http:// --> this part is the protocol telling the browser what to do. In this
+case it is HTTP. It can also be HTTPS, which is the secure version of HTTP, or
+mailto, ftp (for file transfers).
+
+the middle part that reads something like www.someword.com is the domain name. This
+is a convenient name given to the server being requested, or the IP address.
+
+:80: the port, which isn't always visible, but is required for the client to
+access the resources on the server.
+
+path: the physical file location of a resource on the server.
+
+parameters: usually extra, and contain extra information that the server uses
+before it returns a response to the client.
+
+anchor: acts as a bookmark that shows the resource content. 
+
+Source: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
