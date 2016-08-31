@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- HTTP is a protocol or set of rules needed to transfer documents such
+as HTML files across the internet, from server to client. -->
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!-- A server is a large computer where files are stored so that they can be
+accessed by clients. Clients are computers that send requests to a server
+to retrieve the server's files. A client sends a request to a server, the server
+processes the request, the server sends a response back to the client, the client
+processes the reponse.  -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +157,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+<!-- GET - Tell the server to send me data based on the URL given
+     PUT - Change or update a resource on the server
+     DELETE - Tell the server to delete a resource
+     POST - Create a new resource on the server-->
 ```
 
 ## Describe what a Response is
@@ -161,7 +169,9 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!-- When a client sends a request for a resourse from a server, the server
+ sends a response back. The reponse is representation of the resource that
+ was requested by the client. -->
 ```
 
 ## Make a curl request
@@ -169,7 +179,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!-- You would need to call curl command in ther terminal and send a request.
+You change the URL path depending on what resource you want to access. -->
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +190,8 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+<!-- HTTP - The type of protocol that is used to transmit data
+    www. - A pointer to the world wide web
+    'google' - The string representation of the domain name
+    '.com, .net, .org' - The name of the server where the domain is stored -->
 ```
