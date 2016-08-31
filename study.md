@@ -144,8 +144,11 @@ to make a request or transfer documents on the web.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-Client - browser such as Chrome or Firefox
-Server -
+Client - the machine that typically makes the inital request. Clients are typically
+browsers, mobile apps, etc.
+
+Server - the machine that receives the client's request and replies with a response
+to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -154,10 +157,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-GET -
-POST -
-PUT -
-DELETE -
+GET - retrieve and read a resource, such as a web page.
+POST - create a new resource
+PUT - update a resource. this is typically used by APIs.
+DELETE - delete a resource.
 
 ```
 
@@ -167,7 +170,16 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the server's reply to the client's request. It will contain the
+requested resource and the response status code.
+
+Status codes are used to communicate the outcome of the request. Common status
+codes include:
+
+200 OK - success! This is the standard message when a request has successfully
+been returned.
+301 Moved Permanently - the resource will be redirected with the provided URI
+404 Not Found - the resource was unavailable at the time of the request
 ```
 
 ## Make a curl request
@@ -185,5 +197,18 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
-```
+http://google.com/80/examples?a=b&x=y
+
+http:// - protocol. This indicates which protocol the browser should use. Typically
+this will be http:// or https:// (secure). 
+
+google.com/ - domain. This indicates which web server is being requested.
+80 - port - the "gate" used to access resources. this is typically omitted if
+the web server uses standard ports ( 80 for HTTP and 443 for HTTPS)
+
+/examples - path. This is the unique path to the resource on the server.
+
+?a=b&x=y - query or parameter. These are sometimes extra key/value pairs provided
+to the server. Each server has a unique way of handling parameters.
+`
+``
