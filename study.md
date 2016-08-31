@@ -86,6 +86,8 @@ curl --request GET https://www.google.com
 
 What did you see?
 
+Lots of HTML!
+
 ## Responses & Resources
 
 Servers send responses, and those responses contain resource representations.
@@ -135,7 +137,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a set of rules used to exchange messages between the client (the browser)
+and the server. The messages are sent in text form, although within the body of
+the message, other media can be included.
+
+Resources: http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +149,13 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the browser (such as Firefox, Chrome, IE, etc.) being used to access
+a website. The server is the machine that websites are run on, although it has
+other meanings and applications when referring to node and ruby, and they can
+also be on the web. Clients send requests and receive responses to/from the
+server, whereas servers receive requests and send responses from/to the client.
+
+Source: description at top of study
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +164,19 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+The most commonly used HTTP verbs/methods (aren't there 5?)
+
+1) POST: used to create new resources under a parent resource, like a new ID
+or other element.
+2) GET: Retrieves data or reads a reporesentation of a resource but does not
+change that resource. It is considered safe from making errors or
+unwanted changes. I would use it just to view what is in place.
+3) PUT: Allows you to update or replace a known resource. Not safe and should be
+used sparingly.
+4) PATCH: Used to modify specific resources or capabilities.
+5) DELETE: (maybe this is less common?) Removes a resource.
+
+source: http://www.restapitutorial.com/lessons/httpmethods.html)
 ```
 
 ## Describe what a Response is
@@ -161,7 +185,15 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+An HTTP response is a code sent back from the server indicating whether or not
+a request has been completed and in what state. They also contain
+information on client errors, server errors, and other useful information about
+the quality of the request and the outcome.
+
+sources: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+This document.
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
 ```
 
 ## Make a curl request
@@ -169,7 +201,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +211,23 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+
+http:// --> this part is the protocol telling the browser what to do. In this
+case it is HTTP. It can also be HTTPS, which is the secure version of HTTP, or
+mailto, ftp (for file transfers).
+
+the middle part that reads something like www.someword.com is the domain name. This
+is a convenient name given to the server being requested, or the IP address.
+
+:80: the port, which isn't always visible, but is required for the client to
+access the resources on the server.
+
+path: the physical file location of a resource on the server.
+
+parameters: usually extra, and contain extra information that the server uses
+before it returns a response to the client.
+
+anchor: acts as a bookmark that shows the resource content. 
+
+Source: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
