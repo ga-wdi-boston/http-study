@@ -135,7 +135,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is HyperText Transfer Protocol. It is the way that servers and clients(the people using computers) send and recieve information to load a webpage.
+Found these to be the most helpful:
+http://symfony.com/doc/current/book/http_fundamentals.html
+http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+https://www.youtube.com/watch?v=ADQ_rhefgEk
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +147,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the "computer" that someone is using to ask for the webpage through http. The server is the thing that takes the request and sends back information, or the webpage.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +156,9 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+This article was VERY useful: http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+
+The top verbs are GET, DELETE, POST, and PUT. GET tells the server to send the data it finds by using the url input. PUT is used when you want to make or update whatever is placed in the URL. DELETE is the opposite of PUT, it will remove the resource found int the URL request. POST can be used when you want to repeat the request made in the URL, it is similar to PUT because it can be used to update the request too.
 ```
 
 ## Describe what a Response is
@@ -161,7 +167,7 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+HTTP responses are used to show us the result of the request we sent over in the URL. It can contain numbers or alerts, a mix of both, for example, Error(404 Not Found). Here are some common ones, 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, and a few others.
 ```
 
 ## Make a curl request
@@ -169,7 +175,10 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+used this link:http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+
+You could use "curl -v http://www.reddit.com" to bring back the content from reddit's website.
+
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +188,5 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+A URL begins with the Protocol, http or https which is the way clients send and recieve info from servers. the HOST is the www.domain.com , this is what people usually type without any protocol or path. the PORT looks like :12345 and it is what identifies teh process or the type of network service. The RESOURCE PATH is basically like the paths we've been using with terminal directories or files. The QUERY is the options of where you want to go in the url, it contains the data that does not fit into the regular path structure.
 ```
