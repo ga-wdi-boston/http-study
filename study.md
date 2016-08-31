@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Browsers use HTTP to make published content available.
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+HTTP figures out the format that messages are passed between clients and servers.
+Clients ask for and receive content; they are the browsers and other programs.
+Servers receive requests and send responses. They "serve."
+http://programmers.stackexchange.com/questions/171203/what-are-the-differences-between-server-side-and-client-side-programming
+
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +157,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST - when creating
+GET - when reading
+PUT - when updating/replacing
+DELETE - when deleting
+http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -161,7 +170,15 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A HTTP Response lets us know if a request has been successfully completed. It is a
+status code. Common ones include:
+Information Responses - indicates that everything so far is OK
+Successful responses - request has succeeded
+Redirection messages - The request has more than one possible responses. User
+should choose one of them
+Client error responses - server could not understand the request due to invalid syntax
+Server error responses - server has encountered a situation it doesn't know how to handle
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 ```
 
 ## Make a curl request
@@ -169,7 +186,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl http://reddit.com
+
+source: https://curl.haxx.se/docs/httpscripting.html 3.1 subtitle
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +198,13 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol - identifies the methof (HTTP or HTTPS)
+Domain Name - website requested
+Port - technical gate
+Path to the file - nowadays an abstraction path to the website on the server
+Parameters - Extra info to do extra stuff before returning the resource
+Anchor or Fragment - refers to a section within a website, like a bookmark
+http://collegeofsanmateo.edu/csmlibrary/tutorials/url.html
+https://doepud.co.uk/blog/anatomy-of-a-url
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
