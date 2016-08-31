@@ -135,7 +135,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hypertext Transfer Protocal, otherwise known as HTTP, is a structured set of
+rules for applying and distributing information in the form of hypertext
+across the World Wide Web.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,16 +145,23 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
-```
 
+In the context of HTTP, clients are browsers that send requests to servers
+for files. The servers process these requests and respond to the client.
+```
 ## Describe the 4 most common HTTP verbs
 
 What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST - Creates new resources. Usually theses are subordinate, meaning they have
+a parent resource.
+GET - Used to read or retrive a representation of a resource.
+PUT - Used for updating known resourced
+DELETE - Used to resources identified by the URI
+
+source: http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -161,7 +170,11 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Responses are resource representations sent by servers in the form of HTML,
+JSON, PDF files, and images. Some common status code responses are "404 Not Found",
+meaning the requested resource could not be found, and "301 Moved Permanently" -
+meaning that all future requests should be directed towards a different
+given URI.
 ```
 
 ## Make a curl request
@@ -169,7 +182,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -F http://reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +192,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Example: http://www.wikipedia.com.index.html
+
+http is the protocal
+www is the sub-domain
+wikipedia is the domain name
+com is the top-level domain
+index.html is the file path
+www.wikipedia.com is the resource name
 ```
