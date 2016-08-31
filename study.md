@@ -200,7 +200,7 @@ A response is the message a server sends to a client when it receives a request.
 It contains a header and a body. The body contains requested data or content,
 while the header contains instructions, methods, and other information
 
-The status code tells the client something about the respons.
+The status code tells the client something about the response.
 200 means it was successful
 201 confirms a successful PUT or POST
 400 indicates something was wrong with the request, such as bad formatting
@@ -235,7 +235,7 @@ A URL consists of:
 
 A protocol: the language in which requests for the resource should be made
 A domain: where the resource is hosted
-A port (often omitted):
+A port (often omitted): I am not really clear on this one
 A resource path: instructions for how to find the resource at the host domain
 A query: what the server should do with the resource before returning it
 An anchor: tells the browser what part of the incoming resource to show
