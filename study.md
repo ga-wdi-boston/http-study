@@ -135,7 +135,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+A set of rules that determines how a set of documents(.txt, .js, .css etc.) is
+transfered from one place to another. Ususally from client to server and vice versa.
+It also determines message format between client and server.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +145,15 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Clients send requests and receive responses from servers. Clients are web browsers
+and  and other programs like
+[`curl`](http://curl.haxx.se/docs/) and
+[`wget`](http://www.gnu.org/software/wget/manual/wget.html).
+Servers receive requests and send responses from clients. There are several types
+of servers. Some that run applications, some that are web servers, and sometimes
+the machine itself is called a server.
+The client sends a request to the server, the server processes the request and sends
+response back to the client which processes the response.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +162,14 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST: The POST verb is most-often utilized to make new resources. It creates
+a subordinate resource associated with a parent.POST is neither safe nor idempotent, and
+it is recommended for non-idempotent requests.
+GET method is used to reada representation of a resource. If there is an error
+it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).
+PUT is most-often utilized for update capabilities, it connects a known resource
+with the new representation of this resource.
+DELETE is used to delete a resource identified by a URI.
 ```
 
 ## Describe what a Response is
@@ -161,7 +178,17 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Servers send responses, and those responses contain resource representations. The
+resource representation efers to an abstraction that your application uses like
+a Car, Person, Cart etc.
+Responses contain status codes. They can be informational or indicate sucess connecting
+or an error connecting.
+1xx Informational: Request received, continuing process.
+2xx Success: This class of status codes indicates the action requested by the client was received, understood, accepted, and processed successfully
+3xx Redirection: This class of status code indicates the client must take additional action to complete the request.
+4xx Client ErrorThe 4xx class of status code is intended for situations in which the client seems to have erred.
+5xx Server Error: The server failed to fulfill an apparently valid request.[
+
 ```
 
 ## Make a curl request
@@ -169,7 +196,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +206,18 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Uniform Resource Locators (URLs)
+http://www.domainName.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+http:// indicates which protocol should be used. Either this version or the https
+which is the secure version.
+www.domainName.com is the domain name which indicates which web server should be
+contacted. An IP address can also be used here.
+:80 is the port which indicates the 'gate' on the server. If it is standard it can
+be omitted.
+/path/to/myfile.html is the path to the resource on the Web server. This used to
+point to a physical location, but it doesn't anymore.
+?key1=value1&key2=value2 are extra parameters provided to the Web server. They act
+as preliminary instructions to the web server.
+#SomewhereInTheDocument is an anchor to another part of the resource itself. The
+anchor is similar to a bookmark in the resource.
 ```
