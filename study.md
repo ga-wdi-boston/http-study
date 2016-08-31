@@ -164,7 +164,19 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+The most commonly used HTTP verbs/methods (aren't there 5?)
+
+1) POST: used to create new resources under a parent resource, like a new ID
+or other element.
+2) GET: Retrieves data or reads a reporesentation of a resource but does not
+change that resource. It is considered safe from making errors or
+unwanted changes. I would use it just to view what is in place.
+3) PUT: Allows you to update or replace a known resource. Not safe and should be
+used sparingly.
+4) PATCH: Used to modify specific resources or capabilities.
+5) DELETE: (maybe this is less common?) Removes a resource.
+
+source: http://www.restapitutorial.com/lessons/httpmethods.html)
 ```
 
 ## Describe what a Response is
@@ -173,7 +185,15 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+An HTTP response is a code sent back from the server indicating whether or not
+a request has been completed and in what state. They also contain
+information on client errors, server errors, and other useful information about
+the quality of the request and the outcome.
+
+sources: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+This document.
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
 ```
 
 ## Make a curl request
