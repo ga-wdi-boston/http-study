@@ -201,7 +201,7 @@ https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
