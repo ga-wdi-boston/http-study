@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the the protocol used to transfer information between servers and
+clients.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+ A client is requests and recieves information, this includes web browsers, and
+ servers store information, recieve requests, and send information back to the
+ client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +155,7 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+Post, Get, Put, Patch Delete
 ```
 
 ## Describe what a Response is
@@ -161,7 +164,8 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+An HTTP client requires this to provide information to the user. There are five
+classes of status codes, the response must contain one.
 ```
 
 ## Make a curl request
@@ -169,7 +173,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +183,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol - Desribes the protocol that the server and client use to communicate.
+Domain Name - Indicates which web server is being reqested.
+Port - Indicates the technical gate used to access the server. This can be omitted
+      if it is the standard port associated with HTTP.
+Path to file - gives the exact location on the file the client requested.
+Parameters - Can be used to ask the server to go through extra steps before
+      returing the file.
+Anchor - A bookmark to a specific part of hte document being returned.
 ```
