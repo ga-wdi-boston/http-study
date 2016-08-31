@@ -135,7 +135,20 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP can be described with a number of different analogies. It is:
+
+-a language
+-a format
+-a delivery system
+-a standardized process
+
+Essentially, HTTP is what facilitates the request-response cycle by which
+clients and servers talk to each other, and through which most information
+exchange on the Web takes place.
+
+Sources:
+study.md
+http://symfony.com/, "Symfony and HTTP Fundamentals"
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +156,19 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is an application that initiates requests and receives responses. There
+does't technically need to be a human involved directly, but the easiest example
+of a client is the web browser that a human uses to access the Web. The human
+types something into the browser (client), and the client turns that into a
+request and sends it off. The server (which can refer either to an application
+or the machine that the application runs on) is what receives the request and
+generates a response to send back to the client.
+
+So, clients and servers are essentially both computer programs, but one sends
+requests and the other sends responses.
+
+Sources:
+study.md
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +177,17 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - use to get specific content from the server
+PUT - use to create or update a resource on the server
+DELETE - use to delete a resource from the server, as well as associated data
+POST - also use to create or update a resource on the server
+
+I'm not really clear on when to use PUT and when to use POST, although I
+remember that in class we discussed using POST to send data from a form.
+
+Sources:
+study.md
+http://code.tutsplus.com/, "A Beginner's Guide to HTTP and REST"
 ```
 
 ## Describe what a Response is
@@ -161,7 +196,19 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the message a server sends to a client when it receives a request.
+It contains a header and a body. The body contains requested data or content,
+while the header contains instructions, methods, and other information
+
+The status code tells the client something about the response.
+200 means it was successful
+201 confirms a successful PUT or POST
+400 indicates something was wrong with the request, such as bad formatting
+404 means the requested resource was not found.
+
+Sources:
+study.md
+http://code.tutsplus.com/, "A Beginner's Guide to HTTP and REST"
 ```
 
 ## Make a curl request
@@ -169,7 +216,12 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+I did not have time to cover this material in depth, but here is my best shot:
+
+curl --request GET https://www.reddit.com
+
+Source:
+study.md
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +231,16 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+A URL consists of:
+
+A protocol: the language in which requests for the resource should be made
+A domain: where the resource is hosted
+A port (often omitted): I am not really clear on this one
+A resource path: instructions for how to find the resource at the host domain
+A query: what the server should do with the resource before returning it
+An anchor: tells the browser what part of the incoming resource to show
+
+Sources:
+study.md
+https://developer.mozilla.org, "What is a URL?"
 ```
