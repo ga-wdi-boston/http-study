@@ -38,7 +38,7 @@ with? Both of these questions are answered by *uniform resource locator (URL)*.
 
 > ![URL](https://cloud.githubusercontent.com/assets/388761/12622184/2c0143dc-c4f2-11e5-84af-55f723dd6639.png)
 >
-> unkown source
+> unknown source
 
 Study each part of a URL using the [Mozilla Developer Network
 Documentation](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL).
@@ -135,7 +135,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is Hypertext Transfer Protocol. It is a protocol for the web which uses a
+client-server model. A client (computer, laptop, iPhone, etc.) sends a request
+to a server (usually a web host), which responds with a code that indicates the
+success of the request (example: 200 if it was successful)
+http://techterms.com/definition/http
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +147,15 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the local device, such as a computer, smartphone, laptop, etc.,
+and the server is the web host (Google, Facebook, etc.) that handles requests
+for clients.
+
+The client sends a request to the server, and the server sends a response to
+the client (a code that indicates success, such as 200 for success, 404 for
+not found, etc).
+
+http://techterms.com/definition/http
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +164,17 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET: Its purpose is to retrieve data. It returns the data in XML or JSON, along
+with a code indicating success or failure (200 for success, 400 for not found,
+etc.)
+POST: It requests that the server accept and store data sent in the
+request (ie submitting a feedback form, posting a photo, etc).
+PATCH: Parially modifies the data
+(ex: Updating an in-process Google search with different preview images
+for the new search while not actually refreshing page)
+DELETE: Deletes the resource (ex: Deleting a photo you just posted)
+
+http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -161,7 +183,16 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+It means that the server responds to the client request. It contains the
+requested resource. Examples include: search engine results, seeing a photo or
+video that you click on, updates to a page without refreshing it (as in a
+PATCH response), successful deletion of a post, unfriending someone on Facebook
+for not agreeing with you politically, etc.
+Examples:
+200-- successful
+404-- not found
+500-- internal server error. Unexpected, non-specific, problem on the server end
+http://symfony.com/doc/current/introduction/http_fundamentals.html
 ```
 
 ## Make a curl request
@@ -169,7 +200,12 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+CREATE a request (POST) to the server (example, clicking on a thread on the site)
+Also used when you are posting your reply to a thread
+READ (GET) a response (being able to see the thread, with 200 response, or that
+your new post was successful)
+UPDATE (PATCH) Edit the reply you just posted.
+DELETE (DELETE) You had second thoughts and deleted your reply entirely!
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +215,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http:// -- protocol (Hypertext transfer protocol). Makes the request
+www.catfail.com -- domain/host The server being requested
+/photos/bestcatfailphotos.html -- path to file
+
+http://www.catfail.com:80/ The :80 means that 80 is the port on this server
+
 ```
