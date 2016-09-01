@@ -172,7 +172,8 @@ A response is the information that you're getting back from the server. It can c
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
+This would also need to take a user agent statement but I haven't been able to get it to work
 ```
 
 ## Describe the parts of a URL
