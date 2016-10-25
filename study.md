@@ -114,7 +114,7 @@ What are HTTP status codes?
 1.  [Know about HTTP URL](https://www.youtube.com/watch?v=ADQ_rhefgEk)
 1.  [Understanding HTTP Request Response Messages](https://www.youtube.com/watch?v=sxiRFwQ1RJ4)
 
-## Additional Resources (Optional)
+## Additional Resources
 
 -   [Conquering the Command Line: `curl`](http://conqueringthecommandline.com/book/curl)
 -   [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
