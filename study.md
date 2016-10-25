@@ -135,16 +135,17 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Http://is the standard protocal used to exchange data and resources on the web.
 ```
-
+No resource used other than the study materials.
 ## Describe what a client is and what a server is
 
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A server stores the data/resource being requested by the requesor (otherwise known as the client).  The interact via an http request.
 ```
+No resource used other than the study materials.
 
 ## Describe the 4 most common HTTP verbs
 
@@ -152,7 +153,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+The most common http verbs are GET, POST, DELETE and PUT.
+GET is used to make a request for a resource.
+PUT places a file or resource onto the server.
+POST creates a resource on the server.
+DELETE deletes a resource from the server.
+
+No resource used other than the study materials.
 ```
 
 ## Describe what a Response is
@@ -161,16 +168,20 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response comes from the server being communicated with and it includes a status, header, and message body (but not always).
+
+Some common status codes returned are 404 (document not found) and 301 (a permanent redirect)
 ```
+Used Google and study materials for this response.
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+Using the terminal you would enter   curl --request GET https://www.reddit.com
 ```
+Study materials were used for this response
 
 ## Describe the parts of a URL
 
@@ -179,5 +190,6 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+The URL consists of the protocal being used (i.e. http or https), the domain name (i.e. Google.com and may also include a subdomain), the Port (or gateway), the resource Path, and other optional parts such as a query and parameters (or instructions for the server receiving the response) 
+
 ```
