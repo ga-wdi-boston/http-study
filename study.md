@@ -3,7 +3,7 @@
 Read this document entirely. Follow any links and study their content. Readings
 and activities are **required** unless otherwise indicated.
 
-## HTTP
+## HTTP Required Reading
 
 HTTP is a protocol - a system of rules - that determines how documents are
 transferred from one place to another. Among other things, it defines the format
