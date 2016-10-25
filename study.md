@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a language that allows two machines to communicate with each other, and is often used to allow a browser to communicate with a server, and the server to communicate back to the browser.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a browser, a smartphone app, etc that sends a request in HTTP. A server is a computer or computer program that manages access to a centralized resource or service in a network. The client sends that request to a server, and then waits for the response. The server then determines which resource the client is requesting, and what the client wants to do with the resource. The server then issues an HTTP response that contains the requested resource (the HTML content in this case), as well as other information about the response.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +152,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET: Retrieves the resource from the server (as in, used by the client when visiting a page)
+POST: Creates a resource on the server (as in, used by the client when submitting a form)
+PUT/PATCH: Updates the resource on the server (used by APIs)
+DELETE: Deletes the resource from the server (used by APIs)
+
 ```
 
 ## Describe what a Response is
@@ -161,7 +165,22 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A server issues a response, which is an HTTP response message containing a status-line, zero or more header fields followed by CRLF, an empty line indicating the end of the header fields, and an optional message-body.
+
+1xx: Informational
+It means the request was received and the process is continuing.
+
+2xx: Success
+It means the action was successfully received, understood, and accepted.
+
+3xx: Redirection
+It means further action must be taken in order to complete the request.
+
+4xx: Client Error
+It means the request contains incorrect syntax or cannot be fulfilled.
+
+5xx: Server Error
+It means the server failed to fulfill an apparently valid request
 ```
 
 ## Make a curl request
@@ -169,7 +188,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +198,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol: tells the browser what to do
+host: tells the browser who host is
+port: shows the gate used to access the data
+resource path: shows browser where to go in the data (usually file or directory on server)
+anchor: bookmarks where the browser needs to go
 ```
