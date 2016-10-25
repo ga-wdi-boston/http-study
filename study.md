@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+How a client or a users computer and a server or a hosts computer transfer information
+rules for how they can transfer info
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,8 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+a client is one that is requesting info. A server is that which is holding the info and
+can send the info requested to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +154,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+get -to get the info from a server
+post -to first create something for a server
+put or patch -update the resources that already exist on a server
+delete -delete the resource from a server
 ```
 
 ## Describe what a Response is
@@ -161,15 +166,18 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+a server returning to a client a resource. the resource that was requested.
+1	1xx Informational ....still processing something
+2	2xx Success ....this is it
+3	3xx Redirection ....not the right resource so heres something else
+4	4xx Client Error ....the client put in the wrong resource request
 ```
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
-```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com/
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +187,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+
+http:// --protocol, which protocol used by browser
+www.example.com --domain name, the name of the website
+:80 --port, the place on the server to access the given resource
+/path/to/myfile.html --file path, locates where file is on server
+?key1=value1&key2=value2 --parameters, specific to server for extras to do before accessing the resource
+#SomewhereInTheDocument --anchor, points to a certain part w/i the resource that you requested
 ```
