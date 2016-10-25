@@ -3,7 +3,7 @@
 Read this document entirely. Follow any links and study their content. Readings
 and activities are **required** unless otherwise indicated.
 
-## HTTP
+## HTTP Required Reading
 
 HTTP is a protocol - a system of rules - that determines how documents are
 transferred from one place to another. Among other things, it defines the format
@@ -114,7 +114,7 @@ What are HTTP status codes?
 1.  [Know about HTTP URL](https://www.youtube.com/watch?v=ADQ_rhefgEk)
 1.  [Understanding HTTP Request Response Messages](https://www.youtube.com/watch?v=sxiRFwQ1RJ4)
 
-## Additional Resources (Optional)
+## Additional Resources
 
 -   [Conquering the Command Line: `curl`](http://conqueringthecommandline.com/book/curl)
 -   [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
