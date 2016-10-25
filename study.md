@@ -135,7 +135,12 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HyperText Transfer Protocol (HTTP) is the protocol that allows documents to be transferred
+back and clients and servers to send messages (requests and responses) back and forth on the web.
+
+Resources:
+
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +148,15 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client is the entity making a request.  The request is transmitted to a server via
+a protocol (like HTTP) to a server.  The server reads and processes the request and
+sends a response back to the client.  A server typically refers to a machine, but
+can also be used to refer to the software on that machine that is used to process
+the request (web servers and app servers).
+
+Resources:
+study.md
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +165,14 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+1. GET - Retrieves a resource from a server.  It doesn't modify anything, it only retrieves.
+2. PUT - Used to create/update the resource defined within the URL.
+3. POST - Used similarly to PUT.  Some people use POST to create and PUT to update, etc.
+4. DELETE - Used to remove the resource defined within the URL.
+
+Resources:
+http://symfony.com/doc/current/introduction/http_fundamentals.html
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a Response is
@@ -161,7 +181,16 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the message sent from the server back to the client after it has received and
+processed the original message.  Some common status codes are:
+200 OK - the request was successful
+404 Not Found - the required resource could not be found
+401 Not Authorized - the requestor is not authorized to receive the resource they requested
+500 Internal Server Error - request fails to something occurring on the server
+
+Resources:
+http://symfony.com/doc/current/introduction/http_fundamentals.html
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Make a curl request
@@ -169,7 +198,10 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -v reddit.com
+
+Resources:
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +211,14 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol - which protocol the browser will use
+domain - the server that the resource is hosted on
+port - determines the service used to access the resource on the server
+resource path - the path to the file or resource being requested
+parameters - may or may not be present in the URL. Contains key/value pairs used
+by the web server for some pre-response tasks.
+anchor - a "bookmark" to a specific part of the resource being requested
+
+Resources:
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
