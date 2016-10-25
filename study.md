@@ -89,6 +89,7 @@ What did you see?
 ## Responses & Resources
 
 Servers send responses, and those responses contain resource representations.
+//
 
 Technically, the term "resource" refers to an abstraction that your application
 uses; depending on what the application does, a resource might be a 'Car', a
