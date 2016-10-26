@@ -84,7 +84,7 @@ Try this in your terminal:
 curl --request GET https://www.google.com
 ```
 
-What did you see?
+What did you see? The html of the google.com page.
 
 ## Responses & Resources
 
@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hypertext Transfer Protocol is a set a rules which govern how clients and servers, on the web, communicate with each other.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is something that requests information from a server. Examples include Google Chrome and Safari.
+
+A server locates the information the client requested and sends it back to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +154,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET = retrieves information
+PUT = places information in a location specified 
+POST = prints a message
+DELETE = deletes selected object
 ```
 
 ## Describe what a Response is
@@ -161,7 +166,8 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is a communication from the web server to the client. It contains a status code related to what the client requested.
+404 - Page not found
 ```
 
 ## Make a curl request
@@ -169,7 +175,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +185,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol = what you want to do ie, send mail, transfer a file or view a website
+domain name = what information you want ie, which website would you like to see
+port = what access point will you use to get what you want
+path = the directions the webserver will follow to get what you want
+parameters = something the webserver uses to do something
+anchor = the exact location of what you wanted
+
+
 ```
