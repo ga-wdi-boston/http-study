@@ -135,7 +135,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP stands for Hypertext Transfer Protocol. It is a system of rules that that
+defines how documents are transferred from one place to another. One thing it
+does is define how clients and servers interact with each other.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +145,13 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Clients are things that send requests and receive responses from those requests.
+They send requests to a server and receive responses back from that server.
+A client would be a web-browser like Firefox or a command-line program like cURL.
+Servers are entities that receive requests and send responses. The word 'server'
+is also used to describe the machine that server programs run on. There are many
+different types of servers, such as application servers like Node.js, and
+web-servers, like Apache.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +160,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST: 'Create' - Creates new resources.
+GET: 'Read' - Read or retrieve a representation of a resource.
+PUT: 'Update/Replace' - Most often used for update functionality, putting to a
+     known resource with new data.
+DELETE: 'Delete' - Used to delete a resource.
 ```
 
 ## Describe what a Response is
@@ -161,7 +173,14 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is data sent back by a server after a request from a client. They
+contain resource representations. Some common status codes are:
+  200 OK - Everything completed successfully, depending on request will send
+           either resource asked for or result of action performed.
+  301 Moved Permanently - This an all future requests should be sent to new URl.
+  404 Not Found - The requested resource could not be found.
+  500 Internal Server Error - Generic error message given when when an unexpected
+                              condition was encountered and no further data is available.
 ```
 
 ## Make a curl request
@@ -169,7 +188,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -v https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +198,14 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://     www.domain.com: 1234 /path/to/resource ?a=x&b=y
+protocol    host            port resource path     query
+Protocol: What protocol the browser must use.
+Host: Which web server is being requested.
+Port: Used to indicate the gate through which to access resources on the web server.
+      Usually ommitted if the server uses standard ports such as 80 for HTTP.
+Resource Path: Path to the resource on the web server.
+Parameters/Query: Extra parameters given to the web server, used to do extra stuff
+                  before returning a resource. They are key/value pairs seperated
+                  by an &.
 ```
