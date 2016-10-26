@@ -135,15 +135,17 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a system that tells what type of messages are passed between clients
+and servers
 ```
 
 ## Describe what a client is and what a server is
 
- What is a client is and what is a server? How do they interact with each other?
+A client sends a request and receives responses while a server receives requests
+and sends responses. They work hand in hand with each other passing information
 
 ```md
-<!-- your answer here -->
+
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +154,8 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+The 4 most common HTTP verbs are Get, Put, Delete and Post.
+
 ```
 
 ## Describe what a Response is
@@ -161,7 +164,9 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Responses are what is received from servers and they contain resource representations.
+codes starting with 1 usually are informational, 2's are successful messages and
+3's are redirections
 ```
 
 ## Make a curl request
@@ -169,7 +174,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +184,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+The parts of a URL are:
+The domain name - indicates which web server is being requested
+The port - used to access resources on the web server
+The Path to the file - path to the resource
+The Parameters - are extra parameters provided by the web server. A list of key
+pairs that are separated by the "&" symbol.
 ```
