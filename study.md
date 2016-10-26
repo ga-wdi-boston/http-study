@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the protocol, or, set of rules, that governs client-server communication
+using text.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,10 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client and the consumers of the hypertext.  They make requests to servers in the
+form of a URL and receive text in response.  Servers may refer to either the
+applications responsible for receiving requests, identifying resources and
+generating responses, or the machines on which server applications are run.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +156,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET instructs the server to return the resource identified by the URL.
+PUT instructs the server to create or update the resource.
+DELETE instructs the server to remove the resource.
+POST instructs the server to perform a repeatable operation that adds a new
+resource that is subordinate to the identified resource.
+
 ```
 
 ## Describe what a Response is
@@ -161,7 +170,19 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the text sent by the server containing a representation of the
+requested resource and a status code indicating whether or not the server was
+successful in retrieving said resource, among other things.
+
+Status codes are three digit numbers that indicate the outcome of the request.
+Codes beginning with 2 indicate sucess.  Codes beginning with 3 indicate
+redirection. Codes beginning with 4 indicate that the client's request was
+invalid in some way.  Codes beginning with 5 indicate a server error.
+
+The most common among these (anecdotally), are 200 (indicating that the
+resource was located and the response contains a representation of it), 401 (
+indicating the the client is not authorized to access the resource,) and 500 (
+indicating a generic error on the server.)
 ```
 
 ## Make a curl request
@@ -169,7 +190,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +200,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+(https://) - Indicates which protocol should be used. (www.reddit.com) - Domain
+Name - The name associated with the location of the server hosting the resource.
+(:80) - The "technical gate" though which the resource is accessible on the
+server. (/path/to/resource) - Indicates the location of the resource within the
+web server. (/a=b&x=y) - The query passed for processing by the server.
 ```
