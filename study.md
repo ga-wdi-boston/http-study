@@ -135,7 +135,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a defined set of rules that allows programs to communicate with
+each other. For example, the communication between a web browser like Chrome
+and
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +145,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client and server are both programs. The client captures input and
+sends it to the server. THe server processes the information, and sends
+it back to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +156,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+The 4 more common HTTP verbs are GET, PUT, DELETE, and POST.
+GET: instructs the server to transmit the data identified by the URL to the client.
+PUT: used when you wish to create or update the resource identified by the URL.
+DELETE: used when you want to delete the resource identified by the URL of the request.
+POST: used when the processing you wish to happen on the server should be repeated.
 ```
 
 ## Describe what a Response is
@@ -161,7 +169,13 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+The response is information sent by the server back to the client. The
+response received from google (for example) is an HTML document that the
+browser can parse and render for the user. Common status codes include:
+404 Not Found - means the requested resource is no longer available.
+403 Forbidden - means access to the resource is forbidden.
+500 Internal Server Error - a catch-all for server-side errors.
+
 ```
 
 ## Make a curl request
@@ -169,7 +183,44 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!doctype html>
+<html>
+  <head>
+    <title>Too Many Requests</title>
+    <style>
+      body {
+          font: small verdana, arial, helvetica, sans-serif;
+          width: 600px;
+          margin: 0 auto;
+      }
+
+      h1 {
+          height: 40px;
+          background: transparent url(//www.redditstatic.com/reddit.com.header.png) no-repeat scroll top right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>whoa there, pardner!</h1>
+
+
+
+<p>we're sorry, but you appear to be a bot and we've seen too many requests
+from you lately. we enforce a hard speed limit on requests that appear to come
+from bots to prevent abuse.</p>
+
+<p>if you are not a bot but are spoofing one via your browser's user agent
+string: please change your user agent string to avoid seeing this message
+again.</p>
+
+<p>please wait 2 second(s) and try again.</p>
+
+    <p>as a reminder to developers, we recommend that clients make no
+    more than <a href="http://github.com/reddit/reddit/wiki/API">one
+    request every two seconds</a> to avoid seeing this message.</p>
+  </body>
+</html>
+
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +230,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol: the protocal used by the browser (usually HTTP or HTTPS)
+domain name: the web server being requested
+port: the technical door used to access the resources on the web server
+file path: path to the specific resource being used
+parameters: extra parameters used to do extra stuff before sending to client
+#anchor: show content at a specific or "achored" spot in the document
+
 ```
