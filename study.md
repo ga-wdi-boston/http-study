@@ -135,7 +135,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP or  hyptertext transfer protocol is what the browswer uses to recieve
+a server address and translate the message from that sever into text in the browser
+window.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +145,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the thing accessing the URL and the server is what recieves the message. A client types in a URL which makes a request to the server. The server processes the request and returns the URL into the broswer using HTTP.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +154,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - tells sever to get information from URL
+POST - Similar to PUT, is used when "processing you wish to happen on the server side should be repeated, if the POST request is repeated", it is basically for on-purpose duplications
+PUT - allows you to add or create information in the resource identified by URL
+DELETE - this will delete the resource indentified by URL
 ```
 
 ## Describe what a Response is
@@ -161,7 +166,11 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is a message from the server informing you of the result of the clients request. The response containts meta-date but it also contains a number indicating the result of the GET request.
+Some common ones:
+400 - data does not pass validation or is in incorrect format
+401 - authentication required
+404 - response not found - usually a bad URL
 ```
 
 ## Make a curl request
@@ -169,7 +178,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl https://wwww.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +188,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+URL scheme - ex. HTTP - indicates how to access resource
+Host - ex. google.com - where the resource is located - could also be IP address
+Port - ex. 80 - informs computer which type of resource it should access
+URL path  - which is used to identify the specific resource like the page that is hosted by the website
+
 ```
