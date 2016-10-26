@@ -135,16 +135,15 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Transfer protocall to transfer text between computers
 ```
 
 ## Describe what a client is and what a server is
 
  What is a client is and what is a server? How do they interact with each other?
 
-```md
-<!-- your answer here -->
-```
+A client is a user / a requester of a service. A server is a provider of tbe service.
+
 
 ## Describe the 4 most common HTTP verbs
 
@@ -152,7 +151,7 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST: create a location with a linking to a customer. GET: read or retireve a response. PUT: Update and replace capabilities. PATCH: Update and moify capablities. DELETE: .... delete.
 ```
 
 ## Describe what a Response is
@@ -161,7 +160,7 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+It's what the server sends back to a client. 1xx : success 2xx: redicrection 3xx: client errors 4xx: server errors
 ```
 
 ## Make a curl request
@@ -179,5 +178,7 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
-```
+Scheme: selects the protocal used to get the information from the internet
+Host: Indentfies the host that has what your are looking for
+Path: gives the file path the thing you are requesting / trying to get to
+Query String: Specified parameters for a search
