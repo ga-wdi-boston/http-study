@@ -184,7 +184,7 @@ Using curl, how would you get the content from Reddit.com?
 
 ```md
 
-curl --request GET https://www.google.com
+curl --request GET https://www.reddit.com
 
 RESULT:
 <!doctype html>
