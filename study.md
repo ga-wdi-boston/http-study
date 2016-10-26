@@ -85,6 +85,7 @@ curl --request GET https://www.google.com
 ```
 
 What did you see?
+All the content from https://www.google.com retrieved and put in terminal.
 
 ## Responses & Resources
 
@@ -132,10 +133,13 @@ material. Instead, digest what you've read and repeat it in your own voice.
 
 ## Define HTTP
 
-In your own words, give a breif description of what HTTP is.
+In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the most-used protocol for client / server communication. It allows
+a client to request files from a server and have that server understand, interpret,
+and send back the info requested. The protocol is denoted at the beginning of
+a URL (i.e. https:www.google / http:www.google.com)
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +147,12 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is normally your browser / user agent that sends a request for specific
+directories / files / etc to a server, using a specific protcol (often times http).
+The client is typically the browser, while the server is where web pages live.
+The client side must communicate with the server in order to retrieve the requested
+info to render in a web browser.
+mak
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +161,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST - create new resources
+GET - Read/Receive a representation of a resource
+PUT - to update a represenation on a resource.
+PATCH - to make changes/updates, only has the updates though...not the whole resource
 ```
 
 ## Describe what a Response is
@@ -161,7 +173,12 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Response lets you know what happened with your request to the server. It basically
+gives you the outcome or at least a range of possibilities. Some common ones are:
+2XX - Successful (Most common is 200 - when page first rendered in browser)
+3XX - Redirection (Permanently redirect(301))
+4xx – Client Error (No longer exists(410), page not found(404), forbidden (403))
+5XX- Server Error (Service uavailable (503))
 ```
 
 ## Make a curl request
@@ -169,7 +186,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl https:www.reddit.com
+If I wanted to save it in files locally, I could do curl -O https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +197,15 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol - Determines how browser and server should communicate. Most common protocol is HTTP or HTTPS
+          HTTP designed to transfer hypertext documents over the internet.
+Domain Name - Unique reference to identify a website. There is typically a top level and a second level
+              domain name
+Port - Always required, not always visible on a URL, is a number (HTTP typically
+        on port 80). An analogy would be a bank teller / booth. Some are for differnety
+        types of services. That's how ports work too. Some may be closed, some may be for HTTP,
+
+Path to File - The directions or address to a file or directory on a server
+Parameters - Snippets of information, located in the query of URL
+Anchor - Specific address of where something is going
 ```
