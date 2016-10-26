@@ -135,7 +135,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTO is a protocol used between web clients and servers for the purposes of communicating and transfering files.
+
+Sources: this reading, "Basic concepts..." youtube video.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +145,13 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+client: the browser or application used by the user in order to access
+sites/resources/or post info to...
+
+servers: the machines that host websites and web services.
+These are generally computers that process requests by web clients,
+and provide the files that make up websites.
+
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +160,24 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST: I would use POST for the info submitted by a client in a form.
+The POST would create new data in some parent element or file.
+
+GET: is used by web clients to request, or get, the files or resources
+from a server. For example, getting the files necessary to render
+ a website in a browser.
+
+(PUT: this updates a resource. It can also be used to creat a new
+resource when it is desirabely for the client to choose the resource ID.)
+
+PATCH: this updates an already existing resource. It identifies a
+current resource and contains modifications intended for that resource.
+
+DELETE: is used to delete a resource according to the URI specified
+in the request. An HTTP status 200 is expected, along with a response.
+
+Source:
+http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -161,7 +186,9 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+When a web client sends a request, the resources it gets in return
+are the response. In the case of website, the response would contain the
+files a browser needs from the server, to render a website.
 ```
 
 ## Make a curl request
@@ -169,7 +196,11 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+I would write the following command in 1 line of terminal terminal:
+
+curl -X GET -L https://www.reddit.com/r/FatBike/top/.json?count=20
+
+source: reddit
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +210,21 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol: the agreed on communication standard between client and server.
+
+Host: the domain name that is used to locate the server. it translates
+ to an ip address.
+
+Port: the port of entry into a server for a request or communication.
+ Rarely used in commercial web addresses.
+
+Resource path: Used to be the path to the resources inside a server.
+Now it is generally more symbolic but serves a similar purpose of
+identifying a specific page or resource.
+
+Query: is the rest of the URL, containing data that can't easily be
+written with a resource path structure.
+
+Sources: Wikipedia, this reading,
+https://cloud.githubusercontent.com/assets/388761/12622184/2c0143dc-c4f2-11e5-84af-55f723dd6639.png
 ```
