@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- Hypertext Transfer Protocol is a text-based language that is used to communicate information between two computers. HTTP's main objective is to understand text requests and return tex reponses between the machines. -->
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,16 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!--
+
+Server: A server is a computer that is used specifically to host information
+that other comoputers (i.e. 'clients') access. These computers (servers)
+literally 'serve' the client computers the information they request.
+
+Client: A client is the browser being used by another computer that is being used to request
+information (files) from a server.
+
+ -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +161,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+<!--
+POST: Usually used to create new resources. Specifically, create subordinate resources (sibordinate to a parent resource).
+GET: Used to read a representation of a resource. GET requests are used to read data, not change it.
+PUT/PATCH: Generally used to update resources, which sometimes is also technically considered "modifying" them. This specification is also why this verb is listed at "Put" / "Patch".
+DELETE: Used to delete a resource.
+-->
 ```
 
 ## Describe what a Response is
@@ -161,7 +175,14 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!-- A response is the reqeusted resource and the relevant information about that resource that a server wants to send back to a client. The reponse contains:
+Status Code: Communicated the overall outcome of the request back to the client. Each status code indicates a different status that describes the result.
+Date: The date at which the response was sent.
+Server: The name of the server that sent the response.
+Content-type: The type of content being sent in the response (ex: 'text/html').
+Resource: The resource that was requested is also sent in the response.
+
+-->
 ```
 
 ## Make a curl request
@@ -169,7 +190,10 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!--
+After downloading cURL via '$ brew install curl', we enter the following into the terminal:
+"$ curl https://www.reddit.com/
+-->
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +203,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+<!--
+Protocol ('http://'): The protocol identifies which predefined protocol the browser must used. Common examples of protocols include HTTPS, HTTP, and mailto:.
+Host/Domain Name ('www.google.com'): Identifies which web server the browser is requesting.
+Port: Represents the access point used by the client to access resources on the server.
+Resource Path: A route to the resource being hosted.
+Query (parameters): A specific set of key/value paris used to identify certains sets on information.
+
+ -->
 ```
