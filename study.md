@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+The rules for sending documents to and from on the internet.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,8 +143,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
-```
+Client is the website, and a server is the host which accepts connections from Clients and allows users to.....use the client.  ```
 
 ## Describe the 4 most common HTTP verbs
 
@@ -152,8 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
-```
+Post - creates a new resouce within the parent - you would use it to, for example, post a new message to a message board.
+Get - Is the most common verb and is required by servers to be implemented.  you would use it to read files, or messages
+put - update or overwrite, you would use this reuest to, say replace a message
+and delete - delete, use this to delete items
 
 ## Describe what a Response is
 
@@ -161,7 +162,7 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+After a server receives a request, it sends a response which contains a status line, the http version, the status code, and a message (optional).  404 would be a common one, means not found.   403 is also common, it means forbidden.  200, means OK.
 ```
 
 ## Make a curl request
@@ -169,8 +170,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
-```
+You would specify what content you wanted to GET and use the command line?  I think,
+Curl is a little confusing in that answers were all very generalized on the web and the README was very dry.  But it looks like you specify which content you'd like to GET (example:  get the 10 most recent posts from a thread)
 
 ## Describe the parts of a URL
 
@@ -179,5 +180,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
-```
+The first section is the protocol section, or rules, that the browser must follow.
+HTTP and HTTPS are most common.
+The second part is the WEB address or IP address, which tells the browser WHERE to go.
+The third is the PORT, which tells the browser HOW to get to the WHERE
+The fourth is PATH, which tells the browser, once its reached the server, where the specific place it's trying to go is located (think of this as rooms in a house, the address is the house address, the path is which hallway and which room)
+You can have a subdomain, which comes before the domain, you can also have a query, which is found on dynamic pages, you can have perameters, which link to certain characters, is used for searching mostly, and you can have named anchors (fragments), which link to sections within a page.
