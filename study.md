@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hypertext Transfer Protocol is a way of communicating with a server. For example as a client you can request information from a server by typing in a URL which then the server finds information on that URL and returns back to the client which processes the information and gives you a webpage to look at.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a browser that request information from a server. A server is a computer program or a device that provides functionality for other programs or devices, called clients.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +152,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST: Create new rescources.
+PUT: Update capabilities.
+GET: Read or retrieve a representation rescource.
+PATCH: Modify capabilities.
 ```
 
 ## Describe what a Response is
@@ -161,7 +164,10 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is something sent to a server and contains rescource representatiion
+that has information that is dependent upon the application, it can also be
+represented in multiple different ways by the server. They are documents that
+are returned as part of the response body.
 ```
 
 ## Make a curl request
@@ -169,7 +175,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl GET Reddit.com 
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +185,7 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http:// is the protocol, www.example.com is the domain name, :80 is the port,
+?key1=value1&key2=value2 are extra parameters provided to the Web server,
+#SomewhereInTheDocument is an anchor to another part of the resource itself.
 ```
