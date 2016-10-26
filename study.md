@@ -183,6 +183,10 @@ browser can parse and render for the user. Common status codes include:
 Using curl, how would you get the content from Reddit.com?
 
 ```md
+
+curl --request GET https://www.google.com
+
+RESULT:
 <!doctype html>
 <html>
   <head>
