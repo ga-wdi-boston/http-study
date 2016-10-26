@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol for exchanging information through the web. It is used
+between a server and client.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,8 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client requests information through HTTP and a server either accepts or denies
+the request, and if accepts, sends the requested information back to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +154,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+PUT, which is used to place requested content
+GET, which is used to request content
+DELETE, used to delete content
+POST, is used for repeated placement of content or other repeated actions
+
 ```
 
 ## Describe what a Response is
@@ -161,7 +167,14 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is a message telling the client what happened with their request.
+It is broken up into 5 sections, 100 level, 200 level, 300 level, 400 level,
+and 500 level.
+
+200: ok, meaning the request was successful
+404: Not found, when content requested cannot be found
+500: internal server error, the server was faulty and there's nothing the client
+can do about it.
 ```
 
 ## Make a curl request
@@ -169,7 +182,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --include --request GET http://reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +192,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+The following are the parts of a URL in order:
+
+http:   the protocol used
+www.domain.com  the host name
+4 digit number:   port number
+path/to/resource  references the path to the content
 ```
