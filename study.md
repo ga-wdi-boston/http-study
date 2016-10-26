@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the protocol clients use to pass requests to a server. It's how requests are formatted and interpreted.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A server is a computer which stores resources and sends them out to computers which request it. Clients are the computers which make those requests.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +152,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET -- when I want to see a resource
+POST -- when I want to create a new resource
+PUT -- when I want to update or create a resource
+DELETE -- when I want to delete a resource
 ```
 
 ## Describe what a Response is
@@ -161,7 +164,17 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what is sent back by the server when a request is made. It contains a code stating what happened to the request and sometimes resources that were on the server.
+
+common codes: 200 -- success, here's your thing
+400 -- your request is wrong
+401 -- you need authorization
+404 -- can't find your thing
+500 -- something's wrong with the server
+503 -- something's wrong with the server temporarily
+550 -- you don't have authorization
+
+https://www.smartlabsoftware.com/ref/http-status-codes.htm
 ```
 
 ## Make a curl request
@@ -169,7 +182,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl http://www.reddit.com
+
+https://curl.haxx.se/docs/httpscripting.html
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +194,15 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+
+
+http -- protocol. What format to request in
+www.example.com -- host, or domain. What server you're requesting from
+:80 -- what port. If a server has multiple functions, this clarifies
+/path/to/myfile.htm -- path. tells the server where to look
+?key1=value1&key2=value2 -- extra parameters the server may need to find stuff
+#SomewhereInTheDocument -- anchor. The browser uses this to jump to a particular part of the document. the server doesn't use it.
+
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
