@@ -135,7 +135,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is Hyper Text Transfer Protocol - a set of rules that determine how files
+are trasnfered between places. It defines the format of communication between
+clients and servers.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +145,18 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The server component provides a function or service to one or many clients,
+which initiate requests for such services.
+Clients and servers exchange messages in a request–response messaging pattern:
+The client sends a request, and the server returns a response. To communicate,
+the computers must have a common language, and they must follow rules so that
+both the client and the server know what to expect. The language and rules of
+communication are defined in a communications protocol. The application-layer
+protocol defines the basic patterns of the dialogue. To formalize the data
+exchange even further, the server may implement an API. The API is
+an abstraction layer for such resources as databases and custom software.
+By restricting communication to a specific content format, it facilitates
+parsing. By abstracting access, it facilitates cross-platform data exchange.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +165,17 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - The HTTP GET method is used to retrieve a representation of a resource.
+      They can be called without risk of data modification or corruption since
+      GET requests are used only to read data and not change it.
+POST - The POST verb is utilized to create new resources, or subordinate
+       resources.
+PUT - PUT is utilized for update capabilities, putting to a known resource URI
+      with the request body containing the newly-updated representation of the
+      original resource.
+DELETE - DELETE is used to **delete a resource identified by a URI.
+
+
 ```
 
 ## Describe what a Response is
@@ -161,7 +184,17 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Servers send responses, and those responses contain resource representations.
+1xx Informational - Request received, continuing process.
+2xx Success - Request received, continuing process.
+3xx Redirection - indicates the client must take additional action to complete
+                  the request.
+4xx Client Error - intended for situations in which the client seems to have
+                   erred.
+5xx Server Error - The server failed to fulfill an apparently valid request.
+Unofficial codes - These codes are not specified by any RFC, but are used by
+                   third-party services to provide semantic or RESTful error
+                   responses.
 ```
 
 ## Make a curl request
@@ -169,7 +202,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +212,13 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Url contains
+  Protocol - http
+  Domain Name - Indicates the web server being requested. Eg - google.com
+  Port - The gate used to access the resources on the web page.
+  Path to the file - Path to the resource on the web server.
+  Parameters - Web servers use parameters to do extra stuff before returning
+               the resource.
+  Anchor - It represents a bookmark inside the resource giving the browser
+           directions to show contentb at that spot.
 ```
