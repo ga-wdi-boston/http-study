@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- Http is a protocol that determines how things are presented and trasnfered from place to place. It also defines the format of those messages that are passed between client and server.  -->
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!-- A client or client computer, is a personal computer which through a browser makes requests to a server for files in order to run web sites and applications. A server is a machine where those files are located and broadcast to clients who request them.  -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +152,8 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+<!-- Get, Put, Delete, Post.
+Get allows you to access a read only version of the data. Put will allow you create or update the data on the site. Delete is the opposite of put, it allows you delete the resource indentified by the request. Finally Post is simialar to PUT however you can instead specify which part youd like to edit, and make additions to the data. -->
 ```
 
 ## Describe what a Response is
@@ -161,7 +162,7 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!-- Responses are sent from the servers to a client. These generally contain information about the resources requested. Some of the common response codes are 1XX, 2XX, 3xx and so on. The 100's are informational such as 101 is switching protcols, saying that the server was asked to to switch and is now doing so. The 200's are success, such as 205 which is reset content meaning the server successfully preocessed the request but is forcing the requester to reset the document. The 300's being redirection, 301 for exapmple being moved permanently meaning the site moved and you will redirected to the posted URL.  -->
 ```
 
 ## Make a curl request
@@ -169,7 +170,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!-- You would use http GET to preform a request on reddit.com.  -->
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +180,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+<!-- Protocol -  indicated the protcol the server uses, most common it will be HTTP or the secured version of https. There are others that are less common such as mailto:
+    Domain Name - It is the name given to the IP address that makes it a lot easier for us to remember, alternativly the IP address could be used.
+    Port - This represents the technical gate used to acces the resources on the server, however using http or https they're not needed, inorder to use a non standard protocol they're required.
+    Path to file - This is the path to a resource on the webserver.
+    Parameters - These are a list of key values that are genereally seperated by & These can be used to do extra things before returning the resource. Each server will have their own rules regarding parameters.
+    Anchor -  these are a sorta similar to a  "bookmark" however instead of linking to a specific page, they link to a specific part of the page, or section in a video/audio file. -->
 ```
