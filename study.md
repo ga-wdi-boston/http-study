@@ -86,6 +86,8 @@ curl --request GET https://www.google.com
 
 What did you see?
 
+A very long line of code that starts with <!doctype html> and has a bunch of text and numbers and ends with {google.med('init');google.initHistory();google.med('history');}});if(google.j&&google.j.en&&google.j.xi){window.setTimeout(google.j.xi,0);}
+
 ## Responses & Resources
 
 Servers send responses, and those responses contain resource representations.
@@ -104,6 +106,13 @@ JSON) as part of the response body.
 ## Response Statuses
 
 What are HTTP status codes?
+
+hypertext transfer protocol response codes
+codes beginning with 1 are informational so the request was recieved
+codes beginning with 2 are success and was able to be processed successfully
+codes beginning with 3 are redirection and the client needs to take addition actions to complete a request
+codes beginning with 4 are client errors
+codes beginning with 5 are server errors so the server didnt fulfill a request
 
 -   [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 -   [HTTP Status Codes in a Nutshell](https://twitter.com/stevelosh/status/372740571749572610)
@@ -135,7 +144,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP gives computers a universal language to communicate back and forth, it's the foundation of data communication
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +152,8 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+the web client communicates with the web server via HTTP, the web client requests the information
+the web server receives the requests and 'serves' files to users as a response to their requests
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +162,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+post is used to create new resources
+get is used to read/retrieve resources
+put is used to update or create a resource
+patch is used to modify and changes to the resource
 ```
 
 ## Describe what a Response is
@@ -161,7 +174,12 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+a response indicates what is about to happen
+response codes beginning with 1 are informational so the request was received
+response codes beginning with 2 are success so the action that was requested was received and processed correctly
+response codes beginning with 3 are redirection and means there needs to be additional action to complete a request
+response codes beginning with 4 are client errors
+repsonse codes beginning with 5 are server errors so the request fail to be fulfilled.
 ```
 
 ## Make a curl request
@@ -169,7 +187,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+uses a get command to receive the api data from the specific web server
+curl GET https://www.reddit.com/
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +198,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocal: http
+host/domain: www.domain.com reference that identifies the website
+port: indicates the gate, only number from IP Address
+resource: or path refers to the file on the web server
+query: parameters at end, starts with ?
 ```
