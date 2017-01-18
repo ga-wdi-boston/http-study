@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP are the rules for how documents on the internet move from one place to another between clients and servers.
+
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a computer that sends a request and recieves a response. Like the browser on my laptop when I am trying to go to a new website. The server is the computer that recives a request and sends out the response.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +153,16 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET, POST, PUT and DELETE are the most important.
+
+You use GET to transmit the data from the URL to the client in a reuqest.
+
+You use PUT when you create or update the resource identified by the URL.
+
+You use DELETE to delete a resource identified by a URL.
+
+You use POST to repeat a process at a URL base.
+
 ```
 
 ## Describe what a Response is
@@ -161,7 +171,14 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+HTTP responses tell us whether an HTTP request has been successfully completed.
+There are 5 common responses that start with the following:
+100 - Information responses - everything is OK and the client should continue with the request
+200 - Success Responses- the request was successful
+300 - Redirection responses -  the request has more than one possible response
+400 - Client error responses - the server could not understand the request due to invlaid syntax
+500 - Server error responses -  the server encountered an error and doesn't know how to respond
+
 ```
 
 ## Make a curl request
@@ -169,7 +186,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+We can make an http requestu to a server and print its response to the console. It would look like: $ curl reddit.com
+
+I don't really understand what curl does and why or when we would use it despite reading the docs. 
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +198,14 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+I'll go in order:
+1. The protocol: which rules the browser should follow. Usually http or https
+2. Domain name: the name of the specific server being requested.
+3. Port: the "gate" used to access the resources on the server.
+4. File path: gives us a more specific location of the web server
+5. Parameters: extra key, value pairs for extra information. Not always necessary
+6. Anchor: A "bookmark" that gives us the content of a specific location
+
+I really liked the analogy of a URL being like a regular postal mail address on MDN:
+protocol is the postal service you want to use, domain name is the city or town, port is the zip code, path, is the building your mail should be delivered to and parameters are the extra info, like the apartment building number. Anchor is the name of the person you want the mail to go to.
 ```
