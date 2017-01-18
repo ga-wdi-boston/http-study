@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+http provides a network protocol standard that Web browsers and servers use to communicate. so its basicly how two computers communicate withe each other.
+
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+a client is a local computer. the client requset info from the server and the server response(or not)
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +153,14 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET
+Retrieve the resource from the server
+POST
+Create a resource on the server
+PUT/PATCH
+Update the resource on the server
+DELETE
+Delete the resource from the server
 ```
 
 ## Describe what a Response is
@@ -161,7 +169,11 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+response is the "answer" of the server to the client.
+201 - created location with link
+200 - ok -list of customers
+404 - not found/deleted
+
 ```
 
 ## Make a curl request
@@ -169,7 +181,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +191,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocal  http
+domain reference that identifies the website
+port number from IP Address
+resource or path refers to the file on the web server like html/css files
+query: parameters at end
 ```
