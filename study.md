@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+it is the rules that determin how files are moved betewwn computers.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,8 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+the client is "you" the computer/other connected devise that is requesting files from the server.
+the server is where the files that the user requests are stored and sent from
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +153,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET to retreive a resource
+PUT to change or update
+POST to create the resourse
+and DELETE to well, delete it
 ```
 
 ## Describe what a Response is
@@ -161,7 +165,12 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+a response is what the server sends back to the client and it may or may not contain a file and it will contain a status the main statuses are a s follows from steve losh's twitter:
+1xx: hold on
+2xx: here you go
+3xx: go away
+4xx: you fucked up
+5xx: I fucked up
 ```
 
 ## Make a curl request
@@ -169,7 +178,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+in the command prompt
+>cURL http://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +189,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+parts of a URL
+protocol: this is the set of rules the browser must use most used is http or https
+domain name: this is the which web server is being requested www being the most used
+port: this is the "gate" used to access the resource on the web server
+path to the file: is the directory path to the file requested.
 ```
