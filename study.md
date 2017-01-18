@@ -62,6 +62,7 @@ often describe requests like this:
 
 ```txt
 GET https://www.google.com/
+We are making a get request to server which won't be modifying any data in the rever but we will be obtatining data from it.
 ```
 
 If we know we're working with a particular server, we might shorten abbreviate
@@ -135,7 +136,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Http is a protocol which transmits hypertexts like html bwteen personal computers and serves to to create comunication in between.
+Source MDN
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +145,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client is the computer whick requests for information and server provides answer to what it is it asked for.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +154,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - is asking for information from server.
+POST - is creating new information in the server.
+PUT - is updating the existing information in the server.
+DELETE - deleting the information in the server.
 ```
 
 ## Describe what a Response is
@@ -161,7 +166,7 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Response is what we get as a representation of the resource when we make a get request to server. It specifies the content of the body. Status of a code explains how did server reponded into our get request.
 ```
 
 ## Make a curl request
@@ -169,7 +174,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -v reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +184,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http:// - is the  protocol
+www.example.com - domain name is the server that it points to
+:5 - a port is the gate being used for the first step of reaching the information
+/path - is the specific route that is the other step for reaching the dta
+parameters with keys and &: are the exta work that server does before sending the information
+#anchor: pointers for specific data.
 ```
