@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+It is like the "Department of Communications" for the web: it's a protocol that chooses how a request/message is communicated/formated and processed by servers and clients.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,8 +143,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
-```
+A client is individual's like my chrome or your firefox. A server is a program that shares information/resources with clients.```
 
 ## Describe the 4 most common HTTP verbs
 
@@ -152,8 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
-```
+GET - when requesting a server to send back some resources.
+PUT - when adding to a resource that a server has sent.
+POST - used when you want an action repeated.
+DELETE - Does the opposite of PUT.```
 
 ## Describe what a Response is
 
@@ -161,16 +162,19 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
-```
+A response is the resources a server sends back to the client from it's request.
+It contains information such as HTML,CSS,Javascript files, and images.
+Common status codes are:
+200 OK - meaning that the clients request was succesful.
+404 Not Found - Even non tech people have seen this one! It means that the serve could not find the resource(s) the client requested.
+408 Request time-out - Also seen quite a bit like when you are riding in the T and the connection is not so good so the server says "yo bro I just timed out because I waited to long for you.. get your shit together man..."```
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
-```
+curl --request GET https://www.Reddit.com```
 
 ## Describe the parts of a URL
 
@@ -179,5 +183,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
-```
+1. HTTP:// - It is like the "Department of Communications" for the web: it's a protocol that chooses how a request/message is communicated/formated and processed by servers and clients.
+2. www.google.com - the domain name which is the host.
+3. :80 - this is the port which is not always present. It is the gate of the domain.
+4. /path/to/resource - It is the path to resource. It tells the server where the resources are.
+5. keys and values - these are parameters. I believe it asks servers how the parameters are being processed.
+6. #Whereami - an anchor which tells where on the 'web page' the client wants to be. This was in the pre-course work ;)```
