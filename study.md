@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP, hypertext transfer protocol, is basically the messenger of the web. It is used to deliver all sorts of data such as text contents, images, videos, audios, etc. To make the delivery, HTTP follows the standards of the client server model. The client(computers) must establish connection with the internet and then sents out a HTTP message request to the server(databases) with methods such as GET(for displaying), POST(for updating), DELETE(for deleting). After the server receives the HTTP message request, it will then send a response back to the client based on what the client used as the method.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Clients can be anything that have access to the internet and ability to make requests to the server.
+Servers are programs that serve clients meaning their purpose is to listen for requests and responding back with a messenge.
+The way that the client server model works is that the client sends out a HTTP messenge request via methods such as GET, POST, DELETE, etc. to the server. The server receives the messenge and sees if it can fulfill the request. If the server can fulfill the request and method that was used for example is GET, the client will get a respond back from the server displaying the page the client requested for. if not, ona typical case, the client will get the 404/page not found messenge.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +154,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST - used when creating new items in the resource
+GET - used when retrieving items from the resource
+PUT - used when replacing existing items in the resource
+DELETE - used when deleting existing items in the resource
 ```
 
 ## Describe what a Response is
@@ -161,7 +166,10 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Response is the HTTP messenge that's sent by the server to the client based on the client's request. Based on the server's review/ability to fulfill the request, the response typically have the following status codes in the messenge;
+200 - OK, the request has succeeded and the data return is based on the method used.
+404 - Not Found, the server can't find a match base on the request.
+
 ```
 
 ## Make a curl request
@@ -169,7 +177,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -i https://www.reddit.com/
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +187,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+HTTP - transfer of data, messenger, sets of rules
+WWW - World Wide Web, webpage
+Domain Name - google, yahoo, aol, equivalent to the ip address
+Domain Extensions - org, com, edu, etc.
+Path - points to a specific webpage within the site
+
 ```
