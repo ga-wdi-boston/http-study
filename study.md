@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+  HTTP stands for hypertext transfer protocal and it is a very simple language
+  used to communicate between a client and a server.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,11 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+  A client is often a browser or app and a server is a computer(or software)
+  that takes requests from multiple clients and sends back information.  When
+  I type a url in my browser and press enter, that is the client asking for info
+  on the url to a server.  The server finds the correct information and then
+  sends it back to my browser.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +157,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+ GET, POST, PUT, and DELETE.  GET is used to retrieve information resources
+ from a server like a webpage.  POST sends information to the server like forms.
+ PUT is used to update information on a server and DELETE does just that to
+ information on a server.
 ```
 
 ## Describe what a Response is
@@ -161,7 +169,12 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+  The response from the browser will contain the requested resource for the
+  client if successful.  The response will contain a code to let the client see
+  any issues or indicate a successful transfer.  Code 200 is the most common and
+  is a successful response.  404 is also common, meaning the file requested was
+  not found.  403 means access was denied to the file.  301 means the file was
+  permanently moved and usually results in a redirection.
 ```
 
 ## Make a curl request
@@ -169,7 +182,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+  In the terminal I would enter
+  curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +193,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+  http://www.mysite.com/mypage
+
+  In this basic url, http:// is the protocol, www.mysite.com is the domain name,
+  and /mypage is a path to the correct file.  The protocol says we have to use
+  HTTP or HTTPS to communicate with the server.  The domain name tells the
+  browser what server to search for and the path tells the server which file to
+  include in the response.  
 ```
