@@ -135,7 +135,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the system of communication that various programs (usually browsers)
+use to communicate with servers to get the information of websites.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +144,9 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+a client is a program that sends a request to a server for information and
+renders it.  A server is a separate computer that retrieves information and sends
+it to a client program when requested.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +155,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET: used to retrieve information
+POST: creates new content on the server
+PUT: changes content on the server
+DELETE: removes content from the server
 ```
 
 ## Describe what a Response is
@@ -161,7 +167,11 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the message sent back by  server after a request.  It contains a
+code that tells if the request was successful (and if not what went wrong), along
+with the requested information.  Common Status codes include: 200 (everything
+worked out fine!), 404 (the page you referenced does not exist), and 503 (the
+server is not available at the moment).
 ```
 
 ## Make a curl request
@@ -169,7 +179,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET http://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +189,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol: how are we going to be talking to this server?
+host/domain main: Where is this server located?
+port: what gateway are we going to use to access this server?
+resource path: where on the server is this located?
+parameters/query: used by the server for server-side voodoo
+anchor: attaches to a particular part of the website. Not always used.
 ```
