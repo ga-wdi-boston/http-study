@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+It's the standard language for sharing text based inforamtion with clients and servers
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,7 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is something that is requesting information from a server and makes requests for information. A server is an item that is receiving requests and sending responses
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +152,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - for asking for information
+PUT - for adding specific information
+DELETE - for removing specific information
+POST - for updating information based on the location
 ```
 
 ## Describe what a Response is
@@ -161,7 +164,7 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the information that you're getting back from the server. It can contain text and resources. Common status codes are 404, object not found and 303 - redirect.
 ```
 
 ## Make a curl request
@@ -169,7 +172,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
+This would also need to take a user agent statement but I haven't been able to get it to work
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +183,4 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
-```
+You have the protocol - language that you're using, host - location that the information is being hosted/server, port - how you're accessing that location, resource path - particular location in relation to the host, and query - information that you want the host to return```
