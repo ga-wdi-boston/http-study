@@ -135,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a breif description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+It is a protocol that determines how documents are transferred from one place to another.
 ```
 
 ## Describe what a client is and what a server is
@@ -143,7 +143,10 @@ In your own words, give a breif description of what HTTP is.
  What is a client is and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a web browser that we, the user, use to send requests and receive responses.
+A server receive requests and send responses; they hold the information that users want.
+A client sends a request to a server which receives that request, then the server proceeds to
+send a response to the client, closing the loop.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,7 +155,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+The four most common HTTP verbs are `GET`, `PUT`, `DELETE`, and `POST`.
+-'GET': instructs the server to transmit the data to the client.
+-'PUT': used to create or update the resource identified by URL.
+-'DELETE': used to delete the resource identified by the URL.
+-'POST': used when the processing you wish to happen on the server should be repeated.
 ```
 
 ## Describe what a Response is
@@ -161,7 +168,7 @@ What is a response? what does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the data a server sends that a client receives. Responses contain resource representations. Some common status codes are "404 Not Found" which means that the resource wasn't found at the time, but could be in the future (unlikely), and "403 Forbidden" which means that the request was valid but the server refuses to respond.
 ```
 
 ## Make a curl request
@@ -169,7 +176,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -179,5 +186,5 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+An example of a URL would be http://www.domain.com:1234/path/to/resource?a=b&x=y. Looking at the individual parts, the 'http://' at the beginning states the protocol, what kind of rule we're using. The 'www.domain.com' is the host/domain name which indicates what server is being requested. The ':1234' is the port which indicates the "gate" used to access the resources on the web server (usually omitted). The '/path/to/resource' is the path to the resource on the web server. The '?a=b&x=y' at the end are extra parameters provided to the web server; it does extra stuff before returning the resource. 
 ```
