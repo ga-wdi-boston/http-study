@@ -117,7 +117,6 @@ What are HTTP status codes?
 ## Additional Resources
 
 -   [Conquering the Command Line: `curl`](http://conqueringthecommandline.com/book/curl)
--   [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 -   [Media Types](http://en.wikipedia.org/wiki/Internet_media_type)
 
 ## Questions
