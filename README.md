@@ -6,11 +6,11 @@
 
 By the end of this, developers should be able to:
 
--   Diagram the request-response flow between a client and server
--   Identify the different parts of a Universal Resource Location (URL)
--   Identify the different parts of a request
--   Identify the different parts of a response
--   Make web request outside the browser using `curl`
+-   Diagram the request-response flow between a client and server.
+-   Identify the different parts of a Universal Resource Location (URL).
+-   Identify the different parts of a request.
+-   Identify the different parts of a response.
+-   Make web requests outside of the browser using `curl`.
 
 ## Instructions
 
