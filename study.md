@@ -38,7 +38,7 @@ with? Both of these questions are answered by *uniform resource locator (URL)*.
 
 > ![URL](https://cloud.githubusercontent.com/assets/388761/12622184/2c0143dc-c4f2-11e5-84af-55f723dd6639.png)
 >
-> unkown source
+> unknown source
 
 Study each part of a URL using the [Mozilla Developer Network
 Documentation](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL).
@@ -64,9 +64,9 @@ often describe requests like this:
 GET https://www.google.com/
 ```
 
-If we know we're working with a particular server, we might shorten abbreviate
+If we know we're working with a particular server, we might abbreviate
 it as follows. For example, if Google had API documentation that described
-requests you could make to it's server, that documentation might say instead:
+requests you could make to its server, that documentation might say instead:
 
 ```txt
 GET /
@@ -75,7 +75,7 @@ GET /
 In other words, API docs often only describe the URI instead of the full URL.
 
 The response your browser receives from Google is an HTML document the browser
-parses and renders. What would happen if you made the same get request outside
+parses and renders. What would happen if you made the same GET request outside
 of the browser?
 
 Try this in your terminal:
@@ -95,7 +95,7 @@ uses; depending on what the application does, a resource might be a 'Car', a
 'Person', a 'User', or an 'Order Cart'.
 
 A single resource can be represented in multiple different ways by the server,
-including a HTML, JSON, PDF files, and images. What we really mean when we say
+including HTML, JSON, PDF files, and images. What we really mean when we say
 "resource" above is a specific representation of a resource.
 
 You may think of resources as the documents that are returned (usually HTML or
@@ -117,7 +117,6 @@ What are HTTP status codes?
 ## Additional Resources
 
 -   [Conquering the Command Line: `curl`](http://conqueringthecommandline.com/book/curl)
--   [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 -   [Media Types](http://en.wikipedia.org/wiki/Internet_media_type)
 
 ## Questions
@@ -132,7 +131,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 
 ## Define HTTP
 
-In your own words, give a breif description of what HTTP is.
+In your own words, give a brief description of what HTTP is.
 
 ```md
 <!-- your answer here -->
@@ -140,7 +139,7 @@ In your own words, give a breif description of what HTTP is.
 
 ## Describe what a client is and what a server is
 
- What is a client is and what is a server? How do they interact with each other?
+ What is a client and what is a server? How do they interact with each other?
 
 ```md
 <!-- your answer here -->
@@ -157,7 +156,7 @@ would you use each?
 
 ## Describe what a Response is
 
-What is a response? what does it contain? What are some common status codes in a
+What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
