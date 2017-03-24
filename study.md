@@ -135,7 +135,7 @@ In your own words, give a brief description of what HTTP is.
 
 ```md
 <!-- your answer here -->
-```
+Hypertext transfer protocol - on the left side of every web link. It defines how messages are transmitted and formatted between browser and web server
 
 ## Describe what a client is and what a server is
 
@@ -143,7 +143,8 @@ In your own words, give a brief description of what HTTP is.
 
 ```md
 <!-- your answer here -->
-```
+A client is a web browser which is sending requests to web server - storage place where is the document requested. The web server is making a response to it. They interact by http.
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
 
 ## Describe the 4 most common HTTP verbs
 
@@ -152,7 +153,11 @@ would you use each?
 
 ```md
 <!-- your answer here -->
-```
+GET - will retrieve all or single resource in a collection
+POST - create a new resource in a collection
+HEAD - will retrieve all or single resource in a collection
+PUT - update a resource
+http://restful-api-design.readthedocs.io/en/latest/methods.html
 
 ## Describe what a Response is
 
@@ -160,8 +165,16 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Response is a reaction of the web server for the browser - client request. It sends back a special resource - html, image, json
+
+Server response code:
+Server 100 = the data request was completed and the process is moving along
+Server 200 = everything is ok
+Server 301 - redirect to a new website - always
+Server 400 = bad request
+Server 500 = server error
 ```
+https://hostandstore.com/what-are-server-response-codes/
 
 ## Make a curl request
 
@@ -169,8 +182,9 @@ Using curl, how would you get the content from Reddit.com?
 
 ```md
 <!-- your answer here -->
-```
+http://reddit.com/
 
+https://makandracards.com/makandra/1145-how-to-send-http-requests-using-curl
 ## Describe the parts of a URL
 
 List the parts of a URL and explain what each part is, in your own words. You'll
@@ -179,4 +193,8 @@ an easy-to-reference place.
 
 ```md
 <!-- your answer here -->
-```
+Protocol - is http
+Host name - name of domain
+The port - is a number where to point the request to which server
+The path - points to the file on the web server
+The parameters - starts with ? and are separated with &
