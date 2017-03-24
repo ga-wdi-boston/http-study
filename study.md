@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a set of rules that governs how clients and servers speak to each other to provide users with the information they request.  This information comes in the form of documents or pages, which are translated by web browsers on the client machines to translate complex files into readable, enjoyable content.  The user sends a request from their client machine to the server, which receives the request, parses the information that it needs to get the information the user wants, and assembles the response, which it sends back to the client.  Once at the client machine, the web browser translates the file into a readable format which can be displayed.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a computer that people interact with.  Normally it will have several input and output methods, like a screen, speakers, a keyboard and mouse.  This is a person's access point to the internet, which happens by using a web browser.  A server stores files, almost like a filing cabinet.  The interaction between client and server is how the internet works.  Instead of storing all possible information on every single client machine, one file that makes up a webpage can be stored on one server, and accessed repeatedly by many different people all at the same time.  The client issues a request for a webpage, which the server receives, interprets, and prepares a response to, which the client then receives and interprets so that it is visible to the user.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+1. GET - This issues a request from a client to a server for specific information, often the files stored at a specific hyperlink that is either clicked on or entered in the address bar.
+2. PUT - This tells the server to create a new piece of information to store, specified by the URL in the request.  A PUT command could be issued when adding a new user's account to a shopping website, for example.
+3. DELETE - This removes the piece of data at the provided URL.
+4. POST - This alters in some way the piece of data specified by the URL.  For instance, in a run-tracking app, a POST request could alter the date and time of the specified run.
 ```
 
 ## Describe what a Response is
@@ -160,7 +163,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the information that the server sends to the client as the result of a request.  In addition to the code that creates the content that the user will see, a response contains a lot of meta-data about the transmission of the data, like whether it was successful or other information that the user may want to see about their request.  The most common response code is 404: File not found but there are others like 200: OK which shows that everything went as expected.
 ```
 
 ## Make a curl request
@@ -168,7 +171,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +181,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol: The language the browser will use to communicate with the server.  Can be http or https or mailto or ftp.
+Domain Name:  The name of the server from which the files are being requested.  Can also use IP address.
+Port:  The "gate" used to access the resources on the webpage.  There are standard ones for http and https which can be omitted if using those.
+Path:  The location of the file inside the specified domain.  In the past it was literal, but now the server can interpret it and it doesn't have to be literal.
+Parameters:  Extra requests for the server to perform other options to the specified files.  Made up of key/value pairs.
+Anchor:  Specifies where on the document to display.  Most common on wikipedia to show which section of an entry is currently being shown.
 ```
