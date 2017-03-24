@@ -134,7 +134,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP short for hypertext transfer protocol is an application that enables the transfer
+of data from clients to servers and servers back to clients. It defines the rules of
+transmitting data over the internet. Data thats being delivered can be text, images,
+video, audios, etc.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +145,12 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client can be a machine or a program that have internet connection and does requests.
+Server are programs only and they only duty is to listen to request. The interaction
+between the two is that the clients send out requests, servers listen to requests,
+server reviews the request, and sends a respond back out to the client corresponding
+to the method that was used upon setting up the request. The respond can varies up a
+bit depending on the result of the server's review to the request.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +159,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+The four common HTTP verbs are GET, PUT, POST, DELETE. GET is used on a regular basis
+being that it is used to get resource such displaying the webpage. DELETE basically
+means deleting an item or thing within the webpage. Put is used when you want to update
+or change something. Lastly, POST is used when you want to create something.
 ```
 
 ## Describe what a Response is
@@ -160,7 +171,15 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Response is what the server does when a client sends a request. Depending on the
+result of the review from the server to the request and if the server can or can't
+fulfill the request, the response varies. It mainly contains the contents the status
+code that defines on if the server can or cannot present you with the resource that
+you requested. One of the more common codes that a regular user/client would see
+would be the 404 and 200 code. 404 is basically meaning the page is not found and 200
+means the request can be fulfill and the server's respond succeeds in fulfilling the
+client's request. There are other codes, but for now those two should be the ones that
+most people would see.
 ```
 
 ## Make a curl request
@@ -168,7 +187,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -i http://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +197,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Taken for example: http://google.com.uk/sdsd/dscdj
+http - hypertext transfer protocol, sets the rule of client server model
+google.com - domain name
+.com - domain extension, varies, can be .org,.edu
+.uk - geographical extension - points to location
+/sdsd/dscdj - Path - same as pointing to a directory or file within your computer.
 ```
