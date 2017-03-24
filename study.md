@@ -134,7 +134,12 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is an acronym for HyperText Transfer Protocol.
+It's how the computer communicates with the world wide web.
+The communication protocol connects and creates the client/sever interaction. This happens with the web browser you are using and the destination web page.
+
+It's a cycle of:
+Client sends request to server as the server then registers the request to get sent back to the client. The response is then processed by the client.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +147,12 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client is you and the browser. The website is the server. The client requests the server to be of service and the server then processes this particular request. It
+is then sent back to the client and the response is then processed by the client.
+
+Example:
+I google search fur hats (request), the server will then give me  Amazon.com/furhats as the processing value and it is sent back to me with
+multiple options for fur hats and that is when I start processing it as the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +161,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET, PUT, DELETE, POST are the 4 most common HTTP verbs.
+DELETE:  Deletes a resource identified by the URL of the request.
+RGET: Read or retrieve a representation of a resource.
+PUT: Updates the resource identified by the URL (or creates).
+POST: If you want a repetition with the processing happening on the server.
 ```
 
 ## Describe what a Response is
@@ -160,7 +174,11 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Responses are sent from servers and they contain resource representations.
+If I wanted to look for a car online, I would send that response and the resource would be a car on a website or multiple cars.
+200 OK - when the HTTP request was successful, this is the response received.
+301 Moved Permanently - this request was redirected to a given URI.
+400 Bad Request - there is a client error and the request will not go through.
 ```
 
 ## Make a curl request
@@ -168,7 +186,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +196,20 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+
+http:// - protocol - which protocol the browser should use (or secured version https://)
+
+www.developer.mozilla.org (or www.example.com) - domain name - so it differentiates the Web server and it signifies which Web server we're requesting.
+
+:80 - port - normally omitted of utilizing standard HTTP protocol but if not
+then it is required. It accesses the resources on the web server-- seen as the
+technical gatekeeper.
+
+/path/to/myfile.html - resource's path on web server
+
+?key1=value1&key2=value2 - extra parameters that are separated by '&' symbol as a list of key/value pairs.
+
+#SomewhereInTheDocument - is an anchor or "bookmark" inside of the resource.
+Revealing another part of itself.
 ```
