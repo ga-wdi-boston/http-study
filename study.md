@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol used to send information across different machines, generally in the form of text with a head nad a body, which contain meta-data and the resource requested respectively.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,9 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The server is defined as the machine on which the application's resources are stored, aka where the website is hosted.
+
+The client is the machine, be it a laptop browser or a mobile phone, which is making requests to the server for content.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +153,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET: Sends a request to the server to retrieve a resource. This is the most common method used by browsers to serve web pages
+
+PUT: Creates a new file or resource on the server, commonly used to submit forms.
+
+POST: Used to update/replace files that already exist on the server.
+
+DELETE: Removes a file or resources from the server.
 ```
 
 ## Describe what a Response is
@@ -160,7 +168,10 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what the server sends back when it has finished processing and serving an HTTP request. It contains a head and a body, the head generally containin metadata such asthe method requested and the status code. Some common status codes include:
+1. 200: successful request
+1. 404: resource not found, meaning the resource does not exist or the server could not find it for some other reason
+1. 401: Access denied, indicates a lack of permission to viw the file.
 ```
 
 ## Make a curl request
@@ -168,7 +179,11 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
+
+although this returns some html that accuses me of being a bot.
+
+to answer this question I had to check my terminal history to remember the curl command needed.
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +193,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol: indicates whether to use http or https, it's more secure sibling
+host: the domain name for the server on which the website is hosted (these are generally a stand in for a numerical IP)
+port: the port on which the server is listening for requests, generally servers will expect different types of requests on different ports.
+resource path: the path to the resource on the server that you want to access
+query: any additional parameters necessary to make the request, such as perhaps a set of search parameters.
 ```
