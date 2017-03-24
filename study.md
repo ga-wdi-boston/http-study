@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!--HTTP is a protocol that determines how documents are transferred from one place to another and defines how clients communicate with servers.-->
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!-- A client is the browser used to access the server, which read the language of the client's request... The client sends the server a request, which the server processes and responds to, at which point the client processes the response. -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+<!--
+GET - the equivalent of us, the humans, hitting "enter" in an address bar... it tells the server to transfer data to the client. It's basically a read-only request.
+PUT- Allows us to create or update a resource identified by the URL.
+DELETE- Deletes a resource identified by the URL.
+POST- Similar to PUT, but lets you be more specific about what you want to change and make it an addition to the resource identified by the URL.
+-->
 ```
 
 ## Describe what a Response is
@@ -160,7 +165,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!-- Responses show the resources we want... servers send responses to the clients, so they're basically what we want to see (ideally) or a message saying why we can't see it (e.g. 404 Not found meaning the server could not find the resource requested)-->
 ```
 
 ## Make a curl request
@@ -168,7 +173,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!-- $curl --request GET reddit.com -->
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +183,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+<!-- A URL (Uniform Resource Locator) is sort of an address that tells the browser to point at a resource... it's made up of the:
+protocol (http://) - how the documents are sent between servers and clients
+the domain name (www.example.com) - the web server requested
+port - the gate to all the things on the server
+path to the file - path to a specific page or file on the web server
+parameters - key/value pairs separated by `&`... helps the web server to do extra/more specific things before returning the resource to the client.
+anchor - optional bookmark that tells the browser to show content at a specific spot (e.g. a page scrolled halfway down or a video started midway)
+-->
 ```
