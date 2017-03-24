@@ -134,7 +134,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol that allows different connected systems to send messages to each other.
+
+- http://symfony.com/doc/current/introduction/http_fundamentals.html
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +144,12 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is any sytem that is requesting a resource from a server. It could be a browser or an application like cURL.
+
+A server is where resources are hosted and/or prepared and it recieves requests and sends responses. For instance a web server or API.
+
+- http://symfony.com/doc/current/introduction/http_fundamentals.html
+- https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +158,16 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET: A request to retrieve something from the server. For instance, an html doucment or image.
+
+POST: A request to update a document. For example, submitting a form.
+
+PUT: Create or update a resource at the specified location. For instance, if you are creating a new DB entry.
+
+DELETE: Destroy the resource at the specified location.
+
+- https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+- http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -160,7 +176,15 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response occurs when a the server "responds" to a request made by a client for a given resource. These responses can contain the request resource but they also contain metadata about the request called headers.
+
+// Common Responses:
+200: Success
+404: Resource not found
+500: Server error
+
+- http://symfony.com/doc/current/introduction/http_fundamentals.html
+- https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Make a curl request
@@ -168,7 +192,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
+
+http://conqueringthecommandline.com/book/curl
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +204,15 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol: The method the request is using. For instance, http or https.
+
+Domain Name: The web server that the request is being sent to. For instance, google.com or amazon.com.
+
+Port: The gateway through which the request is using to access server resources. For instance, 80 for http protocol.
+
+File Path: The location of the specific resource on the server that the request is trying to access. for instance /orders/ or /users/<:id>
+
+Query/Parameters: Additional information related to the request that is presented in key-value pairs. For instance, ?query=dale&location=providence
+
+- https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
