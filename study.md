@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hypertext Transfer Protocol is a set of instructions for the web browser on how to interpret the content.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a computer on the user's side, while a server is a computer that stores all the data of a web site.  When a user attempts to go to a site, a request is sent from the client to the server.  The server processes the request and prepares the necessary data, then sends that data back to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - tells the server to send the client the data indicated by the URL.
+PUT - contains data and instructions to be added to the server.
+DELETE - deletes indicated data from the server.
+POST - is used when an action needs to take place on a server, a request that needs to be processed by the server.
 ```
 
 ## Describe what a Response is
@@ -160,7 +163,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response code is located in the header section.  It is sent to the client along with the html and other data and it indicates the status of the request.  An example is '404 not found'.
 ```
 
 ## Make a curl request
@@ -168,7 +171,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +181,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol - indicates which set of rules the browser should use to interpret the content.  usually it is http://
+Domain Name - indicates where the data is being requested from
+Port - contains instruction/direction on how to access the data
+File Path - indicates a path to the requested file through the directory
+Parameters - a list of key-value pairs that can instruct the server to do something before returning the data
+Anchor - tells the browser to go to a specific part of the document or a specific time in a video
 ```
