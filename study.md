@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+A language that allows two machines to communicate.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client is the requesting computer and the server is the machine that listens and then returns a response back. They communicate with http. (http://symfony.com/doc/current/introduction/http_fundamentals.html)
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - obtains the resource from the server
+POST - creates a resource on the server
+PUT/PATCH - update the resource on the server
+DELETE - deletes the resource from the server
+(http://symfony.com/doc/current/introduction/http_fundamentals.html)
 ```
 
 ## Describe what a Response is
@@ -160,7 +164,13 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response comes from the server and includes the requested resource and other information about the response such as the status.
+ - 200 - OK - standard success response
+ - 204 - No Content - server processed the request but is not returning any content
+ - 300 - Multiple Choices - the client can choose from multiple options
+ - 404 - Not Found - request could not be completed but you can try again
+(http://symfony.com/doc/current/introduction/http_fundamentals.html)
+(https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 ```
 
 ## Make a curl request
@@ -168,7 +178,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+within the terminal type: curl --request GET https://www.reddit.com
+(note that it returned a message including "we're sorry, but you appear to be a bot and we've seen too many requests from you lately.")
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +189,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+PROTOCOL - https or http
+HOST - www.example.com - which server the client is requesting
+PORT - the "gate" used to get to the resources on the server (80 and 443 are standard and not visible in the URL)
+PATH - the specific path to the resource on the server
+PARAMETERS - extra info for the server to do extra things before returning the resource
+ANCHOR - a location within the document (e.g. the browser can scroll down to the location)
+
+(https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)
 ```
