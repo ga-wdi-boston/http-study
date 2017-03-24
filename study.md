@@ -133,43 +133,38 @@ material. Instead, digest what you've read and repeat it in your own voice.
 
 In your own words, give a brief description of what HTTP is.
 
-```md
-<!-- your answer here -->
-```
+HTTP stands for Hypertext Transfer Protocol. HTTP is a specially formatted message that clients and servers use to communicate with each other or to transfer and exchange hypertext. It is the foundation for data communication on the Web.
 
 ## Describe what a client is and what a server is
 
  What is a client and what is a server? How do they interact with each other?
 
-```md
-<!-- your answer here -->
-```
+A client is the computer that is attempting to access information on a server. A server is a device or program that provides the data in which clients are attempting to access. A client will send the server a request for a particular resource using HTTP. Common HTTP methods are get(retrieve a resource from the server), post(create a resource on the server), put/patch(update resource on the server), and delete(remove resource on the server). Once the server recieves the request it prepares the resource via the URI and sends the server back a HTTP response containing the requested resource (e.g. HTML) and a status code detailing any issues with the request and response. Finally the client processes the response.
 
 ## Describe the 4 most common HTTP verbs
 
 What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
-```md
-<!-- your answer here -->
-```
+The four most common HTTP verbs are as follows:
+  Get: Retrieves a particular resource from a server
+  Post: Create a resource on the server
+  Put/Patch: Updates a resource on the server
+  Delete: Removes a resource from the server
 
 ## Describe what a Response is
 
 What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
+A response is the HTTP message sent by the server to the client after it processes the client's request. The response contains a status line which contains the protocol version followed by a numeric Status-Code. The Status-Code details any issues or notes with the request and response. Status-Codes are followed by a reason phrase which gives a short textual description of the Status-Code. Common status codes are 200 OK (standard response for HTTP requests), 201 Created (new resource was created), and 204 No Content (the server successfully processed the request but is not returning any content).
 
-```md
-<!-- your answer here -->
-```
+
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
-```md
-<!-- your answer here -->
-```
+Curl must first be installed on the system. Then, in the command line type 'curl -O https://www.reddit.com/'. The -O (uppercase o) downloads all of the files as the same name of the files on the website.
 
 ## Describe the parts of a URL
 
@@ -177,6 +172,17 @@ List the parts of a URL and explain what each part is, in your own words. You'll
 refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
-```md
-<!-- your answer here -->
-```
+used https://www.mattcutts.com/blog/seo-glossary-url-definitions/
+
+http://video.google.co.uk:80/videoplay?docid=-7246927612831078230&hl=en#00h02m30s
+
+- The protocol is HTTP
+- Hostname is video.google.co.uk
+- The subdomain is video
+- The domain name is google.co.uk
+- Top level domain: uk
+- Second level domain is co.uk
+- The port is 80, the default value for web servers
+- The path is /videoplay. Refers to location of file on server
+- The parameters are 72469....
+- The fragment or named anchor is #00h02m30s. Used to refer to an internal section of the web document.
