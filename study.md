@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a ruleset that allows servers and clients to send messages to each other over the internet.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client makes a request from a server, and a server sends data to the client.A client sends data back to a server too, but mainly in the form of requests for more data.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,8 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET, DELETE, PUT, and POST. Get is a read only request for data, such as typing in a URL. Put adds data to the server, and delete deletes data from the server. Post is a little trickier, and <b>not</b> in my own words "trigger operations on the server, which do not fit into the Create/Update/Delete paradigm", the idempotentency makes a little more sense actually, so put for idempotent, as in where doing the action twice would result in the same result, and post for where the same action would create different results?
+
 ```
 
 ## Describe what a Response is
@@ -160,7 +161,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+404 is the classic response code from t-shirts to pick-up lines. 403 is very common also. It's a way for clients to get more information out of a failure, so they can hopefully fix their issue (in the cases the problem is with the client). This was hilarious, thank you: https://twitter.com/stevelosh/status/372740571749572610
 ```
 
 ## Make a curl request
@@ -168,7 +169,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl https://www.reddit.com
+
+Although it boots me for being a bot.
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +181,22 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://
+mailto:
+(scheme) - what to use
+
+www.google.com
+(host) - where it is stored
+
+:80
+(port) - through what port to get there
+
+/example/example/example.html
+(url path) - what you want from where it is stored
+
+?couponCode=offer
+(query string) - optional extra data, syntax is loose
+
+#/discussions
+(fragment) - identifier, usually where to go on the page
 ```
