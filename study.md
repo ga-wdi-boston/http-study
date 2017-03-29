@@ -134,7 +134,15 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol for sending an receiving information on the world wide web.
+The world wide web is a subset of the internet(all globally connected computers)
+that uses HTTP to communicate. These terms are used interchangeably but are not
+actually the same thing. The HTTP protocol was initially created for academic
+exchange of information and was cooked up by Tim Berners Lee as a part of a
+project for DARPA. It's initial conception was simply to transfer graphics, links,
+and text- hence the term hypertext. The language used to tranfer the data is HTML
+and that is why HTTP stands for hypertext transfer protocol. There is also HTTPS
+which adds a layer of security to the transfer layer.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +150,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Clients request data from a server. Servers "serve" data to clients. In other words
+servers service requests from clients - i.e. return responses from client requests.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +160,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET -  used to retrieve info
+PUT - used to place information on the server such as a file
+POST - used to process information on the server such as a form submission
+DELETE - mostly self explanatory, but....it deletes things - opposite of PUT
 ```
 
 ## Describe what a Response is
@@ -160,7 +172,14 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what a client recieves from a server after making a request. In
+it's simplest form it is an HTML page. There are many codes that can be passed
+along to denote successes or failures. Such as a response 200 - indicating a
+successful response to a client.
+202 is accepted
+205 is reset content
+
+....the rest can be gotten off wikipedia for any curious.
 ```
 
 ## Make a curl request
@@ -168,7 +187,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+In the terminal type:
+curl --request GET https://www.Reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +198,21 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+HTTP - protocol (could be https) - protocol used for communication
+www.something.com - domain or the computer you are talking to - the reading
+omits one crucial detail here, I think. The www portion of the domain which is
+the server on the domain. WWW could be anything such as with maps.google.com.
+This site is still a part of the google domain, but is actually hosted on a
+different server as is denoted by the "maps" portion of th URL
+www.domain.com: after the colon is the port. this portion is often omitted but
+a clever hacker with some knowledge armed can use specific port information
+to infiltrate poritons of sites they are not meant to access - maybe...if they
+are good.
+after the domain and port is the resource path. Think of this as any other file
+path on a computer. This tells the server where the file the client wants is at
+after that is the ? .... this is specific query information and once more, with
+some pre knowledge can and sometimes was (not as common i am sure now) used to
+trick a site into giving up information it wasn't supposed to. Often the browser
+will fill in this portion and the user is often not responsible for knowing how
+to formulate this portion of the URL.
 ```
