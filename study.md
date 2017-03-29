@@ -7,9 +7,9 @@ and activities are **required** unless otherwise indicated.
 
 HTTP is a protocol - a system of rules - that determines how documents are
 transferred from one place to another. Among other things, it defines the format
-of the messages passed between *clients* and *servers*.
+of the messages passed between _clients_ and _servers_.
 
-"Clients" send *requests* and receive *responses*. Examples include browsers
+"Clients" send _requests_ and receive _responses_. Examples include browsers
 (like Chrome, Safari, or Firefox) and other programs like
 [`curl`](http://curl.haxx.se/docs/) and
 [`wget`](http://www.gnu.org/software/wget/manual/wget.html).
@@ -27,14 +27,14 @@ mean when we say "server", as in this diagram:
 > [Symfony and HTTP Fundamentals (The Symfony Book)](http://symfony.com/doc/current/book/http_fundamentals.html)
 
 1.  A client sends a request to a server.
-1.  The server processes the request.
-1.  The response gets sent back to the client.
-1.  The client processes the response.
+2.  The server processes the request.
+3.  The response gets sent back to the client.
+4.  The client processes the response.
 
 ## URLs
 
 Which server is the request sent to? How does the server know what to respond
-with? Both of these questions are answered by *uniform resource locator (URL)*.
+with? Both of these questions are answered by _uniform resource locator (URL)_.
 
 > ![URL](https://cloud.githubusercontent.com/assets/388761/12622184/2c0143dc-c4f2-11e5-84af-55f723dd6639.png)
 >
@@ -111,8 +111,8 @@ What are HTTP status codes?
 ## Videos
 
 1.  [Basic concepts of web applications, how they work and the HTTP protocol](https://www.youtube.com/watch?v=RsQ1tFLwldY)
-1.  [Know about HTTP URL](https://www.youtube.com/watch?v=ADQ_rhefgEk)
-1.  [Understanding HTTP Request Response Messages](https://www.youtube.com/watch?v=sxiRFwQ1RJ4)
+2.  [Know about HTTP URL](https://www.youtube.com/watch?v=ADQ_rhefgEk)
+3.  [Understanding HTTP Request Response Messages](https://www.youtube.com/watch?v=sxiRFwQ1RJ4)
 
 ## Additional Resources
 
@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a set of rules for transferring information between computers
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client and a server are computers with different jobs. A client's job is consuming information and a server's job is to give or "serve" information.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - Retrieve data from a server
+POST - Send data to a server
+DELETE - Remove data from a server
+PUT - Update some existing data on a server
 ```
 
 ## Describe what a Response is
@@ -160,7 +163,11 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the name for what a server sends to the client after it makes an HTTP call.
+
+200 - everything looks good
+403 - Forbidden, usually means the client is not authorized to access that data
+500 - Major failure, something is messed up with the server
 ```
 
 ## Make a curl request
@@ -168,7 +175,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +185,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://www.google.com
+protocol - This defines the rules for how the data will be transferred
+domain name - this is the address of the server the client is requesting data from
+port - the gateway in the server that the information is passed through
+path - where the specific resource is located on the server
 ```
