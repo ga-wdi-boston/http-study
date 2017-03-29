@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+http is a protocol.  It is a procedure with formal instruction on transferring code between clients and servers.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Clients are the local device that the user is using. A PC, iphone, ipad.
+Servers are hosted computers that communicate to the internet.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +152,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+Post is used to create a resource.
+Get is used to read a resource.
+Put is used to update a resource.
+Delete is used to delete a resource.
+I think the 5th and less used http verbs is Patch.
+
 ```
 
 ## Describe what a Response is
@@ -160,7 +166,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what is returned after the request.  It could be informational (hey I got it), redirectional (go here instead) or an error (failed because of this).
 ```
 
 ## Make a curl request
@@ -168,7 +174,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +184,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http or https is the protocol
+host is the domain
+port is rarely needed unless it is something other than http or https
+resource path is where within the domain the resource is housed
+query is the parameters needed to get to the exact resource
 ```
