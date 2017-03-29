@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP or Hypertext Transfer Protocol is a protocal or set of rules that clients and servers use to request and interpret information from each other.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the web browser, which is making a request to a server for content.
+A Server is the computer that physically stores the information requested by the client that comprises a website,etc.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +152,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - Make a request to retreive information
+POST - Triggers an operation on the server on a resource
+PUT - Make a request to update or create a resource.
+DELETE - Deletes a resource from the server
 ```
 
 ## Describe what a Response is
@@ -160,7 +164,10 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is data or infromation sent back from the server.  It can take the form of an image , HTML, or PDF code.
+404 - Not Found
+403 - Forbidden
+200 -OK
 ```
 
 ## Make a curl request
@@ -168,7 +175,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +185,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol - Rules on how to engage with the server
+Host - Parent Directory of the site
+Port - Gate for how it was accessed
+Path - path to file resource on the server
+Query - PArameters or anchors used to do stuff before executing the site or used to take us to a location
+
 ```
