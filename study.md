@@ -85,7 +85,13 @@ curl --request GET https://www.google.com
 ```
 
 What did you see?
-
+$ curl --request GET https://google.com
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="https://www.google.com/">here</A>.
+</BODY></HTML>
 ## Responses & Resources
 
 Servers send responses, and those responses contain resource representations.
@@ -134,16 +140,17 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
-```
+HTTP is a protocol that facilitates the transfer of messages between
+clients and servers/```
 
 ## Describe what a client is and what a server is
 
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
-```
+Clients, such as web browsers send requests and recieve responses from servers.
+Servers on the other hand recieve the requests from the clients, interperets
+them and sends back a response.```
 
 ## Describe the 4 most common HTTP verbs
 
@@ -151,8 +158,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
-```
+GET- Retrieves data requested by the client as outlined in the URL
+POST- Triggers operations on the server side
+PUT- Created or updates data outlined in the URL
+DELETE- Deletes data outlined in the URL of the request```
 
 ## Describe what a Response is
 
@@ -160,16 +169,21 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
-```
+Responses are a way for the server to inform the client about the status of
+their request, containing the first digit which explains basically what happened, as well as some other meta data and diagnostic information.
+Common responses:
+1xx- waiting on something
+2xx- returning something
+3xx- additional client action needed
+4xx- client error
+5xx- server error ```
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
-```
+curl --request GET Reddit.com```
 
 ## Describe the parts of a URL
 
@@ -178,5 +192,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol- which protocol the browser needs to use
+host- the domain name or web server being requested
+port- ommitted if default HTTP ports of HTTP, otherwise the "date
+used to access the web server
+resource path- the location of the file, nowawdays most likely abstract
+query- query for another part of the document itself
 ```
