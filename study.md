@@ -134,12 +134,17 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+The Hypertext Transfer Protocol (HTTP) is a  protocol or a system of rules allowing for communication on the Web. Web clients can talk to Web servers using this protocol.  HTTP is the underlying protocol used by the World Wide Web and this protocol defines how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands. For example, when you enter a URL (www.google.com) in your browser, this actually sends an HTTP command to the Web server directing it to fetch and transmit the requested Web page
 ```
 
 ## Describe what a client is and what a server is
 
  What is a client and what is a server? How do they interact with each other?
+ A web client is an application that communicates with a web server. For example, when you click on a
+ web page you are viewing the web client. When you click a button to retrieve some data (price, avalability, content, picture etc) you are then sending a request to the web server to retrieve the
+ required data from the web server. This is then sent back to the web client and displayed in your
+ browser
+ A web server stores this data on the back end. For example, Amazon's servers store all the data about all their products on their servers. So when you click on an Amazon page for a particular item, the client sends a message to the web server to obtain the price, availability etc. So the Web client is just something that consumes data and provides interfaces to end users
 
 ```md
 <!-- your answer here -->
@@ -151,7 +156,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST - When you submit forms, the browser typically issues a POST request. For example checking on hotel availability on hotel.com
+
+GET - GET is the simplest type of HTTP request method. By default, the browser issues GET requests when you type a URL into the address bar. It is the one that browsers use each time you click a link or type a URL into the address bar. For example, just typing in www.cnn.com.  It instructs the server to transmit the data identified by the URL to the client. Data should never be modified on the server side as a result of a GET request.
+
+PUT - A PUT request is used when you wish to create or update the resource identified by the URL
+
+DELETE - should perform the contrary of PUT; it should be used when you want to delete the resource identified by the URL of the request.
 ```
 
 ## Describe what a Response is
@@ -160,7 +171,28 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+After receiving and interpreting a request message, a web server responds with an HTTP response message. The HTTP response should specify the content type of the body. This is done in the header, in the Content-Type field; for instance: Content/Type: application/json
+
+Here are some common status codes and their meaning:
+  200 OK
+  This response code indicates that the request was successful.
+
+  201 Created
+  This indicates the request was successful and a resource was created. It is used to confirm success of a PUT or POST request.
+
+  400 Bad Request
+  The request was malformed. This happens especially with POST and PUT requests, when the data does not pass validation, or is in the wrong format.
+
+  404 Not Found
+  This response indicates that the required resource could not be found. This is generally returned to all requests which point to a URL with no corresponding resource.
+
+  401 Unauthorized
+  This error indicates that you need to perform authentication before accessing the resource.
+
+  405 Method Not Allowed
+  The HTTP method used is not supported for this resource.
+
+
 ```
 
 ## Make a curl request
@@ -168,7 +200,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -v reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +210,18 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Using an example http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+
+http:// is the HTTP protocol. This indicates which protocol the browser must use.
+
+The www.example.com is the DOMAIN NAME which dincates which web server is  been requested.
+
+The :80 is the PORT number.
+
+The /pathToMyFile.html is the path to where the web page is found on the web server.
+
+?key1=value1&key2=value2 are extra parameters provided to the Web server. Those parameters are a list of key/value pairs separated with the & symbol. The Web server can use those parameters to do extra stuff before returning the resource
+
+#SomewhereInTheDocument is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot.
+
 ```
