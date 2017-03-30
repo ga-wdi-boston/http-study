@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Long ago, I memorized HTTP to stand for "Hyper Text Transfer Protocol". I understand it to be a standard from which different browser applications can use to interpret and display data.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Both clients and servers are computers. I see the names as being the role that they play in relation to each other, The computer that sends requests to another computer is called the client. The computer that processes the request is called the server. After the server has processed the request, it sends a response back to the client. The client processes the response.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - this command is most commonly used to get browser pages when a URL has been specified in the address bar.
+POST - this is used to initiate some sort of action
+PUT - is used to create or update a resource. Usually the resource is a data record.
+DELETE - is used to delete a resource. Usually the resource is a data record.
+
 ```
 
 ## Describe what a Response is
@@ -160,7 +164,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the reply back from the server. Responses typically contain a copy of the request that was made and a status code of the response. Some common status codes are 404 which I get enough times to know that it is "not found" when a requested URL does not return a browser page. 200 is "successful/ok".
 ```
 
 ## Make a curl request
@@ -168,7 +172,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.Reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +182,19 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+A URL is split up into different sections.
+Take http://www.ado.com:80/file/path?debugmode=Y & env=TIN#anchor
+http:// part is the protocol. It tells the server how to handle the request. HTTP specifies to handle the request as a get browser page request, a mailto: protocol is to open the mail client. ftp: is to do a file transfer,
+
+the www.ado.com is the domain name which is the address of the server.
+
+the :80 species the server port that grants access.
+
+/file/path species the file path of the page/resource
+
+? signifies the beginning of parameters
+debugmode=Y & env=TIN are parameters that can be used by code to control browser behavior or other things
+
+#anchor - the hashtag and word combination is like a bookmark within the page or a video/sound file.
+
 ```
