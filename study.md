@@ -134,7 +134,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol for handeling requests from clients and responses
+from servers (mainly) used on the web (mainly).
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +143,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+a client is a application or computer that sends requets for information to the server. The server is a computer that sends responses to the client after they are requested by the client. they
+interact with each other by making calls to each other to send information to and from.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +153,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+PUT - put would be used when you want to create or update a resource at an exact location on the server
+POST - post would be used when you want to create or update a resource at subordiante location from where you tell it. and have the server handle that info
+DELETE - delete would be used to remove information that is on the server somewhere.
+GET - Get would be used in order to recieve info thats currently on the server somewhere
 ```
 
 ## Describe what a Response is
@@ -160,7 +165,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+responses are the information being passed back to the client from the servers. They contain representations of the resources on the server as well as status codes. common status codes include 200 - request success. 201 - request success with created resource. 404 - Resource not found. 500 - internal server error
 ```
 
 ## Make a curl request
@@ -168,7 +173,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +183,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://www.something.com:80/blah/blahs/blahz
+
+http - is officially the scheme. In this case the protocol.
+www.something.com - is the host name or the domain name.
+:80 - is the port number.
+/blah/blahs/blahz - is the resource path on the server.
+
 ```
