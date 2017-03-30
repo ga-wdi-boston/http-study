@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is how webpages are sent and received.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client makes requests for resources and finds a way to display the resources when received.
+A server finds a way to interpret requests and then provides responses for those requests.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +152,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - gets/fetches information
+POST - displaying/creating information
+PUT - updating information
+DELETE - deletes information
 ```
 
 ## Describe what a Response is
@@ -160,7 +164,10 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is feedback on whether a request to a server is or is not succussful.
+HTTP 200 - standard response that every thing is fine
+HTTP 404 - the client requested something that is not on the server.
+HTTP 503 - server is unavailable
 ```
 
 ## Make a curl request
@@ -168,7 +175,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -L www.reddit.com (currently the site seems to not allow these requests)
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +185,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol - how a client will interact with a server
+host - friendly name for a server
+port - the listening port of the server (typically 80 when accessing sites)
+resource path - the file or directory of the webserver
+query - for dynamic web pages - locates specific information
 ```
