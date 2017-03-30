@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP: Is a set of rules that determines how messages are transferred across the World Wide Web.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client is the requesting machine, web browser etc and the server is the receving machine, application etc. When the server receives a client request, it will send a response back to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+A. POST: Creates new resources
+   B. GET: Reads representations of resources. For ex- JSON file
+   C. PUT: Updates/replaces resources
+   D. DELETE: Deletes resources
 ```
 
 ## Describe what a Response is
@@ -160,15 +163,18 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
-```
+A response is a message from the server back to the client usually indicating that the response was successfully received or not.
+
+  Common staus codes are: 2xx -- indicates successful response, 4xx- indicates client error genearall an unsuccesful request by the client aka broken link, 5xx- something is wrong with the server/unsuccessful response
+
+  https://searchenginewatch.com/2016/05/19/beginners-guide-to-server-response-codes/
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+url --request GET https://reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +184,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+The URL is made up the follwing parts in order
+     1. Protcol: the rules for how the browser should interrept the page
+     2. Host: shows which/whose web server is being requested
+     3. Port: the "gate" used to access the resources on the host's web server
+     4. Resources Path: Path to where the resource is hosted on the web server
+     5. Query: Parameters provided to the web server that lets the server do extra 	stuff before displaying the page to the client
 ```
