@@ -134,7 +134,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a proctocol used to take with servers on the network. It is a simple
+protocol that issues a request to the server and the server docodes the request
+and sends back the response to the said request. The response will have all
+the necesary resources needed to display you page. HTML, imagines, etc.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +145,12 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client, a piece of softare running on a computer such as a web brower
+ initiates requests to a server, typically over a network.  The server is
+ another piece of software that is running and listening for requests on a computer.
+ The client uses a well know protocol such as HTTP to send these requests to
+ the server. The server then responds to the request buy sending data back to
+ the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +159,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET is used to retrieve data
+POST is when data is sent to the server. You are asking the server
+to take this data and do something with it, data from a form on a
+webpage.
+DELETE is used to remove data from a server, such as deleting a message
+from you mail box.
+PUT stores data under the supplied URI.
 ```
 
 ## Describe what a Response is
@@ -160,7 +174,11 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what is returned from a request from a server.The response will contain a status code. This code can be used to determine
+the state of the request made.
+2xx is success(OK), action was received, understood and accepted.
+4xx client error(403 Forbidden), the request was not formed properly and failed.
+5xx server error(500 Internal Server Error), server is properly down.
 ```
 
 ## Make a curl request
@@ -168,7 +186,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +196,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol  https
+domain name server we are trying to talk to
+port the port on the server listening
+path the resource on the server we are interacting with
+parameters any data that is required by the request
 ```
