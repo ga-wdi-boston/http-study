@@ -85,6 +85,8 @@ curl --request GET https://www.google.com
 ```
 
 What did you see?
+-- The entire HTML file returned from the Google server
+(https://www.google.com on one line
 
 ## Responses & Resources
 
@@ -134,7 +136,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a transfer protocol used between web servers and web browsers on
+clients.
+
+References:  https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
+Text in this study above
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +148,13 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client sends requests to and receive responses from web servers.  Examples include browsers such as Google Chrome.
+
+A server receive requests from and send responses to clients.
+
+References:
+Text in the study above
+
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +163,19 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - Read-only request to get data identified by URL from the server to the client
+
+PUT - Write request to update resource identified by URL on server
+
+DELETE - Write request to delete resource identified by URL on server
+
+POST - Write request to create resource identified by URL on server
+
+PATCH (Last HTTP verb)
+
+Reference:
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -160,7 +184,20 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is data returned back from a server.  This data contains resource
+representations including a returned HTTP status code.
+
+200 OK - Successful HTTP request
+404 Not Found - Resource requested was not found (i.e. missing web page)
+
+1xx - Informational Responses
+2xx - Success
+3xx - Redirection
+4xx - Client errors
+5xx - Server error
+
+Reference:
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 ```
 
 ## Make a curl request
@@ -168,7 +205,10 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+$ curl --request GET  https://www.reddit.com
+
+Reference:
+Text in this study above
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +218,21 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Example: http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+
+The parts of the URL are:
+- Protocol (http://) Transfer protocol that the browser uses (Postal service)
+
+- Domain Name (www.example.com) Indicates which web server is being requested (city or town)
+
+- Port (:80) Indicates the "technical" gate used to access resources on the web server (zip code)
+
+- Path to the file (/path/to/myfile.html) Path to the resource on the web server (building to where mail should be delivered)
+
+- Parameters (?key1=value1&key2=value2) Extra parameters (key/value pairs) to do extra things (extra info such as number of the apartment in the building)
+
+- Anchor (#SomewhereInTheDocument) Anchor to another part of the resource itself such as a "bookmark" inside the resource (actual person to whom you've addressed your mail)
+- 
+Reference:
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
