@@ -134,7 +134,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- It is the rules/standardes by which clients request web pages from
+servers -->
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +143,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!-- A clinet is a machine that sends requests to a server.  The server is
+a machine that returns those request to teh client -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +153,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+<!-- GET to pull back teh URL(aka teh webpage)
+  PUT to send info from the client to server e.g. place an order?
+  DELTE to remove information from the server based on in put from the clien e.g. cancel
+  an order
+  POST to repeat a task, but is simlar to PUT b/c it creates data on teh server side-->
 ```
 
 ## Describe what a Response is
@@ -160,7 +166,12 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!-- A response is what the server returns based on teh request from teh client.
+
+Common codes are(really liked this tweet):
+1XX- hold on
+2xx: here tyou go
+3xx: go away and so on-->
 ```
 
 ## Make a curl request
@@ -168,7 +179,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!-- curl --request GET https://www.reddit.com-->
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +189,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+<!-- the protocol describes the rules used  the server to store
+the URL.  The host(www....) is the commputer name that the document
+is being stored on.  The port is usally not printed b/c there are exisitng
+standerds that can be used, but is the paccess point on the machine.  Resource payh is the spot
+on the machine storing the document, and the query is not sent to the server
+but is a name/refrence to spot in teh docuemnt(e.g. class tag that points
+to teh video the URL is linking to...) -->
 ```
