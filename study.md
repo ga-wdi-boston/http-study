@@ -134,7 +134,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- http is a formal way of clients and servers to talk to send data to each
+other; it's a set of rules by which client and server honor a contract
+
+source:  see above plus common knowledge and understanding but long ago -->
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +145,11 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!-- a client is a requestor and a server is a provider.  The client requests
+files from ip address and the server locates the files from that ip address,
+bundles and ships them to the client
+
+source:  see above, plus pre-work, plus general understanding of definition -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +158,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+<!--  GET - request something from server
+      POST - create a resource/data on server
+      PUT - update data on server
+      DELETE - delete something from server-->
 ```
 
 ## Describe what a Response is
@@ -160,7 +170,12 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!-- data sent from server bundled with a line of data/header and body.
+
+header sometimes has additional info like host, what kind of formats allowed,
+application; body can be empty
+
+common status code:  200 - accepted; 404 - page not found-->
 ```
 
 ## Make a curl request
@@ -168,7 +183,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!-- curl http://reddit.com
+this looks awful; not sure I'm doing that correctly -->
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +194,8 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+<!-- http://homeworkquestions.com:80/next/page/find=answer
+
+http = protocol, homeworkquestions.com = domain name, 80 = port,
+next/page is path to the file (not literal), find=answer = query -->
 ```
