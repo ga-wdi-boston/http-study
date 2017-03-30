@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol that establishes a rule for how information is transmitted between web servers and clients. A good example is how when two people need to communicate with one another they need to be speaking the same language - HTTP is like the language that enables a client and server to communicate.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,16 +142,18 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client initiates requests to the server. The server receives the request and sends a response back to the client.
 ```
-
 ## Describe the 4 most common HTTP verbs
 
 What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - instructs server to pass data from the URL the client sent; ex. sending a GET request to access www.google.com
+PUT - add data to the body of the URL in the request; ex. replace current information with new data
+DELETE - remove data from the body of the URL in the request; ex. delete a document from a web page
+POST - send information; ex. filling out an online form
 ```
 
 ## Describe what a Response is
@@ -160,7 +162,13 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is sent by the server to the client after the server has addressing what was sent in the client's request.
+
+1xx: informational
+2xx: success
+3xx: redirection
+4xx: client error
+5xx: server error
 ```
 
 ## Make a curl request
@@ -168,7 +176,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +186,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+URL scheme - http; indciates how to access the resource
+host - computer where resoure is located; can be an IP address;
+port number - identifies which network application to look at; usually not visible in URL; 80 = http, 443 = https
+URL path - web server uses this info to identify the resource
+query string - passes info to the web server; name=value&name=value format
+fragment - similar to a bookmark, not passed to the web server
+
 ```
