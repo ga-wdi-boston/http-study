@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+A set of rules used to control how documents are sent from a local device to a server, and vice versa
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client SENDS requests, a server RECEIVES them
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - request data from server
+PUT - Add/update data on server
+DELETE - delete resource from server
+POST - request processing on server
 ```
 
 ## Describe what a Response is
@@ -160,7 +163,12 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+An answer from a server based on the request being made. Response codes include:
+1xx: waiting
+2xx: a response including the result you requested
+3xx: go away
+4xx: something wrong with request
+5xx: somethine wrong on server, unable to process (internal error)
 ```
 
 ## Make a curl request
@@ -168,7 +176,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.twitter.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +186,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol: Such as HTTP, dictates how data will be sent/received
+Domain name: name of site, such as www.google.com
+Port: the 'gate' used to access data. Optional. HTTP uses port 80, https uses port 443. If port is different, it needs to be included
+Path: location of file being accessed based on where it is stored on server. relative path.
+Parameters: Data sent from client to server as part of URL in order for the server to do something extra with the data
+Anchor: an ID of an element in the document. Opening the document with an anchor will automatically cause the browser to scroll to that part of the document. 
 ```
