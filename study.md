@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the set of rules (protocols) that determine how web pages are displayed and formatted
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client is basically your personal device, say a laptop, and it sends a request to the server and gets a response from a server. A server is just a computer that stores things.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST -
+GET - instructs the server to transmit (or 'get') the data requested by the URL
+PUT -
+DELETE -
 ```
 
 ## Describe what a Response is
@@ -160,7 +163,9 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response comes from the server and responds to the client request.
+
+My personal favorite response code is 301 - when a url has moved.
 ```
 
 ## Make a curl request
@@ -168,7 +173,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+I'm incredbily confused on what curl actually is or what it does or how to use it.
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +183,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol
+host
+port
+resource to path
+query
 ```
