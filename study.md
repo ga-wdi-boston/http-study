@@ -20,10 +20,8 @@ in Node or Ruby to generate documents using those languages, and there are web
 servers like [Apache](http://httpd.apache.org/), [nginx](http://nginx.com/), and
 [lighttpd](https://www.lighttpd.net). The word "server" is also used to describe
 the machine that these programs run on. In this document, the latter is what we
-mean when we say "server", as in this diagram:
+mean when we say "server", as in the diagram on this page:
 
-> ![http-xkcd](https://cloud.githubusercontent.com/assets/388761/12621764/0ffb527e-c4f0-11e5-87ae-d597e3835fcd.png)
->
 > [Symfony and HTTP Fundamentals (The Symfony Book)](http://symfony.com/doc/current/book/http_fundamentals.html)
 
 1.  A client sends a request to a server.
@@ -134,7 +132,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP allows two-way text-based communication between two computers connected to the
+internet.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +141,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a computer that can communicate with another via the internet,
+typically from a server that hosts content that can be sent back.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET is used when you are requesting resources from a server
+POST is used when you are sending resources to a server
+PUT/PATCH is used with APIs to update a resource on a server
+DELETE is used with APIs to delete a resource on a server
 ```
 
 ## Describe what a Response is
@@ -160,7 +163,8 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the requested resource, and some important information relating
+to the request and resource, aka HTTP headers.
 ```
 
 ## Make a curl request
@@ -168,7 +172,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+by entering this in the terminal "curl https://www.reddit.com/"
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +182,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol            the communication protocol to use
+domain name         the name of the web server
+Port                the gate used to acces the resources on the server (80 for HTTP and 443 for HTTPS)
+Path to the file:   where the resource is stored on the server
+Parameters:         key/value pairs that the web server uses to do fun stuff
+Anchor:             aka a bookmark that tells what part of the resource should
+be shown
 ```
