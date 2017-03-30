@@ -84,7 +84,7 @@ Try this in your terminal:
 curl --request GET https://www.google.com
 ```
 
-What did you see?
+What did you see?  The source code for google.com
 
 ## Responses & Resources
 
@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a common protocol that clients use to request resources, update them or delete them from servers which also use HTTP to respond.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the computer that wishes to display a resource from the web and needs to request and receive it in a browser to do so.  The server is a computer connected to the internet but entirely different from the client where the resource is hosted.  Clients send requests to servers, which acknwoledge the requests and either return the resource or return an error message.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - This is used for read transactions only, where the data is not modified
+POST - Used to create resources
+PUT - Used to update or replace resources
+DELETE - Used to remove resources permanenetly
 ```
 
 ## Describe what a Response is
@@ -160,7 +163,12 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is an HTTP message sent by a server to a client requesting a resource.  It usually contains some metadata regarding the resource and the status code.  Some common status codes are:
+
+200 - Transaction successful
+404 - Resource not available
+403 - Insufficient permissions to access resource
+500 - error on the server side
 ```
 
 ## Make a curl request
@@ -168,7 +176,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +186,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://www.google.com?q=yes
+http: protocol
+www.google.com - URL
+?q=yes - query
+
+http://www.cnn.com/todays-news
+todays-news: file path from base URL
 ```
