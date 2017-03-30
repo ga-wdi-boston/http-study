@@ -134,7 +134,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hypertext Transfer Protocol - it's a protocol for communicating with "the internet."
+the majority of requests are sent via http or https (secure).
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +143,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client is a program that requests and receives information using a browser like
+Safari, Chrome, Mozilla.., or programs like cURL or wget
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +153,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+Post:  create or add to resources
+Get:  retrieve a resource
+Put:  update a resource
+Delete:  remove a resource or data
+http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -160,7 +166,18 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Responses is the result of making a request to the http server.  It
+contains protocol/version, status code, description, headers, and body.  Some common response codes are:
+404:  file is no longer available
+403: forbidden.  Your machine does not have permissions to view (hasn't been whitelisted)
+500:  Internal server error.  It's a server-side catchall error.  You might get a different result if you try again.
+503:  Service unavailable.  Web server is unavailable.  It is likely temporary.
+
+https://www.globo.tech/learning-center/5-most-common-http-error-codes-explained/
+http://geekexplains.blogspot.com/2008/06/whats-http-explain-http-request-and.html
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
 ```
 
 ## Make a curl request
@@ -168,7 +185,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+in the terminal, enter $ curl http://www.reddit.com
+http://www.thegeekstuff.com/2012/04/curl-examples/?utm_source=feedburner
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +196,14 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://  hypertext transfer protocol
+www.anywhere.com   is the domain name (for the web server)
+
+:#### is the port.  If it's 80 or 443 it won't likely display, as those are default ports for HTTP and HTTPS respectively.
+
+/file path/ x/ x /  where the file is located in the file structure
+
+?key....&.....values.... parameters separated with the & symbol.  These can be used to tell the browser which view of a page you should see (different levels of permission may show different content/views).  I'm sure there are other uses for parameters as well.
+
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
