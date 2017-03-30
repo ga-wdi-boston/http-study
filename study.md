@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the set of rules that dictates how clients and servers communicate with each other.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client is typically a browser and there are many types of servers including application servers and web servers. The client requests the information from the server and the server provides it.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+1. GET: Go get and display data (usually a webpage).
+2. PUT: Used to request changes or make new things on a particular webpage.
+3. DELETE: Opposite of PUT, when you want to request things to be deleted.
+4. POST: Similar to PUT but for when you want an action to be repeated. Still a bit blurry on this one.
+
 ```
 
 ## Describe what a Response is
@@ -160,7 +164,12 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+HTTP response codes tell you if a particular request has been completed. (https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+Some common ones are:
+103 Processing - Server is still processing the request.
+303 See Other - Tells the client to go look at another URL.
+404 Not Found - Server cannot find the address you're looking for.
+
 ```
 
 ## Make a curl request
@@ -168,7 +177,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +187,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+
+Protocol: Which set of rules to play by. (HTTP or HTTPS)
+Host: Indicates which server to request information from.
+Port: Indicates the technical gate used to access resources on the server...?
+Resource Path: Path to the resource on the server.
+Query: Do extra things before returning the resource. May be diff for each server.
+
+
 ```
