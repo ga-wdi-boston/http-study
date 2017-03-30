@@ -85,6 +85,7 @@ curl --request GET https://www.google.com
 ```
 
 What did you see?
+a bunch of HTML
 
 ## Responses & Resources
 
@@ -129,12 +130,14 @@ search. We ask you to write responses in your own words in order to see how you
 process what you've read. Please do not respond with direct quotes from source
 material. Instead, digest what you've read and repeat it in your own voice.
 
+**Note: for my answers, I used the resources listed in this study and WDI fundamentals.
+
 ## Define HTTP
 
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+It is the set of rules and protocols used to transmit data/information over for the web from clients to servers and vice versa.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +145,10 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a device connected to the web that sends out requests using URLs. The
+server actually stores the files needed to render web pages. A client sends a
+request to the server for a particular web page and the server finds the required
+files and returns them to the client and they are the rendered in the browser.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +157,9 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST(repeat processing request to server), GET (tells the server to transmit data associated with the URL), PUT (used to update resource), DELETE (when you want to delete the resource associated with the URL)
+
+
 ```
 
 ## Describe what a Response is
@@ -160,7 +168,11 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is simply the server responding to the request from the client.
+
+Common codes that I have seen in my work:
+400-Bad request: This means that the server can't process a request because of a client error.
+401-Unauthorized: The client that made the request is not authorized to view the information.
 ```
 
 ## Make a curl request
@@ -168,7 +180,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +190,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Parts of the URL:
+-Protocol: indicates that the web needs to use a certain protocol (ex. HTTP)
+-Domain name: indicates which web server to access
+-Port:the gate used to access the web server
+-Path to file: Shows how to get to the resource on the web server
+-Parameters: Extra parameters given to the server; key/value pairs
+-Anchor: Where on the web page to go
 ```
