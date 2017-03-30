@@ -134,7 +134,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hypertext transfer protocol.  Used on the web to transfer/communicate hyertext to
+client and servers. Its a protocol that when you input a URL it would
+automanticly send a  equest the web sever to give you your webpages(html etc).
+
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +145,10 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+client is your device like, PC, phone, ipad etc.
+The server is where all the data is being held that contain the information
+that is being sent to your device.
+
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +157,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - read: to read the data not to change it etc
+POST - create : to create new resources
+PATCH - update/modify: request only needs to contain the change to a resource
+DELETE - delete: to a resouce
 ```
 
 ## Describe what a Response is
@@ -160,7 +169,16 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+response is the commuincation of information hand off between devices. Client to server
+server to server etc.  Response contain the inofrmation your requesting or data your
+sending and the response you get from the server or client when you request that
+information.
+
+200 = OK
+204 = no content
+404 = not found
+403 = forbidden
+
 ```
 
 ## Make a curl request
@@ -168,7 +186,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +196,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http: type of protocol used
+domain name: Name of website like www.yahoo.com
+port: the port/gate used to access the resource on the web server
+path: is the path to the resources on teh web server.
+
 ```
