@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a system of rules governing data transfer between computers across the web
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+In the context of our lesson, both are computers, but the client is used by and end-user to access remote resources and applications, while a server is responsible for serving centralized resources and applications to client computers (or other servers, I guess, which eventually pass the resources to a client computer).  The client sends requests and receives responses, while the server receives requests and sends responses.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+"HTTP verbs tell the server what to do with the data identified by the URL. "
+GET - A request from a client to read data from a server. Data will not be manipulated server-side with GET
+POST - Appends data to an existing resouce
+PUT - A request from a client to update or add data to a resource (pointed to by the url) on the server. It is a write request.
+DELETE - A request from a client to delete data (more specifically, data within a resource pointed to by the url) from the server
 ```
 
 ## Describe what a Response is
@@ -160,7 +164,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+An HTTP response is an html document that the browser parses and renders. It contains html to render but also metadata used to let the client know the status of the request. 200 means request was successful, and the server has provide the data back. Other status codes in the 200s mean varying degress of success.  300s are redirection status codes.  400s are failed requests. 404 is the one I've seen the most:  Not Found.
 ```
 
 ## Make a curl request
@@ -168,7 +172,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +182,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+'http://' is the protocol
+'www.website.com' is the Domain Name
+'/path/to/resource' tells the server where to find the resource to return
+'?key1=value1' are parameters in the form of key value pairs, used by the web server for various purposes, as specified in their documentations
+'#place in document' is an anchor which acts as a bookmark at a specific place in the data. An example is an anchor used so the browser knows to scroll to a certain part of an html document.
+
 ```
