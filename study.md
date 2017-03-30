@@ -134,7 +134,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol, or set of rules, that enables a client (e.g. browser) and a server
+to communicate. Requests are sent from the client to the server via HTTP. The server, likewise,
+sends an HTTP response.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +144,9 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+An example of a client is a web browser. Clients make requests for information to servers via
+HTTP. Servers store information and return resource information via responses to clients upon request.
+HTTP. As an example, a server can store the HTML and CSS files for a website. When a client request is made, those resources are returned to the client via HTTP so the page can be rendered by the browser.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +155,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - Used by browsers anytime a URL is is input. It's a request from the client for a read-only view of the resource.
+
+PUT - Used when you wanto to create or update the resource identified by the URL.
+
+DELETE - Request sent from client to delete the resource identified by the URL
+
+POST - Used when an update is required on the server side for the requested resource. A form is a good exmaple of this, where the data input by the user on the client side must be passed to the server side and stored.
 ```
 
 ## Describe what a Response is
@@ -160,7 +170,18 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+
+A response is what is sent back from the server in "response" to an HTTP request from the client (e.g. browser).
+Includes: Response Status Code, Content Type, Last Modified Date, Server details etc.
+
+200 OK - Request is successful
+
+201 Created - Confirms success of a POST or PUT request. Let's you know the resource was created/updated
+
+400 Bad Request - Issue with the request. Happens if data is in the wrong format or doesn't pass validation (common for POS/PUT requests)
+
+404 Not Found - Resource could not be located. Occurs if a URL has no associated resources.
+
 ```
 
 ## Make a curl request
@@ -168,7 +189,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request https://www.reddit.com
+(although, this results in a message indicating that reddit thinks I'm a bot and only one request/second can be sent. I only sent the one, so not sure what that means..)
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +200,15 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+https://www.example.com:80/path/to/resource?query=1
+
+http: Protocol - communication method being used to pass request and receive response from server
+
+www.example.com: Domain Name/Host - Identifies the web server the request is being made to
+
+80: Port: Often omitted. Indicates the gate used to access resources on the web server.
+
+path/to/resource: Path to the specific resource being requested.
+
+?query=1: Query - Key/Value pairs are saparated by an '&'. Web servers can use this information to perform other functions before returning a request. 
 ```
