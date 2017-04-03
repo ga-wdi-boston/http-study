@@ -86,6 +86,9 @@ curl --request GET https://www.google.com
 
 What did you see?
 
+*** I saw a lot of characters and data. Some that was discernable and understandbale
+and some that I could not comprehend.
+
 ## Responses & Resources
 
 Servers send responses, and those responses contain resource representations.
@@ -134,7 +137,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a network protocol of the web that alows clients and servers to comminucate
+and in turn let the client(user) surf the web...
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +146,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Clients (esentially users surfing the web) initiate communication with servers which await incoming requests. Serveres then respond to the client and send back the requested information or page.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +155,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET: this method is used to retrieve information from a server.
+POST: this is used to send data to the server such as forms or customer info
+PUT: used to update or replaces content.
+DELETE: Performs the opposite of PUT. will delete data associated with respective resource.
 ```
 
 ## Describe what a Response is
@@ -160,7 +167,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+This is essentially a response from the server that will let the client know (or invisibly in the background respond). For example 200 is a success, and tge request has succeeded. 400 is bad request. 404 is not found. There are too many to list but essentially the response from the server can help you to understand exactly what you are getting back, and if the request was not succesful, what the issue may be.
 ```
 
 ## Make a curl request
@@ -168,7 +175,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET http://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +185,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+The http:// portion is the protocol. This is what allows us to communicate with the server to begin with.
+
+the www.example.com portion is the host (or the website itself, essentially)
+
+the :1234 < (e.g.) is the port. Ports allow servers to makes various uses available to using numbered ports, one for each service that is available on the server. 80 is the standard port I believe.
 ```
