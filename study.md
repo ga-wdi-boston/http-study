@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP (hyper text transfer protocol) is the set of standards by which web applications communicate through client requests and server responses.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,9 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is an application that sends requests to and receives responses from servers.
+
+A server is an application that receives requests from and sents responses to clients.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +153,14 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+The 4 most common HTTP verbs used when creating RESTful APIs are:
+
+GET: used to request a resource based on the URL
+PUT: used to create or modify a resource based on the URL
+DELETE: used to delete a resource based on the URL
+POST: used to submit data to the server resource location that the server should process (rather than modifying the resource with PUT)
+
+(SOURCE: A Beginner’s Guide to HTTP and REST)
 ```
 
 ## Describe what a Response is
@@ -160,7 +169,22 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is the message returned by a server when it receives a request from the client.
+
+For http requests, a response contains thee elements:
+
+1. The response or start line,
+2. Headers formatted as name:value pairs
+3. The body of the response containing the document data
+
+Common status codes include:
+
+200 OK: a successful response to the client request
+301 Moved Permanently: the requested resource has been moved and requests should be redirected to a new URI
+404 Not Found: the requested resource could not be found
+401 Unauthorized: the client request does not have permission to access the specified resource
+
+(SOURCE: Understanding HTTP Request Response Messages video and  wikipedia)
 ```
 
 ## Make a curl request
@@ -168,7 +192,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl https://www.reddit.com/
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +202,16 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+In the following URL:
+  http://www.host.com:80/path_to/file.html?p1=val1&p2=val2#fragment
+
+'http://' is the URL scheme, which may be a protocol, but doesn’t have to be
+'www.host.com' is the host name of the web server, equivalent to the IP address
+port number
+':80' is the port number. Standardized port numbers, such as 80 or 443, are not usually shown in public URLs
+'/path/to/file.html' is the resource path on the server
+'?p1=val1&p2=val2' is the query string
+'#fragment' is a fragment that is not passed to the server, often used to reference anchor tags on an html page
+
+(SOURCE: Know about HTTP URL video)
 ```
