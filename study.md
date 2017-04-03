@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP stands for HyperText Transfer Protocol. This is process is the path upon which the front end (meaning your web browser) is connected to the actual webpage's server on the backend. To drastically simplify, the client requests the pages HTML from the server, which the server prepares and sends back to the client, which then processes it and displays it for the user.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+The client is the front-end, user guided program which makes requests for HTML, recieves said requests and renders them for the user. The server exists on the back end, recievies the requests and sends the HTML responses to the client. Server can refer to both the program recieving the request/sending the response as well as the physical machinery on which the program is run and the HTML is stored.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST: Used to create new resources, particularly subordinate resources (resources subordinate/created in relation to parent resources). When creating a subordinate resource, POST ensures that subordinate resource is effectively linked to the parent.
+
+GET: A fairly simple HTTP verb which recieves and displays unbroken links to pages. Vital in displaying any web page. A read only method which is only capable of recieving data from a server on behalf of a client.
+
+PUT: Used to create or update resources associated with the given URL on the backend.
+
+DELETE: Fairly self explanatory. Used to delete the resource associated with the given URL.
 ```
 
 ## Describe what a Response is
@@ -160,7 +166,13 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is sent to a client from a server upon request from said client. A response contains the resources which render a webpage/app usable to the client's user. There are 5 different types of 3 digit codes which a server can give to indicate status:
+
+1XX: Indicates the server has recieved the request and is processing information.
+2XX: Indicates a successful request and response.
+3XX: Indicates necessary resources are located on a different server and redirects.
+4XX: Indicates an error in the request from the client.
+5XX: Indicates server failure to fufil a valid request.
 ```
 
 ## Make a curl request
@@ -168,7 +180,11 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+I am not exactly sure whether this question is asking me how to navigate to reddit in a browser from a terminal or simply to display the HTML response sent from a server. I am not sure how to do the former. To do the latter, one would input:
+
+curl --request GET https://www.reddit.com
+
+but would basically recieve the unintelligible raw resources which make up reddit.
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +194,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol: indicates the browsers protocol, generally HTTP or https
+Domain name: The web server the request is being sent to.
+Port: The gate to the website. 80 is the standard port for HTTP and 443 for https
+Path: the path to the file on the server
+Parameters: Key value pairs which do different things depending on the site.
+Anchor: A bookmark in the resource which will open to that point if invoked.
 ```
