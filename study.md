@@ -134,7 +134,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol that allows for computers to communicate with each other. It
+is designed so that computers can communicate no matter how different their under-
+lying designs are. All the computers need to have in common is an understanding of
+the HTTP protocol itself.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +145,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the computer requesting data. The server is the computer that hosts
+and delivers the data to the client.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +155,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET, this is the default verp even if you don't type it specifically.
+PUT, updates or makes an object on the server
+DELETE, the oposite of PUT, removes an object from the server.
+POST, is like put, except that sending the commond multiple times will cause the
+effect the repeat multiple time. For example, sending an order request multiple times.
 ```
 
 ## Describe what a Response is
@@ -160,7 +168,8 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response comes after the server receives a request. It goes to the client and
+is where you get codes like 404 not found and such.
 ```
 
 ## Make a curl request
@@ -168,9 +177,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
-```
-
+curl request -- GET https://www.reddit.com
 ## Describe the parts of a URL
 
 List the parts of a URL and explain what each part is, in your own words. You'll
@@ -178,5 +185,14 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+protocol: the HTTPS part. Tells the browser which protocol to use.
+host: AKA domain name. It's the www.domain.com part. It tells the browser which
+server to access.
+port: Usually not in a URL and then defaults to 80 for HTTP and 443 for HTTPS. If not
+using these ports you've gotta specify which ones you are using. Tells which port (gate)
+to access servers through.
+resource path: The /resource/path part after the .com Specifies where on the server
+to find the required resource.
+query: AKA parameters, these tell the server to do extra things before returning
+the resource and vary from server to server. 
 ```
