@@ -134,15 +134,14 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
-```
+HTTP is hyper text transfer protocol, and it is the way that information or responses get sent in between servers and cliens. ```
 
 ## Describe what a client is and what a server is
 
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is the what is requesting the response, usually a person on a computer or a phone typing in some keystrokes and hoping to get some specific information or functions back.  The server is what contains the informaiton and functions, and can return the proper response if it is stored and called correctly.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,8 +150,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
-```
+The most common are:
+  POST, which is used to create or add information.
+  GET, which returns information
+  PUT, can update information,
+  DELETE, used to delete information
+
+  ```
 
 ## Describe what a Response is
 
@@ -160,16 +164,16 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
-```
+The response can include the information being request, like returning the right webpage. Reponses also include the HTTP response status codes, which return information.
+
+Codes in the 100s, like 100-continue, means that you should continue to send requests.  200 codes mean that everything is working sucessfully, like 201- created means that the request to create a new resource was sucessful.  The 404 Not Found code is perhaps the most famous, and that is what happens when you have a link that doesn't work, or for some other reason the request cannot be found.  ```
 
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
-```
+curl --request GET https://www.Reddit.com/```
 
 ## Describe the parts of a URL
 
@@ -178,5 +182,6 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
-```
+the url starts with the source protocol ( http://). Then it has the host (www.maggiCorp.x10host.com), followed by the port (:7056) and then the resource path to the specfic resource you want to see (/lib/MemoryGame) and then the query (?s=sd).
+The full url from this example would be:
+http://www.maggiCorp.x10host.com:7056/lib/MemoryGame?s=sd```
