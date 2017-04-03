@@ -134,7 +134,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Is a set of rules that you local machine and a server use to communicate and transfer data.
+
+source: the links provided in this file.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +144,9 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client could be a browser that sends a request to a server. The server receives that request and send the response back to the client.
+
+source: the links provided in this file.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +155,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+POST - Create a resource
+GET - This is the verb used to read the content and returns the HTTP
+PATCH - Updates and replaces the content on a resource
+DELETE - Delete the resource identified on a URI
+
+source: the links provided in this file.
 ```
 
 ## Describe what a Response is
@@ -160,7 +169,16 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what a server send back to the client after a request. It contains the information you are trying to access from the server, using a specific URL.
+The status codes are:
+1xx - Informational Response
+2xx - Success
+3xx - Redirection
+4xx - Client Errors
+5xx - Server Errors
+They are used to let the client know if he had success trying to get the response or if something happened along the way.
+
+source: the links provided in this file.
 ```
 
 ## Make a curl request
@@ -168,7 +186,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl https://www.reddit.com/
+
+source: wikipedia
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +198,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http://www.example.com:80/path/to/myfile
+http:// - that is the protocol in which my request is being generated and that is going to be accepted by the server
+
+www.example.com - that is the domain name of the address and the files I'm trying to access
+
+:80 - is the port <!-- I'm not really clear on this-->
+
+/path/to/myfile - is the path in which my file is held in the Web Server.
 ```
