@@ -161,7 +161,7 @@ GET - GET / HTTP/1.1
 POST - POST /clients/
 
 PUT - curl -v -X PUT -d "some text"
-
+.
 DELETE - DELETE /clients/anne HTTP/1.1
 
 https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
@@ -174,6 +174,14 @@ response and what do they mean?
 
 ```md
 When a user is requesting an URL in the address bar it sends a request to the web server the web server then sends a resource consisiting of HTML, PDF, or JSON.
+200: Request's acceptable.
+201: Confimes PUT || POST requests
+400: Bad POST & PUT request. Does not compute.
+404: Sorry HTML, PNG, & JSON resources couldn't be located. try URL again
+401: Error: resource authentication access required
+405: Sorry that method doesn't support the resource.
+409: Conflit is bad, making multiple PUT requests for the same resource is bad.
+500: Error: Serve side malfunctions. Sorry for the inconvenience!
 
 https://www.youtube.com/watch?v=RsQ1tFLwldY
 ```
