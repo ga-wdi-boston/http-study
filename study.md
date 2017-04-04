@@ -134,7 +134,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+A set of rules (protocol) for data to be sent back and forth on the web, such as between a client and a server.
+Resources used: Given notes above.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +143,14 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a computer or an application that has access to services by a server.
+A server is a program or a device that provides services to clients.
+A client sends a request to the server, and the server receives and responds back
+to the client with data requested. Examples of clients include browsers and curl,
+and examples of servers include application servers and web servers like Apache.
+Resources used:
+-https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
+-http://theydiffer.com/difference-between-a-client-and-a-server/
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +159,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET: Read or retrieve data identified by the requested URL. Data retrieved should not be modified.
+POST: Usually used to create new resources (in particular, subordinate resources).
+PUT: Usually used to update or replace resources identified by the requested URL.
+DELETE: Delete resources identified by the requested URL.
+Resource: http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -160,7 +172,13 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Responses are outputs by servers after processing requests from clients. Responses
+contain resource representations, which are documents contained in the response body.
+Common response codes:
+200 OK: request was successful.
+201 Created: request was successful and resources was successfully created (PUT or POST request)
+404 Not Found: Resource was not found.
+Resources: Given notes above.
 ```
 
 ## Make a curl request
@@ -168,7 +186,8 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
+Resources: Given notes above.
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +197,13 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Example URL:
+http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+http:// - Protocol, or the set of rules that the browser must abide by.
+www.example.com - Domain name, which indicates the server that it sends requests to
+:80 - The port, which is used to access the resources provided by the server
+/path/to/myfile.html - path to the resources provided by the server
+?key1 = value1&key2=value2 - extra parameters sent to servers so that the servers can do extra things before returning the resource.
+#SomewhereInTheDocument - Anchor, or a pointer to another part of the resource itself.
+Resource: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
