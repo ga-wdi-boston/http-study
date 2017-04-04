@@ -134,7 +134,13 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+
+HTTP is a protocol that a two computers in a client server relationship use to communicate.
+The client can can make requests to the server and the server will respond. This could include: requsting an html file when you first enter a website
+or when you change pages, deleting a file on the server, or storing a username and password. HTTP is stateless and treats each new communication
+as a new one without saving any information from the previous.
+https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +148,13 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+
+A client is a web browser and a server is a computer program or device that provides functionality and resources to the client.
+
+The client makes a request over a protocol(HTTP). This is like a language that the client and server will use to communicate.
+Then the server chooses whether to accept the request, if it does, it send backs a response.
+https://techterms.com/definition/client-server_model
+https://en.wikipedia.org/wiki/Server_(computing)
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +163,25 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET
+
+To use request a resource like the html file of a websites homepage
+
+PUT
+
+To create a new resource that is a child of an existing parent resource.
+
+POST
+
+To update pre existing resource
+
+DELETE
+
+To delete a resource identified by a URL
+
+
+https://www.youtube.com/watch?v=sxiRFwQ1RJ4
+http://www.restapitutorial.com/lessons/httpmethods.html
 ```
 
 ## Describe what a Response is
@@ -160,7 +190,20 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is what the server sends back to client after it gets a request.
+
+The response contains the requested resource, like an html file. It contains a status code
+and headers which are pieces of information in key value pairs.
+
+404 not found: Means the requested resource was not found
+403 Forbidden: Means access to the requested resource is forbidden somewhere on the server side.
+500 Internal Server Error: Is a general catch all status code for errors on the server side.
+
+
+https://www.youtube.com/watch?v=sxiRFwQ1RJ4
+http://symfony.com/doc/current/introduction/http_fundamentals.html
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+https://www.globo.tech/learning-center/5-most-common-http-error-codes-explained/
 ```
 
 ## Make a curl request
@@ -168,7 +211,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com/
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +221,33 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+
+Protocol
+
+Indicates the protocol that the broswer(client) and the server will use to communicate.(HTTP HTTPS)
+
+Domain Name
+
+is used to find the server that we are requesting. The domain name corresponds to an IP address,
+
+Port Number
+
+On the server side of our request there could be multiple servers running on diffrent ports. The port number specifies which
+'gate'(port) that our server is behind. Most of the time we can ommit this because HTTP defaults to 80 and HTTPS to 443.
+
+Path to file
+
+Points to the specific resource on the server we have requested.
+
+Parameters
+
+Are a list of key value pairs that the web server could use to do something extra before it returns the resource.
+
+Anchor
+
+The anchor acts as a bookmark within the resource. It could point a certain scoll point in the page or a point midway though a video.
+
+
+https://www.youtube.com/watch?v=ADQ_rhefgEk
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
