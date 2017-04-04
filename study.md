@@ -85,6 +85,7 @@ curl --request GET https://www.google.com
 ```
 
 What did you see?
+10,000 characters some in strings and some were gibberish.
 
 ## Responses & Resources
 
@@ -134,7 +135,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+Hyper text transfer protocol is the standards by which web apps communicate between client requests and server responses.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +143,8 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is a application that sends requests to and receives responses from servers.
+A server is an aplication that receives requests from and sends responses to clients.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +153,10 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET-- used to request a resource based on url.
+DELETE--used to delete a resource based on the url
+PUT-- used to create or modify a resource based on the url
+POST-- used to submit data to the server resource location that the server should process(instead of changing th resource with PUT)
 ```
 
 ## Describe what a Response is
@@ -160,7 +165,17 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+This is pretty much a response from the server that tells the client in the background to respond. 200 is a success, and your request has been sucessful. 400 is bad request. 404 is not found.
+
+HTTP status ranges in a nutshell:
+
+1xx: hold on
+2xx: here you go
+3xx: go away
+4xx: you fucked up
+5xx: I fucked up
+clear concise funny
+
 ```
 
 ## Make a curl request
@@ -168,7 +183,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com/
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +193,19 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+The protocol http://  this allows you to communicate with a server.
+
+The domain name www.blabla.com is the host or website itself
+
+:80 is the port or gate used to access resources on the web server
+
+The path to the resource on the web server /path/to/myfile.html
+
+parameters ex(?key1=value1&key2=value2)
+the server can do extra stuff before sending the resource you requested.
+
+the anchor # - is a bookmark inside the resource giving the browser directions to show content
+
+MDN what is a url
+
 ```
