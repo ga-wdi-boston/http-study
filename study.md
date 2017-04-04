@@ -134,7 +134,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP stands for Hypertext Transfer Protocol which is a set of rules used to transfer web resources(HTML, PDF, JSON) files to the web client/user(i.e desktop, laptop, tablet, cellphone). Ex: put www.google.com in the address bar in the browser, the web clinet will send a request to the web server, then web server will send a response back to the client/user.
+
+https://www.youtube.com/watch?v=RsQ1tFLwldY great high level overview of HTTP
 ```
 
 ## Describe what a client is and what a server is
@@ -142,8 +144,11 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+Client side is the platform(cellphone, laptops, etc.) the user is using to surf the web or access an application. Ex: The user is using an iphone opens sarfari and enters a url(www.google.com) in the address bar. The clients platform sends a request to the server side.
+
+Server side are the web servers consisting of resources that responds to the clients side requests. The resources consists of HTML, PDF, and JSON files.
 ```
+https://www.youtube.com/watch?v=RsQ1tFLwldY video helped refresh my memory. Had previouse knowledge from last job.
 
 ## Describe the 4 most common HTTP verbs
 
@@ -151,7 +156,15 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - GET / HTTP/1.1
+
+POST - POST /clients/
+
+PUT - curl -v -X PUT -d "some text"
+.
+DELETE - DELETE /clients/anne HTTP/1.1
+
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe what a Response is
@@ -160,7 +173,17 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+When a user is requesting an URL in the address bar it sends a request to the web server the web server then sends a resource consisiting of HTML, PDF, or JSON.
+200: Request's acceptable.
+201: Confimes PUT || POST requests
+400: Bad POST & PUT request. Does not compute.
+404: Sorry HTML, PNG, & JSON resources couldn't be located. try URL again
+401: Error: resource authentication access required
+405: Sorry that method doesn't support the resource.
+409: Conflit is bad, making multiple PUT requests for the same resource is bad.
+500: Error: Serve side malfunctions. Sorry for the inconvenience!
+
+https://www.youtube.com/watch?v=RsQ1tFLwldY
 ```
 
 ## Make a curl request
@@ -168,7 +191,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl -v Reddit.com
+
+https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +203,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+HTTP: Hyper Text Transfer Protocol is a set of rules used to transfer files between the client and server side.
+Domain: is the name given to a website ex: wwww.google.com would be the domain name
+Port: Identifies if the resources are being transfered from a standard port or HTTP/s ports and grants access to its resources.
+Path: The path indicates the location of the file on the web server.
+Parameters: Used to do additons things before the response returns the resource resprented by key1=value1&key2=value2
+Anchor: The anchor represents a bookmark insides the resource providing the browser a path to locate the content.
+
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 ```
