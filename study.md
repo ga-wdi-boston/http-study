@@ -135,7 +135,7 @@ In your own words, give a brief description of what HTTP is.
 
 ```md
 <!-- your answer here -->
-```
+```HTTP is a set of "rules" protocol for how documents are transferred between clients and servers. It also specfies the format of the messages (url, pdf, etc.).
 
 ## Describe what a client is and what a server is
 
@@ -143,7 +143,7 @@ In your own words, give a brief description of what HTTP is.
 
 ```md
 <!-- your answer here -->
-```
+```A client (browser, device, or app) and the server sends a response of a resource back to the client. Referenced http://symfony.com/doc/current/introduction/http_fundamentals.html
 
 ## Describe the 4 most common HTTP verbs
 
@@ -152,7 +152,11 @@ would you use each?
 
 ```md
 <!-- your answer here -->
-```
+``1. GET - allows you to retrieve a server resource
+2. POST - allows you to create a resource
+3. PUT/PATCH: when using APIs, these will create upadates
+4. DELETE: when using APIs, this will delete an item.
+Referenced http://symfony.com/doc/current/introduction/http_fundamentals.html
 
 ## Describe what a Response is
 
@@ -162,14 +166,23 @@ response and what do they mean?
 ```md
 <!-- your answer here -->
 ```
+A response is an abstracted resource representation. They can be in the form of HTML, JSON, and pdf files and also images.
 
+Common Status Codes
+- 1xx Informational - and information response indicating the request was received and understood
+- 2xx Success: indicates the action requested by the client was received, understood, accepted, and processed successfully.
+- 3xx Redirection: additonal action needed by client
+- 4xx Client Errors
+- 5xx Server Errors - server failed to fulfill requeset and is aware it encountered an error
+Referenced https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
 <!-- your answer here -->
-```
+```curl --request GET https://www.reddit.com
+referenced study.md
 
 ## Describe the parts of a URL
 
@@ -180,3 +193,11 @@ an easy-to-reference place.
 ```md
 <!-- your answer here -->
 ```
+Example: http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+-Protocol (http): indicates which protocol ("rules") a browse must use
+Domain Name (www.example.com): indicates which web server is being requested
+-Port (:80) indicates resource location on the server
+-Resource Path (/path/to/myfile.html): used to represent a physcial path, now is often used as an abstraction
+-Parameters (?key1=value1&key2=value2): specific to server, best to ask the server owner
+-Anchor (#SomewhereInTheDocument): "bookmark" witin resource. May be spot on scrolled page or a timestamp on audio/video.
+Referenced https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
