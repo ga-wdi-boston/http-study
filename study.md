@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is the protocol that allows clients and servers to send documents back and forth on the web.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client sends requests to a server - a serve receives the requests and then sends responses to the client. 
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET: retrieves resource from server
+POST: creates resource on the server
+PUT/PATCH: updates the resource on the server
+DELETE: deletes the resource on the server
+
+I used symfony.com for this answer.
 ```
 
 ## Describe what a Response is
@@ -160,7 +165,15 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response is sent by the server, and contains resource representations (in the form of HTML, JSON or images etc.).
+Some common status codes are 1xx, 2xx, 3xx, 4xx, and 5xx.
+1xx: The request was received and understood, but the client needs to wait for a final response.
+2xx: The client's request was received, understood, accepted, and processed - success!
+3xx: Client needs to take additional action to complete the request.
+4xx: Client made an error.
+5xx: Server made an error.
+
+I used the wikipedia page for this answer.
 ```
 
 ## Make a curl request
@@ -168,7 +181,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +191,11 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+Protocol: tells you which protocol the browser uses (usually HTTP or HTTPS).
+Domain name: shows which web server is requested
+Path: this is the path to the resource, which is on the web server.
+Parameters: These parameters are for the Web server to do extra stuff with before returning the resource representations.
+Anchor: tells the browser a specific part of the content to go to, sort of like a "bookmark."
+
+I used the Mozilla Developer Network article "What is a URL?" for this answer.
 ```
