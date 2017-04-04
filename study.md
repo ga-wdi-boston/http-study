@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- A hypertext transferring protocol is a protocol within a browser that sends requests to a server to return whatever was requested, ie an html page, pdf file, etc.-->
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!-- A client is what the end user intracts with directly and displays what is requested/sent from the server. A server 'serves' documents to the client when the client requests something from it. The client and the server communicate with, or talk, to one another -->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,12 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+<!-- CRUD
+    Create - used to create an item
+    Read - used to display an item
+    Update - used to update an item
+    Delete - used to delete an item
+ -->
 ```
 
 ## Describe what a Response is
@@ -160,7 +165,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!-- A response is what the server returns to the client. It contains source representations. Common status codes in a response are informational responses (request was received and understood), success responses (action was accepted and processed), redirectional responses (client must take additional actions to complete request), client errors (client errored resulting in explanation of situational errors), & server errors (server failed to fulfill an apparently valid request). -->
 ```
 
 ## Make a curl request
@@ -168,7 +173,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!-- curl --request GET https://www.reddit.com -->
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +183,10 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+<!-- for http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2
+http:// is the protocol and indicates which protocol the browser must use
+www.example.com is the domain name
+:80 is the port, or technical "gate," used to access resources on the web server.
+/path/to/myfile.html is the path to the resource on the Web server.
+ ?key1=value1&key2=value2 is the query or parameters to which determines what will be done in the background before returning the resource requested-->
 ```
