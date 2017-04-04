@@ -134,7 +134,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+<!-- A system of rules that figures out how documents are moved from one place to another.
+
+source : notes from the study-->
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +144,9 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+<!-- An example of a client would be a web browswer, such as chrome. Servers are a bit more complex because there are different kinds, such as application or web servers. The term "server" comes into play because of the machine that these programs are run on. Clients and servers interact with each other by sending and recieving requests/recieving requests and sending results.
+
+source : notes from the study-->
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +155,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+<!-- GET - used when you click on a link. It tells the server to trasnmit data      identified by the URL to the client.
+     PUT - used when you want to update or create the resource identified by the URL.
+     DELETE - essentially the opposite of 'PUT'. Used when you want to delete the resource identified bt the URL of the request.
+     POST - used when you want to repeat the processing on a server.
+
+source : http://www.restapitutorial.com/lessons/httpmethods.html
+     -->
 ```
 
 ## Describe what a Response is
@@ -160,7 +170,13 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+<!-- A response is a way of letting the client know about the result of it's request. They contain meta information (information about information).
+Common status codes:
+    400 Bad Request - means the request was malformed
+    405 Method Not Allowed - means that the HTTP method used is not supported
+    200 OK - means that the request made was succesful
+
+    source : http://www.restapitutorial.com/lessons/httpmethods.html-->
 ```
 
 ## Make a curl request
@@ -168,7 +184,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+<!-- curl --request GET https://reddit.com -->
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +194,12 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+<!-- 1. Protocol - shows what protocol the browser needs to use
+     2. Host/Domain name - shows the web server that is being requested by a client
+     3. Port - stated to access resources on a server
+     4. Resource path - the path to the resources on a server, this speaks for itself
+     5. Query - or extra parameters used by the server to do extra things. "Things" because different servers have different rules regarding parameters.
+
+source : https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
+     -->
 ```
