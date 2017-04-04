@@ -192,7 +192,7 @@ Common status codes include:
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-curl https://www.reddit.com/
+curl --request GET https://www.reddit.com/
 ```
 
 ## Describe the parts of a URL
