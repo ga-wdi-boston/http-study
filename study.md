@@ -134,7 +134,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+HTTP is a protocol which decides how documents are transferred.  Effectively it is a language.
+
+Above and provided readings.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +144,9 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is is a centralized, powerful computer is a hub of which a less powerful, personal computer makes reuests to.
+
+provided readings, techterms.com, dictionary.com
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +155,13 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+CREATE: The create or add new entries
+
+READ:  Reads or takes new entries
+
+UPDATE:  Writes new entiries
+
+DELETE:  disposes of new entries
 ```
 
 ## Describe what a Response is
@@ -160,7 +170,10 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+Once a server has recieved a request from a client is know's which resource the client needs and
+how it needs to process it. i.e. It knows what it wants to do with it via the method.
+
+Mainly symfony
 ```
 
 ## Make a curl request
@@ -168,7 +181,9 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl http://reddit.com
+
+makandracards.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +193,7 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+The first part 'HTTP' is the protocol which is the language used.  The second part is the hostname of the correct server.  This replaces the IP address so it is easier for a human being to remember.  The next optional inclusion is the port number.  This directs to the correct port at the designated server.  The fourth is also optional which is the resource path, effectively leading you to the correct directory within the port.  The final, again optional, is the query string which is input for a certain program which much be evaluated in a certain way.
+
+used provided and webreference.com primarily
 ```
