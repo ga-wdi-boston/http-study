@@ -135,6 +135,8 @@ In your own words, give a brief description of what HTTP is.
 
 ```md
 <!-- your answer here -->
+HTTP is a set of rules that a program uses to talk to another program(which is oriented around actions and resources). It's what allows web browsers such as chrome to communicate to a server(like a webserver such as  apache or app servers like ruby) and vice versa
+I used reddit, freecodecamp and symfony as resources
 ```
 
 ## Describe what a client is and what a server is
@@ -143,6 +145,10 @@ In your own words, give a brief description of what HTTP is.
 
 ```md
 <!-- your answer here -->
+Clients such as a web browser are used to request information via HTTP
+The server receives that information and sends it back based on the URI(which identifies the things that the client wants sent back)
+
+I used reddit, freecodecamp and symfony as resources
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -152,6 +158,12 @@ would you use each?
 
 ```md
 <!-- your answer here -->
+1)Get: used to read/retrieve the resource/data such as when you go to a website, you retrieve the data to display the webpage
+2)Post: used to create new resources, as the name suggests you "post" new information to the server an example would be submitting a form online
+3)Put: used for updating a resource on the server identified in the URI
+4)Delete: will delete the resource identified in the URI
+*The URI is an identifier and ONLY identifies a resource
+I used stackoverflow, symfony and restapitutorial as resources
 ```
 
 ## Describe what a Response is
@@ -161,14 +173,22 @@ response and what do they mean?
 
 ```md
 <!-- your answer here -->
-```
+Reponse is the data that a server spits back to the client via HTTP.
 
+Some common ones include:
+1)404 - not found, meaning the resource wasn't found
+2)400 - bad request, usually because of domain validation errors
+3)401 - unauthorized, user is not allowed to perform the operation
+```
+I used restapitutorial and symfony
 ## Make a curl request
 
 Using curl, how would you get the content from Reddit.com?
 
 ```md
 <!-- your answer here -->
+curl -L http://www.reddit.com
+I used thegeekstuff.com
 ```
 
 ## Describe the parts of a URL
@@ -179,4 +199,13 @@ an easy-to-reference place.
 
 ```md
 <!-- your answer here -->
+1)
+http:// is the protocol and tells the browser which protocol it should use
+2)
+www.somewebsite.com is the domain name and is the common way for users to access a website. Using Domain Name servers, these domain names are linked to a specific set of numbers(IP address) which is how COMPUTERS access webpages
+3)A path traditionally follows the domain name. This is the path to the resource
+on the server
+
+I used https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
+URL is both an identifier and locator for a resource
 ```
