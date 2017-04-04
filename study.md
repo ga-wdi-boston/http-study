@@ -134,7 +134,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, give a brief description of what HTTP is.
 
 ```md
-<!-- your answer here -->
+A protocol that describes the interaction between the client and server.
 ```
 
 ## Describe what a client is and what a server is
@@ -142,7 +142,7 @@ In your own words, give a brief description of what HTTP is.
  What is a client and what is a server? How do they interact with each other?
 
 ```md
-<!-- your answer here -->
+A client is something that issues a request - for example, the browser is a client that asks for a particular page.  A server is  something that responds to this request by providing the page requested.
 ```
 
 ## Describe the 4 most common HTTP verbs
@@ -151,7 +151,11 @@ What are the 4 most common HTTP verbs used when creating a RESTful API. How
 would you use each?
 
 ```md
-<!-- your answer here -->
+GET - get the data idetified by the URL and return it to the client
+PUT - create or update something on the server
+DELETE - delete a resource identified by the URL
+POST - cause processing on the server
+
 ```
 
 ## Describe what a Response is
@@ -160,7 +164,7 @@ What is a response? What does it contain? What are some common status codes in a
 response and what do they mean?
 
 ```md
-<!-- your answer here -->
+A response contains a representation of the requested data.  200 OK indicates success.  404 indicates not found!  400 Bad request.
 ```
 
 ## Make a curl request
@@ -168,7 +172,7 @@ response and what do they mean?
 Using curl, how would you get the content from Reddit.com?
 
 ```md
-<!-- your answer here -->
+curl --request GET https://www.reddit.com
 ```
 
 ## Describe the parts of a URL
@@ -178,5 +182,9 @@ refer to this list often in the next few weeks, so it's important to keep it in
 an easy-to-reference place.
 
 ```md
-<!-- your answer here -->
+http/https <- protocol
+www.XXX.com <- domain - the host for this site
+:XXX  <- port  <- usually only specified if the default port is not used
+/path/.../xxx    <- resource path
+?<> <- query   if you want to access particular information from the site
 ```
